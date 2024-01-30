@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="nl" style="scroll-behavior: smooth;">
+<head>
+	<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+</script>    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D148HDTZQK"></script>
+<script> 
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D148HDTZQK');
+</script>
+<script>
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+</script>
+  
+    <meta charset="utf-8" />
+	<meta name="robots" content="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="static/images/XL.svg" />
+	<link rel="mask-icon" href="static/images/XL.svg" color=”#15803D" />
+	<link rel="canonical" href="https://www.excelineendag.nl/"/>
+	<title>
+		
+			Excel leren met duidelijke, korte voorbeelden
+		
+	</title>
+	
+		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "Organization", "name": "Excel in een dag", "url": "https://www.excelineendag.nl/", "description": "Leer Excel met duidelijke voorbeelden. Onder andere ALS, VLOOKUP en XLOOKUP. Zowel Excel-cursussen in-company als op externe locatie mogelijk."}]}</script>
+	
+	
+		<meta name="description" content="Leer Excel met duidelijke voorbeelden. Onder andere ALS, VLOOKUP en XLOOKUP. Zowel Excel-cursussen in-company als op externe locatie mogelijk."/>
+	
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+
+<!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
+<body>
+	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
+		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
+		
+	</div> -->
+
+	<!-- absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white -->
+    <div id="header" class="fixed w-full z-10 top-0 bg-white">
+        <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
+        
+<!-- TO DO: Als hamburger menu open, dan hamburger veranderen in kruis -->
+<!-- TO DO: als hover dan item open -->
+<!-- TO DO: meer menu items en grid, a la explainit.nl -->
+
+
+
+
+
+<div class="w-full lg:max-w-5xl xl:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+    
+    <!-- <div class="mx-2 px-4 py-1 items-center hover:bg-warmGray-100 rounded-xl">
+        <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="index.html">
+            Excel in een dag <br/><span class="text-sm font-normal text-gray-500 align-top">door Tristan Bains</span>
+        </a>
+    </div> -->
+
+    <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="index.html">
+        <div class="mx-2 px-4 py-1 items-center hover:bg-warmGray-100 rounded-xl">
+            Excel in een dag <br/><span class="text-sm font-normal text-gray-500 align-top">door Tristan Bains</span>
+        </div>
+    </a>
+
+    
+    <!-- MENU for mobile -->
+    <div class="flex md:hidden">
+        <!-- VISIBLE LEFT TO HAMBURGER: -->
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <!-- HAMBURGER MENU: -->
+        <div class="block md:hidden pr-4">
+            <button id="nav-toggle" class="flex items-center px-3 py-2  rounded text-gray-900  hover:text-green-700  appearance-none focus:outline-none">
+                <svg class="fill-current h-8 w-8 my-2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>                
+                    <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+                </svg>
+                
+            </button>
+        </div>
+    </div>
+    <!-- MENU for lg+ -->
+    <div id="nav-content" class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block mt-2 md:mt-0 bg-white z-20 pr-4">
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="functies/index.html">
+                        Excel functies
+                    </a>
+                </li>
+                
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="formules/index.html">
+                        Handige formules
+                    </a>
+                </li>
+                
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="contact/index.html">
+                        Contact
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    
+</div>
+	</div>
+
+	<!-- <div class="container w-full max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto mt-20 md:mt-32 lg:mt-40 px-6"> -->
+    <div class="mt-40">
+        <!-- <div class="w-full px-4 md:px-6 text-lg text-gray-800 leading-normal font-sans"> -->
+            
+
+<div class="bg-warmGray-50 py-12 md:py-36 -mt-16">
+    <div class="text-warmGray-900 max-w-5xl mx-auto prose-lg px-12">
+        <div class="max-w-3xl">
+            <h1 class="text-6xl font-bold leading-none">Leer Excel met duidelijke, korte voorbeelden</h1>
+            <!-- <p class="text-xl ">Discover templates and tutorials to help you be more productive and organized.</p> -->
+            <div class="block md:flex">
+                <a href="functies/index.html">
+                    <button class="mt-4 mr-4 font-semibold bg-warmGray-50 hover:bg-warmGray-100 border-2 border-warmGray-200 px-6 py-2 rounded-xl">Excel functies</button>
+                </a>
+                <a href="formules/index.html">
+                    <button class="mt-4 mr-4 font-semibold bg-warmGray-50 hover:bg-warmGray-100 border-2 border-warmGray-200 px-6 py-2 rounded-xl">Handige Excel formules</button>
+                </a>
+                <a href="contact/index.html">
+                    <button class="mt-4 mr-4 font-semibold text-white bg-green-700 hover:bg-green-500 px-6 py-2 rounded-xl">Excel cursus</button>
+                </a>
+            </div>
+        </div>
+        <!-- <div class="md:py-8 md:pl-8">
+            <div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="X.ZOEKEN-functie-als-niets-gevonden" alt="X.ZOEKEN-functie-als-niets-gevonden" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="B1"><circle cx="89.5" cy="44.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="89" y="59" fill="#636e72" font-size="44.5">2</text></g><g id="D1"><circle cx="381.5" cy="44.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="381" y="59" fill="#636e72" font-size="44.5">3</text></g><g id="F1"><circle cx="623.5" cy="44.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="623" y="59" fill="#636e72" font-size="44.5">1</text></g><g id="B2"><rect x="12" y="101" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="89" y="160" fill="#636e72" font-size="44.5">Afdeling</text></g><g id="C2"><rect x="179" y="101" width="134" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="246" y="160" fill="#b2bec3" font-size="44.5">Maand</text></g><g id="D2"><rect x="325" y="101" width="113" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="381" y="160" fill="#636e72" font-size="44.5">Sales</text></g><g id="F2"><rect x="546" y="101" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="623" y="160" fill="#636e72" font-size="44.5">Afdeling</text></g><g id="G2"><rect x="713" y="101" width="141" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="783" y="160" fill="#636e72" font-size="44.5">Sales</text></g><g id="B3"><rect x="12" y="202" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="89" y="261" fill="#636e72" font-size="44.5">A</text></g><g id="C3"><rect x="179" y="202" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="261" fill="#b2bec3" font-size="44.5">Feb</text></g><g id="D3"><rect x="325" y="202" width="113" height="89" fill="#0984e3" stroke="#636e72" stroke-width="4"></rect><text x="381" y="261" fill="#ffffff" font-size="44.5">3</text></g><g id="F3"><rect x="546" y="202" width="155" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="623" y="261" fill="#636e72" font-size="44.5">A</text></g><g id="G3"><rect x="713" y="202" width="141" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="783" y="261" fill="#ffffff" font-size="44.5">3</text></g><g id="B4"><rect x="12" y="303" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="89" y="362" fill="#636e72" font-size="44.5">B</text></g><g id="C4"><rect x="179" y="303" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="362" fill="#b2bec3" font-size="44.5">Feb</text></g><g id="D4"><rect x="325" y="303" width="113" height="89" fill="#0984e3" stroke="#636e72" stroke-width="4"></rect><text x="381" y="362" fill="#ffffff" font-size="44.5">12</text></g><g id="F4"><rect x="546" y="303" width="155" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="623" y="362" fill="#636e72" font-size="44.5">B</text></g><g id="G4"><rect x="713" y="303" width="141" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="783" y="362" fill="#ffffff" font-size="44.5">12</text></g><g id="B5"><rect x="12" y="404" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="463" fill="#636e72" font-size="44.5">A</text></g><g id="C5"><rect x="179" y="404" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="463" fill="#b2bec3" font-size="44.5">Mrt</text></g><g id="D5"><rect x="325" y="404" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="463" fill="#636e72" font-size="44.5">5</text></g><g id="F5"><rect x="546" y="404" width="155" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="623" y="463" fill="#636e72" font-size="44.5">C</text></g><g id="G5"><rect x="713" y="404" width="141" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="783" y="463" fill="#ffffff" font-size="44.5">data?</text></g><g id="G5_comment"><line x1="866" y1="448.5" x2="910.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="866" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="866.0" y="463.0" dx="55.625">X.ZOEKEN()</tspan><tspan x="866.0" y="516.4" dx="55.625">met waarde voor</tspan><tspan x="866.0" y="569.8" dx="55.625">indien-niet-gevonden</tspan></text></g><g id="B6"><rect x="12" y="505" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="564" fill="#636e72" font-size="44.5">B</text></g><g id="C6"><rect x="179" y="505" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="564" fill="#b2bec3" font-size="44.5">Mrt</text></g><g id="D6"><rect x="325" y="505" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="564" fill="#636e72" font-size="44.5">11</text></g><g id="B7"><rect x="12" y="606" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="665" fill="#636e72" font-size="44.5">A</text></g><g id="C7"><rect x="179" y="606" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="665" fill="#b2bec3" font-size="44.5">Apr</text></g><g id="D7"><rect x="325" y="606" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="665" fill="#636e72" font-size="44.5">9</text></g><g id="B8"><rect x="12" y="707" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="766" fill="#636e72" font-size="44.5">B</text></g><g id="C8"><rect x="179" y="707" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="766" fill="#b2bec3" font-size="44.5">Apr</text></g><g id="D8"><rect x="325" y="707" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="766" fill="#636e72" font-size="44.5">8</text></g><g id="B9"><rect x="12" y="808" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="867" fill="#636e72" font-size="44.5">A</text></g><g id="C9"><rect x="179" y="808" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="867" fill="#b2bec3" font-size="44.5">Mei</text></g><g id="D9"><rect x="325" y="808" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="867" fill="#636e72" font-size="44.5">9</text></g></g></svg></div><p class="code_block"><span class="code_symbol">=</span><span class="code_function">X.ZOEKEN</span><span class="-mr-2">( </span>F5<span class="code_sep"><span class="-mr-2">; </span></span>$B$3:$B$9<span class="code_sep"><span class="-mr-2">; </span></span>$D$3:$D$9<span class="code_sep"><span class="-mr-2">; </span></span>"data?")<span class="code_comment">// cel G5, output: data?</span></p>
+        </div> -->
+        
+        <!-- <div class="bg-gray-100 col-span-2 hidden md:block">Cartoon</div> -->
+
+    </div>
+</div>
+
+<!-- <div class="max-w-5xl pb-20 mx-auto  px-12 gap-y-6 md:gap-y-12 gap-x-4 font-sans prose-lg items-center">
+    <div class="text-warmGray-900 max-w-2xl">
+        <div class="text-lg font-semibold pb-4 text-warmGray-500">Over Excel in een dag</div>
+        <div class="text-4xl font-extrabold leading-none pb-4">
+            I'm on a mission to empower individuals and small teams.
+        </div>
+        <div class="text-xl leading-normal pb-8">I believe that everyone holds untapped potential. My mission is to help you find clarity in your work through clean and minimal design.</div>
+        <div class="grid grid-cols-4">
+            <div class="">
+                <div class="text-warmGray-900 text-4xl font-bold pb-2">474</div>
+                <div class="text-warmGray-500 text-base leading-tight">Functies</div>
+            </div>
+            <div class="text-center">
+                <div class="text-warmGray-900 text-4xl font-bold pb-2">4</div>
+                <div class="text-warmGray-500 text-base leading-tight">Handige formules</div>
+            </div>
+            <div class="text-center">
+                <div class="text-warmGray-900 text-4xl font-bold pb-2">7</div>
+                <div class="text-warmGray-500 text-base leading-tight">Artikelen</div>
+            </div>
+        </div>
+    </div>
+    <div class="md:py-8 md:pl-8">
+        <div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="X.ZOEKEN-functie-als-niets-gevonden" alt="X.ZOEKEN-functie-als-niets-gevonden" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="B1"><circle cx="89.5" cy="44.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="89" y="59" fill="#636e72" font-size="44.5">2</text></g><g id="D1"><circle cx="381.5" cy="44.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="381" y="59" fill="#636e72" font-size="44.5">3</text></g><g id="F1"><circle cx="623.5" cy="44.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="623" y="59" fill="#636e72" font-size="44.5">1</text></g><g id="B2"><rect x="12" y="101" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="89" y="160" fill="#636e72" font-size="44.5">Afdeling</text></g><g id="C2"><rect x="179" y="101" width="134" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="246" y="160" fill="#b2bec3" font-size="44.5">Maand</text></g><g id="D2"><rect x="325" y="101" width="113" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="381" y="160" fill="#636e72" font-size="44.5">Sales</text></g><g id="F2"><rect x="546" y="101" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="623" y="160" fill="#636e72" font-size="44.5">Afdeling</text></g><g id="G2"><rect x="713" y="101" width="141" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="783" y="160" fill="#636e72" font-size="44.5">Sales</text></g><g id="B3"><rect x="12" y="202" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="89" y="261" fill="#636e72" font-size="44.5">A</text></g><g id="C3"><rect x="179" y="202" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="261" fill="#b2bec3" font-size="44.5">Feb</text></g><g id="D3"><rect x="325" y="202" width="113" height="89" fill="#0984e3" stroke="#636e72" stroke-width="4"></rect><text x="381" y="261" fill="#ffffff" font-size="44.5">3</text></g><g id="F3"><rect x="546" y="202" width="155" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="623" y="261" fill="#636e72" font-size="44.5">A</text></g><g id="G3"><rect x="713" y="202" width="141" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="783" y="261" fill="#ffffff" font-size="44.5">3</text></g><g id="B4"><rect x="12" y="303" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="89" y="362" fill="#636e72" font-size="44.5">B</text></g><g id="C4"><rect x="179" y="303" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="362" fill="#b2bec3" font-size="44.5">Feb</text></g><g id="D4"><rect x="325" y="303" width="113" height="89" fill="#0984e3" stroke="#636e72" stroke-width="4"></rect><text x="381" y="362" fill="#ffffff" font-size="44.5">12</text></g><g id="F4"><rect x="546" y="303" width="155" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="623" y="362" fill="#636e72" font-size="44.5">B</text></g><g id="G4"><rect x="713" y="303" width="141" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="783" y="362" fill="#ffffff" font-size="44.5">12</text></g><g id="B5"><rect x="12" y="404" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="463" fill="#636e72" font-size="44.5">A</text></g><g id="C5"><rect x="179" y="404" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="463" fill="#b2bec3" font-size="44.5">Mrt</text></g><g id="D5"><rect x="325" y="404" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="463" fill="#636e72" font-size="44.5">5</text></g><g id="F5"><rect x="546" y="404" width="155" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="623" y="463" fill="#636e72" font-size="44.5">C</text></g><g id="G5"><rect x="713" y="404" width="141" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="783" y="463" fill="#ffffff" font-size="44.5">data?</text></g><g id="G5_comment"><line x1="866" y1="448.5" x2="910.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="866" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="866.0" y="463.0" dx="55.625">X.ZOEKEN()</tspan><tspan x="866.0" y="516.4" dx="55.625">met waarde voor</tspan><tspan x="866.0" y="569.8" dx="55.625">indien-niet-gevonden</tspan></text></g><g id="B6"><rect x="12" y="505" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="564" fill="#636e72" font-size="44.5">B</text></g><g id="C6"><rect x="179" y="505" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="564" fill="#b2bec3" font-size="44.5">Mrt</text></g><g id="D6"><rect x="325" y="505" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="564" fill="#636e72" font-size="44.5">11</text></g><g id="B7"><rect x="12" y="606" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="665" fill="#636e72" font-size="44.5">A</text></g><g id="C7"><rect x="179" y="606" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="665" fill="#b2bec3" font-size="44.5">Apr</text></g><g id="D7"><rect x="325" y="606" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="665" fill="#636e72" font-size="44.5">9</text></g><g id="B8"><rect x="12" y="707" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="766" fill="#636e72" font-size="44.5">B</text></g><g id="C8"><rect x="179" y="707" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="766" fill="#b2bec3" font-size="44.5">Apr</text></g><g id="D8"><rect x="325" y="707" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="766" fill="#636e72" font-size="44.5">8</text></g><g id="B9"><rect x="12" y="808" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="89" y="867" fill="#636e72" font-size="44.5">A</text></g><g id="C9"><rect x="179" y="808" width="134" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="246" y="867" fill="#b2bec3" font-size="44.5">Mei</text></g><g id="D9"><rect x="325" y="808" width="113" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="381" y="867" fill="#636e72" font-size="44.5">9</text></g></g></svg></div><p class="code_block"><span class="code_symbol">=</span><span class="code_function">X.ZOEKEN</span><span class="-mr-2">( </span>F5<span class="code_sep"><span class="-mr-2">; </span></span>$B$3:$B$9<span class="code_sep"><span class="-mr-2">; </span></span>$D$3:$D$9<span class="code_sep"><span class="-mr-2">; </span></span>"data?")<span class="code_comment">// cel G5, output: data?</span></p>
+    </div>
+</div> -->
+
+
+<!-- HIER GEBLEVEN -->
+
+<div class="max-w-5xl px-6 text-warmGray-900 mx-auto gap-y-4 grid grid-cols-2 font-sans py-12">
+    <div class="flex justify-between col-span-2 px-6 items-end">
+        <h2 class="text-2xl md:text-4xl font-semibold">Meest populaire functies</h2>
+        <div class="text-xl md:text-2xl pr-1 font-semibold"><a class=" hover:text-warmGray-500" href="functies/index.html">Alle functies ></a></div>
+    </div>
+    <div class="max-w-3xl col-span-2 px-6 text-lg text-warmGray-500 font-normal">
+        Uitgebreide tutorials met veel voorbeelden van de belangrijkste Excel-functies. Hoe je de functie gebruikt, wanneer, en wat je met de input argumenten kunt.
+    </div>
+    <a class="col-span-2 md:col-span-1" href="functies/vert-zoeken-functie/index.html">
+        <div class="pt-8 px-6 pb-4 hover:bg-warmGray-100 rounded-xl">
+            <div class="relative rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="VERT.ZOEKEN-functie" alt="VERT.ZOEKEN-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="C1"><rect x="158" y="0" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="235" y="59" fill="#636e72" font-size="44.5">Student</text></g><g id="D1"><rect x="325" y="0" width="107" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="378" y="59" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="B2"><circle cx="95.5" cy="145.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="95" y="160" fill="#636e72" font-size="44.5">1</text></g><g id="C2"><rect x="158" y="101" width="155" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="235" y="160" fill="#636e72" font-size="44.5">DvW</text></g><g id="D2"><rect x="325" y="101" width="107" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="378" y="160" fill="#ffffff" font-size="44.5">7</text></g><g id="D2_comment"><line x1="444" y1="145.5" x2="488.5" y2="145.5" stroke-width="4" stroke="#2d3436"></line><text x="444" y="160" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="444.0" y="160.0" dx="55.625">VERT.ZOEKEN()</tspan><tspan x="444.0" y="213.4" dx="55.625">functie</tspan></text></g><g id="G3"><circle cx="679.0" cy="246.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="679" y="261" fill="#636e72" font-size="44.5">3</text></g><g id="H3"><circle cx="862.5" cy="246.5" r="35.6" fill="#a29bfe" stroke="#636e72" stroke-width="4"></circle><text x="862" y="261" fill="#636e72" font-size="44.5">4</text></g><g id="C4"><rect x="158" y="303" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="235" y="362" fill="#636e72" font-size="44.5">Student</text></g><g id="D4"><rect x="325" y="303" width="107" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="378" y="362" fill="#636e72" font-size="44.5">#Les</text></g><g id="E4"><rect x="444" y="303" width="114" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="501" y="362" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="G4"><rect x="615" y="303" width="128" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="679" y="362" fill="#636e72" font-size="44.5">Kolom</text></g><g id="H4"><rect x="755" y="303" width="215" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="862" y="362" fill="#636e72" font-size="44.5">Benaderen</text></g><g id="B5"><circle cx="95.5" cy="448.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="95" y="463" fill="#636e72" font-size="44.5">2</text></g><g id="C5"><rect x="158" y="404" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="463" fill="#636e72" font-size="44.5">LW</text></g><g id="D5"><rect x="325" y="404" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="463" fill="#636e72" font-size="44.5">7</text></g><g id="E5"><rect x="444" y="404" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="463" fill="#636e72" font-size="44.5">8</text></g><g id="G5"><rect x="615" y="404" width="128" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="679" y="463" fill="#636e72" font-size="44.5">3</text></g><g id="H5"><rect x="755" y="404" width="215" height="89" fill="#a29bfe" stroke="#636e72" stroke-width="4"></rect><text x="862" y="463" fill="#636e72" font-size="44.5">ONWAAR</text></g><g id="C6"><rect x="158" y="505" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="564" fill="#636e72" font-size="44.5">MvB</text></g><g id="D6"><rect x="325" y="505" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="564" fill="#636e72" font-size="44.5">4</text></g><g id="E6"><rect x="444" y="505" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="564" fill="#636e72" font-size="44.5">7</text></g><g id="H5_comment"><line x1="862.5" y1="505" x2="862.5" y2="549.5" stroke-width="4" stroke="#e17055"></line><text x="862.5" y="594.0" fill="#e17055" font-size="44.5"><tspan x="862.5" y="594.0" dx="">We willen exact,</tspan><tspan x="862.5" y="647.4" dx="">i.p.v. benadering</tspan></text></g><g id="C7"><rect x="158" y="606" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="665" fill="#636e72" font-size="44.5">EY</text></g><g id="D7"><rect x="325" y="606" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="665" fill="#636e72" font-size="44.5">5</text></g><g id="E7"><rect x="444" y="606" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="665" fill="#636e72" font-size="44.5">7</text></g><g id="C8_comment"><line x1="146" y1="751.5" x2="101.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="146" y="766" fill="#e17055" font-size="44.5" text-anchor="end" dx="-55.625"><tspan x="146.0" y="766.0" dx="-55.625">Match in</tspan><tspan x="146.0" y="819.4" dx="-55.625">1e kolom</tspan></text></g><g id="C8"><rect x="158" y="707" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="235" y="766" fill="#636e72" font-size="44.5">DvW</text></g><g id="D8"><rect x="325" y="707" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="766" fill="#636e72" font-size="44.5">5</text></g><g id="E8"><rect x="444" y="707" width="114" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="501" y="766" fill="#636e72" font-size="44.5">7</text></g><g id="E8_comment"><line x1="570" y1="751.5" x2="614.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="570" y="766" fill="#e17055" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="570.0" y="766.0" dx="55.625">Resultaat</tspan><tspan x="570.0" y="819.4" dx="55.625">uit 3e kolom</tspan></text></g><g id="C9"><rect x="158" y="808" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="867" fill="#636e72" font-size="44.5">AvdV</text></g><g id="D9"><rect x="325" y="808" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="867" fill="#636e72" font-size="44.5">6</text></g><g id="E9"><rect x="444" y="808" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="867" fill="#636e72" font-size="44.5">9</text></g><g id="C10"><rect x="158" y="909" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="968" fill="#636e72" font-size="44.5">FM</text></g><g id="D10"><rect x="325" y="909" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="968" fill="#636e72" font-size="44.5">6</text></g><g id="E10"><rect x="444" y="909" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="968" fill="#636e72" font-size="44.5">8</text></g></g></svg></div>
+            <h3 class="font-bold text-xl pt-4 pb-2">VERT.ZOEKEN-functie (VLOOKUP)</h3>
+            <div class="text-lg text-warmGray-500 font-normal">Verticaal zoeken is superhandig, maar deze functie is niet direct intuïtief. Een uitgebreide tutorial met veel voorbeelden.</div>
+        </div>
+    </a>
+    <div class="col-span-2 md:col-span-1 md:pt-4 gap-y-4">
+            <a class="flex hover:bg-warmGray-100 rounded-xl items-center px-4 py-2 md:py-4" href="functies/als-functie/index.html">
+                <div class="md:w-2/5 w-1/4 relative rounded-xl overflow-hidden border-2 border-gray-300">
+                    <svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="ALS-functie" alt="ALS-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="D3"><circle cx="301.5" cy="246.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="301" y="261" fill="#636e72" font-size="44.5">1</text></g><g id="C4"><rect x="101" y="303" width="116" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="159" y="362" fill="#b2bec3" font-size="44.5">Dag</text></g><g id="D4"><rect x="229" y="303" width="145" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="301" y="362" fill="#636e72" font-size="44.5">Temp</text></g><g id="E4"><rect x="386" y="303" width="145" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="458" y="362" fill="#b2bec3" font-size="44.5">Regen</text></g><g id="G4"><rect x="632" y="303" width="328" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="796" y="362" fill="#636e72" font-size="44.5">Mening</text></g><g id="C5"><rect x="101" y="404" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="463" fill="#b2bec3" font-size="44.5">1</text></g><g id="D5"><rect x="229" y="404" width="145" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="301" y="463" fill="#636e72" font-size="44.5">15</text></g><g id="E5"><rect x="386" y="404" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="463" fill="#b2bec3" font-size="44.5">11</text></g><g id="G5"><rect x="632" y="404" width="328" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="796" y="463" fill="#ffffff" font-size="44.5">Niet warm</text></g><g id="G5_comment"><line x1="972" y1="448.5" x2="1016.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="972" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625">ALS()-functie</text></g><g id="C6"><rect x="101" y="505" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="564" fill="#b2bec3" font-size="44.5">2</text></g><g id="D6"><rect x="229" y="505" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="564" fill="#636e72" font-size="44.5">18</text></g><g id="E6"><rect x="386" y="505" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="564" fill="#b2bec3" font-size="44.5">0</text></g><g id="G6"><rect x="632" y="505" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="564" fill="#ffffff" font-size="44.5">Niet warm</text></g><g id="C7"><rect x="101" y="606" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="665" fill="#b2bec3" font-size="44.5">3</text></g><g id="D7"><rect x="229" y="606" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="665" fill="#636e72" font-size="44.5">21</text></g><g id="E7"><rect x="386" y="606" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="665" fill="#b2bec3" font-size="44.5">1</text></g><g id="G7"><rect x="632" y="606" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="665" fill="#ffffff" font-size="44.5">Warm</text></g><g id="C8"><rect x="101" y="707" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="766" fill="#b2bec3" font-size="44.5">4</text></g><g id="D8"><rect x="229" y="707" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="766" fill="#636e72" font-size="44.5">22</text></g><g id="E8"><rect x="386" y="707" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="766" fill="#b2bec3" font-size="44.5">12</text></g><g id="G8"><rect x="632" y="707" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="766" fill="#ffffff" font-size="44.5">Warm</text></g><g id="C9"><rect x="101" y="808" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="867" fill="#b2bec3" font-size="44.5">5</text></g><g id="D9"><rect x="229" y="808" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="867" fill="#636e72" font-size="44.5">17</text></g><g id="E9"><rect x="386" y="808" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="867" fill="#b2bec3" font-size="44.5">0</text></g><g id="G9"><rect x="632" y="808" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="867" fill="#ffffff" font-size="44.5">Niet warm</text></g></g></svg>
+                </div>
+                <h3 class="font-semibold leading-tight text-lg pt-4 pb-2 md:w-3/5 w-3/4 pl-6 md:pl-4">ALS-functie (IF): uitleg met korte 10+ voorbeelden</h3>
+            </a>
+            <a class="flex hover:bg-warmGray-100 rounded-xl items-center px-4 py-2 md:py-4" href="functies/x-zoeken-functie/index.html">
+                <div class="md:w-2/5 w-1/4 relative rounded-xl overflow-hidden border-2 border-gray-300">
+                    <svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="X.ZOEKEN-functie" alt="X.ZOEKEN-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="C2"><circle cx="206.5" cy="145.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="206" y="160" fill="#636e72" font-size="44.5">2</text></g><g id="E2"><circle cx="520.5" cy="145.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="520" y="160" fill="#636e72" font-size="44.5">3</text></g><g id="G2"><circle cx="723.5" cy="145.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="723" y="160" fill="#636e72" font-size="44.5">1</text></g><g id="C3"><rect x="126" y="202" width="161" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="206" y="261" fill="#636e72" font-size="44.5">Student</text></g><g id="D3"><rect x="299" y="202" width="147" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="372" y="261" fill="#b2bec3" font-size="44.5">Lessen</text></g><g id="E3"><rect x="458" y="202" width="125" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="520" y="261" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="G3"><rect x="643" y="202" width="161" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="723" y="261" fill="#636e72" font-size="44.5">Student</text></g><g id="H3"><rect x="816" y="202" width="117" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="874" y="261" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="C4"><rect x="126" y="303" width="161" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="206" y="362" fill="#636e72" font-size="44.5">LW</text></g><g id="D4"><rect x="299" y="303" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="362" fill="#b2bec3" font-size="44.5">7</text></g><g id="E4"><rect x="458" y="303" width="125" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="520" y="362" fill="#636e72" font-size="44.5">8</text></g><g id="G4"><rect x="643" y="303" width="161" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="723" y="362" fill="#636e72" font-size="44.5">AvdV</text></g><g id="H4"><rect x="816" y="303" width="117" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="874" y="362" fill="#ffffff" font-size="44.5">9</text></g><g id="C5"><rect x="126" y="404" width="161" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="206" y="463" fill="#636e72" font-size="44.5">MvB</text></g><g id="D5"><rect x="299" y="404" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="463" fill="#b2bec3" font-size="44.5">4</text></g><g id="E5"><rect x="458" y="404" width="125" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="520" y="463" fill="#636e72" font-size="44.5">7</text></g><g id="H4_comment"><line x1="874.5" y1="404" x2="874.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="874.5" y="493.0" fill="#2d3436" font-size="44.5"><tspan x="874.5" y="493.0" dx="">X.ZOEKEN()</tspan><tspan x="874.5" y="546.4" dx="">functie</tspan></text></g><g id="C6"><rect x="126" y="505" width="161" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="206" y="564" fill="#636e72" font-size="44.5">EY</text></g><g id="D6"><rect x="299" y="505" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="564" fill="#b2bec3" font-size="44.5">5</text></g><g id="E6"><rect x="458" y="505" width="125" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="520" y="564" fill="#636e72" font-size="44.5">7</text></g><g id="C7"><rect x="126" y="606" width="161" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="206" y="665" fill="#636e72" font-size="44.5">DvW</text></g><g id="D7"><rect x="299" y="606" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="665" fill="#b2bec3" font-size="44.5">5</text></g><g id="E7"><rect x="458" y="606" width="125" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="520" y="665" fill="#636e72" font-size="44.5">7</text></g><g id="C8_comment"><line x1="114" y1="751.5" x2="69.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="114" y="766" fill="#e17055" font-size="44.5" text-anchor="end" dx="-55.625">Gevonden!</text></g><g id="C8"><rect x="126" y="707" width="161" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="206" y="766" fill="#636e72" font-size="44.5">AvdV</text></g><g id="D8"><rect x="299" y="707" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="766" fill="#b2bec3" font-size="44.5">6</text></g><g id="E8"><rect x="458" y="707" width="125" height="89" fill="#0984e3" stroke="#636e72" stroke-width="4"></rect><text x="520" y="766" fill="#ffffff" font-size="44.5">9</text></g><g id="E8_comment"><line x1="595" y1="751.5" x2="639.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="595" y="766" fill="#e17055" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="595.0" y="766.0" dx="55.625">Cijfer dat</tspan><tspan x="595.0" y="819.4" dx="55.625">we zochten</tspan></text></g><g id="C9"><rect x="126" y="808" width="161" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="206" y="867" fill="#636e72" font-size="44.5">FM</text></g><g id="D9"><rect x="299" y="808" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="867" fill="#b2bec3" font-size="44.5">6</text></g><g id="E9"><rect x="458" y="808" width="125" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="520" y="867" fill="#636e72" font-size="44.5">8</text></g><g id="C10"><rect x="126" y="909" width="161" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="206" y="968" fill="#636e72" font-size="44.5">RvC</text></g><g id="D10"><rect x="299" y="909" width="147" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="372" y="968" fill="#b2bec3" font-size="44.5">6</text></g><g id="E10"><rect x="458" y="909" width="125" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="520" y="968" fill="#636e72" font-size="44.5">7</text></g></g></svg>
+                </div>
+                <h3 class="font-semibold leading-tight text-lg pt-4 pb-2 md:w-3/5 w-3/4 pl-6 md:pl-4">X.ZOEKEN-functie (XLOOKUP)</h3>
+            </a>
+        <!-- <div class=""></div> -->
+    </div>
+</div>
+
+<div class="max-w-5xl px-6 text-warmGray-900 mx-auto gap-y-4 grid grid-cols-2 font-sans py-12">
+    <div class="flex justify-between col-span-2 px-6 items-end">
+        <h2 class="text-2xl md:text-4xl font-semibold">Handige formules</h2>
+        <div class="text-xl md:text-2xl pr-1 font-semibold"><a class=" hover:text-warmGray-500" href="formules/index.html">Alle formules ></a></div>
+    </div>
+    <div class="max-w-3xl col-span-2 px-6 text-lg text-warmGray-500 font-normal">
+        Voor veel taken heb je een slimme combinatie van Excel-functies nodig.
+    </div>
+    <div class="col-span-2 md:col-span-1 md:pt-4 gap-y-4">
+        <a class="flex hover:bg-warmGray-100 rounded-xl items-center px-4 py-2 md:py-4" href="formules/cel-bevat-bepaalde-tekst/index.html">
+            <div class="md:w-2/5 w-1/4 relative rounded-xl overflow-hidden border-2 border-gray-300">
+                <svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="Kijken_of_cel_woord_bevat" alt="Kijken_of_cel_woord_bevat" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="B1"><circle cx="52.5" cy="44.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="52" y="59" fill="#636e72" font-size="44.5">1</text></g><g id="C1"><rect x="105" y="0" width="138" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="174" y="59" fill="#636e72" font-size="44.5">Sr.</text></g><g id="C1_comment"><line x1="255" y1="44.5" x2="299.5" y2="44.5" stroke-width="4" stroke="#e17055"></line><text x="255" y="59" fill="#e17055" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="255.0" y="59.0" dx="55.625">Zoek naar "Sr."</tspan><tspan x="255.0" y="112.4" dx="55.625">(NIET hoofdlettergevoelig)</tspan></text></g><g id="C3"><rect x="105" y="202" width="138" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="174" y="261" fill="#b2bec3" font-size="44.5">Naam</text></g><g id="D3"><rect x="255" y="202" width="195" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="352" y="261" fill="#636e72" font-size="44.5">Functie</text></g><g id="E3"><rect x="462" y="202" width="195" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="559" y="261" fill="#636e72" font-size="44.5">"Sr." of "sr."</text></g><g id="C4"><rect x="105" y="303" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="362" fill="#b2bec3" font-size="44.5">MS</text></g><g id="D4"><rect x="255" y="303" width="195" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="352" y="362" fill="#636e72" font-size="44.5">Jr. xyz</text></g><g id="E4"><rect x="462" y="303" width="195" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="559" y="362" fill="#ffffff" font-size="44.5">Nee</text></g><g id="C5"><rect x="105" y="404" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="463" fill="#b2bec3" font-size="44.5">LvG</text></g><g id="D5"><rect x="255" y="404" width="195" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="352" y="463" fill="#636e72" font-size="44.5">Sr. abc</text></g><g id="E5"><rect x="462" y="404" width="195" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="559" y="463" fill="#ffffff" font-size="44.5">Ja</text></g><g id="B6"><circle cx="52.5" cy="549.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="52" y="564" fill="#636e72" font-size="44.5">2</text></g><g id="C6"><rect x="105" y="505" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="564" fill="#b2bec3" font-size="44.5">EtH</text></g><g id="D6"><rect x="255" y="505" width="195" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="352" y="564" fill="#636e72" font-size="44.5">Sr. xyz</text></g><g id="E6"><rect x="462" y="505" width="195" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="559" y="564" fill="#ffffff" font-size="44.5">Ja</text></g><g id="E6_comment"><line x1="669" y1="549.5" x2="713.5" y2="549.5" stroke-width="4" stroke="#2d3436"></line><text x="669" y="564" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="669.0" y="564.0" dx="55.625">Formule met</tspan><tspan x="669.0" y="617.4" dx="55.625">ALS, ISGETAL</tspan><tspan x="669.0" y="670.8" dx="55.625">en VIND.SPEC</tspan></text></g><g id="C7"><rect x="105" y="606" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="665" fill="#b2bec3" font-size="44.5">AS</text></g><g id="D7"><rect x="255" y="606" width="195" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="352" y="665" fill="#636e72" font-size="44.5">Jr. abc</text></g><g id="E7"><rect x="462" y="606" width="195" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="559" y="665" fill="#ffffff" font-size="44.5">Nee</text></g><g id="C8"><rect x="105" y="707" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="766" fill="#b2bec3" font-size="44.5">JvhS</text></g><g id="D8"><rect x="255" y="707" width="195" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="352" y="766" fill="#636e72" font-size="44.5">def jr.</text></g><g id="E8"><rect x="462" y="707" width="195" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="559" y="766" fill="#ffffff" font-size="44.5">Nee</text></g><g id="C9"><rect x="105" y="808" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="867" fill="#b2bec3" font-size="44.5">PB</text></g><g id="D9"><rect x="255" y="808" width="195" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="352" y="867" fill="#636e72" font-size="44.5">def sr.</text></g><g id="E9"><rect x="462" y="808" width="195" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="559" y="867" fill="#ffffff" font-size="44.5">Ja</text></g><g id="E9_comment"><line x1="669" y1="852.5" x2="713.5" y2="852.5" stroke-width="4" stroke="#b2bec3"></line><text x="669" y="867" fill="#b2bec3" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="669.0" y="867.0" dx="55.625">Formule is NIET</tspan><tspan x="669.0" y="920.4" dx="55.625">hoofdlettergevoelig</tspan><tspan x="669.0" y="973.8" dx="55.625">("sr." ook meegenomen)</tspan></text></g><g id="C10"><rect x="105" y="909" width="138" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="968" fill="#b2bec3" font-size="44.5">EvdS</text></g><g id="D10"><rect x="255" y="909" width="195" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="352" y="968" fill="#636e72" font-size="44.5">CEO</text></g><g id="E10"><rect x="462" y="909" width="195" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="559" y="968" fill="#ffffff" font-size="44.5">Nee</text></g></g></svg>
+            </div>
+            <h3 class="font-semibold leading-tight text-lg pt-4 pb-2 md:w-3/5 w-3/4 pl-6 md:pl-4">Cel bevat bepaalde tekst</h3>
+        </a>
+        <a class="flex hover:bg-warmGray-100 rounded-xl items-center px-4 py-2 md:py-4" href="formules/eerste-letter-hoofdletter/index.html">
+            <div class="md:w-2/5 w-1/4 relative rounded-xl overflow-hidden border-2 border-gray-300">
+                <svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="Eerste-letter-van-tekst-naar-hoofdletter-HOOFDLETTERS-LINKS-DEEL-LENGTE" alt="Eerste-letter-van-tekst-naar-hoofdletter-HOOFDLETTERS-LINKS-DEEL-LENGTE" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="C2"><rect x="124" y="101" width="320" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="284" y="160" fill="#636e72" font-size="44.5">Origineel</text></g><g id="D2"><rect x="456" y="101" width="320" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="616" y="160" fill="#636e72" font-size="44.5">Na formule</text></g><g id="C3"><rect x="124" y="202" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="261" fill="#636e72" font-size="44.5">Amsterdam</text></g><g id="D3"><rect x="456" y="202" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="261" fill="#ffffff" font-size="44.5">Amsterdam</text></g><g id="C4"><rect x="124" y="303" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="362" fill="#636e72" font-size="44.5">amsterdam</text></g><g id="D4"><rect x="456" y="303" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="362" fill="#ffffff" font-size="44.5">Amsterdam</text></g><g id="B5"><circle cx="62.0" cy="448.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="62" y="463" fill="#636e72" font-size="44.5">1</text></g><g id="C5"><rect x="124" y="404" width="320" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="284" y="463" fill="#636e72" font-size="44.5">kleine letters</text></g><g id="D5"><rect x="456" y="404" width="320" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="616" y="463" fill="#ffffff" font-size="44.5">Kleine letters</text></g><g id="D5_comment"><line x1="788" y1="448.5" x2="832.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="788" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="788.0" y="463.0" dx="55.625">Formule met</tspan><tspan x="788.0" y="516.4" dx="55.625">HOOFDLETTERS,</tspan><tspan x="788.0" y="569.8" dx="55.625">LINKS, DEEL</tspan><tspan x="788.0" y="623.2" dx="55.625">en LENGTE</tspan></text></g><g id="C6"><rect x="124" y="505" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="564" fill="#636e72" font-size="44.5">123 en woord</text></g><g id="D6"><rect x="456" y="505" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="564" fill="#ffffff" font-size="44.5">123 en woord</text></g><g id="C7"><rect x="124" y="606" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="665" fill="#636e72" font-size="44.5">ABC</text></g><g id="D7"><rect x="456" y="606" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="665" fill="#ffffff" font-size="44.5">ABC</text></g></g></svg>
+            </div>
+            <h3 class="font-semibold leading-tight text-lg pt-4 pb-2 md:w-3/5 w-3/4 pl-6 md:pl-4">Eerste letter naar hoofdletter</h3>
+        </a>
+    <!-- <div class=""></div> -->
+</div>
+<div class="col-span-2 md:col-span-1 md:pt-4 gap-y-4">
+    <a class="flex hover:bg-warmGray-100 rounded-xl items-center px-4 py-2 md:py-4" href="formules/alleen-eerste-letter-hoofdletter/index.html">
+        <div class="md:w-2/5 w-1/4 relative rounded-xl overflow-hidden border-2 border-gray-300">
+            <svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="Alleen-eerste-letter-hoofdletter-HOOFDLETTERS-KLEINE-LETTERS-LINKS-RECHTS-LENGTE" alt="Alleen-eerste-letter-hoofdletter-HOOFDLETTERS-KLEINE-LETTERS-LINKS-RECHTS-LENGTE" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="C2"><rect x="124" y="101" width="320" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="284" y="160" fill="#636e72" font-size="44.5">Origineel</text></g><g id="D2"><rect x="456" y="101" width="320" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="616" y="160" fill="#636e72" font-size="44.5">Na formule</text></g><g id="C3"><rect x="124" y="202" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="261" fill="#636e72" font-size="44.5">AMSTERDAM</text></g><g id="D3"><rect x="456" y="202" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="261" fill="#ffffff" font-size="44.5">Amsterdam</text></g><g id="C4"><rect x="124" y="303" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="362" fill="#636e72" font-size="44.5">amsterdam</text></g><g id="D4"><rect x="456" y="303" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="362" fill="#ffffff" font-size="44.5">Amsterdam</text></g><g id="B5"><circle cx="62.0" cy="448.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="62" y="463" fill="#636e72" font-size="44.5">1</text></g><g id="C5"><rect x="124" y="404" width="320" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="284" y="463" fill="#636e72" font-size="44.5">kleine letters</text></g><g id="D5"><rect x="456" y="404" width="320" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="616" y="463" fill="#ffffff" font-size="44.5">Kleine letters</text></g><g id="D5_comment"><line x1="788" y1="448.5" x2="832.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="788" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="788.0" y="463.0" dx="55.625">Formule met</tspan><tspan x="788.0" y="516.4" dx="55.625">HOOFDLETTERS,</tspan><tspan x="788.0" y="569.8" dx="55.625">KLEINE.LETTERS,</tspan><tspan x="788.0" y="623.2" dx="55.625">LINKS, RECHTS</tspan><tspan x="788.0" y="676.6" dx="55.625">en LENGTE</tspan></text></g><g id="C6"><rect x="124" y="505" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="564" fill="#636e72" font-size="44.5">123 EN woord</text></g><g id="D6"><rect x="456" y="505" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="564" fill="#ffffff" font-size="44.5">123 en woord</text></g><g id="C7"><rect x="124" y="606" width="320" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="284" y="665" fill="#636e72" font-size="44.5">AbCdE</text></g><g id="D7"><rect x="456" y="606" width="320" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="616" y="665" fill="#ffffff" font-size="44.5">Abcde</text></g></g></svg>
+        </div>
+        <h3 class="font-semibold leading-tight text-lg pt-4 pb-2 md:w-3/5 w-3/4 pl-6 md:pl-4">Alleen eerste letter naar hoofdletter</h3>
+    </a>
+    <a class="flex hover:bg-warmGray-100 rounded-xl items-center px-4 py-2 md:py-4" href="formules/als-minimaal-aantal-keer/index.html">
+        <div class="md:w-2/5 w-1/4 relative rounded-xl overflow-hidden border-2 border-gray-300">
+            <svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="Als-minimaal-aantal-keer" alt="Als-minimaal-aantal-keer" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="A2"><circle cx="41.5" cy="145.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="41" y="160" fill="#636e72" font-size="44.5">2</text></g><g id="B2"><rect x="95" y="101" width="158" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="174" y="160" fill="#636e72" font-size="44.5">Min</text></g><g id="C2"><rect x="265" y="101" width="108" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="319" y="160" fill="#636e72" font-size="44.5">3</text></g><g id="B4"><rect x="95" y="303" width="158" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="174" y="362" fill="#b2bec3" font-size="44.5">Student</text></g><g id="C4"><rect x="265" y="303" width="108" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="319" y="362" fill="#636e72" font-size="44.5">Les 1</text></g><g id="D4"><rect x="385" y="303" width="108" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="439" y="362" fill="#636e72" font-size="44.5">Les 2</text></g><g id="E4"><rect x="505" y="303" width="108" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="559" y="362" fill="#636e72" font-size="44.5">Les 3</text></g><g id="F4"><rect x="625" y="303" width="108" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="679" y="362" fill="#636e72" font-size="44.5">Les 4</text></g><g id="G4"><rect x="745" y="303" width="216" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="853" y="362" fill="#636e72" font-size="44.5">Status</text></g><g id="B5"><rect x="95" y="404" width="158" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="463" fill="#b2bec3" font-size="44.5">YvA</text></g><g id="C5"><rect x="265" y="404" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="319" y="463" fill="#636e72" font-size="44.5">x</text></g><g id="D5"><rect x="385" y="404" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect></g><g id="E5"><rect x="505" y="404" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="559" y="463" fill="#636e72" font-size="44.5">x</text></g><g id="F5"><rect x="625" y="404" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="679" y="463" fill="#636e72" font-size="44.5">x</text></g><g id="G5"><rect x="745" y="404" width="216" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="853" y="463" fill="#ffffff" font-size="44.5">OK</text></g><g id="B6"><rect x="95" y="505" width="158" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="564" fill="#b2bec3" font-size="44.5">EY</text></g><g id="C6"><rect x="265" y="505" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="319" y="564" fill="#636e72" font-size="44.5">x</text></g><g id="D6"><rect x="385" y="505" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="439" y="564" fill="#636e72" font-size="44.5">x</text></g><g id="E6"><rect x="505" y="505" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect></g><g id="F6"><rect x="625" y="505" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="679" y="564" fill="#636e72" font-size="44.5">x</text></g><g id="G6"><rect x="745" y="505" width="216" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="853" y="564" fill="#ffffff" font-size="44.5">OK</text></g><g id="A7"><circle cx="41.5" cy="650.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="41" y="665" fill="#636e72" font-size="44.5">1</text></g><g id="B7"><rect x="95" y="606" width="158" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="665" fill="#b2bec3" font-size="44.5">MvB</text></g><g id="C7"><rect x="265" y="606" width="108" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="319" y="665" fill="#636e72" font-size="44.5">x</text></g><g id="D7"><rect x="385" y="606" width="108" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="439" y="665" fill="#636e72" font-size="44.5">x</text></g><g id="E7"><rect x="505" y="606" width="108" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect></g><g id="F7"><rect x="625" y="606" width="108" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect></g><g id="G7"><rect x="745" y="606" width="216" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="853" y="665" fill="#ffffff" font-size="44.5">Strafwerk</text></g><g id="B8"><rect x="95" y="707" width="158" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="766" fill="#b2bec3" font-size="44.5">DvW</text></g><g id="C8"><rect x="265" y="707" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect></g><g id="D8"><rect x="385" y="707" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="439" y="766" fill="#636e72" font-size="44.5">x</text></g><g id="E8"><rect x="505" y="707" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect></g><g id="F8"><rect x="625" y="707" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect></g><g id="G8"><rect x="745" y="707" width="216" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="853" y="766" fill="#ffffff" font-size="44.5">Strafwerk</text></g><g id="B9"><rect x="95" y="808" width="158" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="174" y="867" fill="#b2bec3" font-size="44.5">FM</text></g><g id="C9"><rect x="265" y="808" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="319" y="867" fill="#636e72" font-size="44.5">x</text></g><g id="D9"><rect x="385" y="808" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="439" y="867" fill="#636e72" font-size="44.5">x</text></g><g id="E9"><rect x="505" y="808" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="559" y="867" fill="#636e72" font-size="44.5">x</text></g><g id="F9"><rect x="625" y="808" width="108" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="679" y="867" fill="#636e72" font-size="44.5">x</text></g><g id="G9"><rect x="745" y="808" width="216" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="853" y="867" fill="#ffffff" font-size="44.5">OK</text></g></g></svg>
+        </div>
+        <h3 class="font-semibold leading-tight text-lg pt-4 pb-2 md:w-3/5 w-3/4 pl-6 md:pl-4">Als minimaal aantal keer voorkomt</h3>
+    </a>
+<!-- <div class=""></div> -->
+</div>
+</div>
+
+<!-- <div class="max-w-5xl text-warmGray-900 mx-auto gap-y-4 gap-x-10  prose-xl grid grid-cols-2">
+    <div class="flex justify-between col-span-2 px-6">
+        <div class="text-2xl md:text-3xl font-semibold">Meest populaire functies</div>
+        <div class="md:text-2xl pr-1"><a class=" hover:text-warmGray-500" href="functies/index.html">Alle functies ></a></div>
+    </div>
+
+    <div class="col-span-2 md:col-span-1 pt-8 px-6 pb-4 hover:bg-warmGray-100 rounded-xl">
+        <a class="" href="functies/als-functie/index.html">
+            <div class="relative rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="ALS-functie" alt="ALS-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="D3"><circle cx="301.5" cy="246.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="301" y="261" fill="#636e72" font-size="44.5">1</text></g><g id="C4"><rect x="101" y="303" width="116" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="159" y="362" fill="#b2bec3" font-size="44.5">Dag</text></g><g id="D4"><rect x="229" y="303" width="145" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="301" y="362" fill="#636e72" font-size="44.5">Temp</text></g><g id="E4"><rect x="386" y="303" width="145" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="458" y="362" fill="#b2bec3" font-size="44.5">Regen</text></g><g id="G4"><rect x="632" y="303" width="328" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="796" y="362" fill="#636e72" font-size="44.5">Mening</text></g><g id="C5"><rect x="101" y="404" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="463" fill="#b2bec3" font-size="44.5">1</text></g><g id="D5"><rect x="229" y="404" width="145" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="301" y="463" fill="#636e72" font-size="44.5">15</text></g><g id="E5"><rect x="386" y="404" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="463" fill="#b2bec3" font-size="44.5">11</text></g><g id="G5"><rect x="632" y="404" width="328" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="796" y="463" fill="#ffffff" font-size="44.5">Niet warm</text></g><g id="G5_comment"><line x1="972" y1="448.5" x2="1016.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="972" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625">ALS()-functie</text></g><g id="C6"><rect x="101" y="505" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="564" fill="#b2bec3" font-size="44.5">2</text></g><g id="D6"><rect x="229" y="505" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="564" fill="#636e72" font-size="44.5">18</text></g><g id="E6"><rect x="386" y="505" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="564" fill="#b2bec3" font-size="44.5">0</text></g><g id="G6"><rect x="632" y="505" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="564" fill="#ffffff" font-size="44.5">Niet warm</text></g><g id="C7"><rect x="101" y="606" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="665" fill="#b2bec3" font-size="44.5">3</text></g><g id="D7"><rect x="229" y="606" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="665" fill="#636e72" font-size="44.5">21</text></g><g id="E7"><rect x="386" y="606" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="665" fill="#b2bec3" font-size="44.5">1</text></g><g id="G7"><rect x="632" y="606" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="665" fill="#ffffff" font-size="44.5">Warm</text></g><g id="C8"><rect x="101" y="707" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="766" fill="#b2bec3" font-size="44.5">4</text></g><g id="D8"><rect x="229" y="707" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="766" fill="#636e72" font-size="44.5">22</text></g><g id="E8"><rect x="386" y="707" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="766" fill="#b2bec3" font-size="44.5">12</text></g><g id="G8"><rect x="632" y="707" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="766" fill="#ffffff" font-size="44.5">Warm</text></g><g id="C9"><rect x="101" y="808" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="867" fill="#b2bec3" font-size="44.5">5</text></g><g id="D9"><rect x="229" y="808" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="867" fill="#636e72" font-size="44.5">17</text></g><g id="E9"><rect x="386" y="808" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="867" fill="#b2bec3" font-size="44.5">0</text></g><g id="G9"><rect x="632" y="808" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="867" fill="#ffffff" font-size="44.5">Niet warm</text></g></g></svg></div>
+            <div class="pt-2 md:pt-4 pb-1 md:pb-2 font-semibold">ALS-functie</div>
+            <div class="text-lg text-warmGray-600 font-normal">Beschrijving met heel veel tekst, en nog meer tekst, mijn hemel</div>
+        </a>
+    </div>
+    <div class="col-span-2 md:col-span-1 pt-8 px-6 pb-4 hover:bg-warmGray-100 rounded-xl">
+        <a class="" href="functies/als-functie/index.html">
+            <div class="relative rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="VERT.ZOEKEN-functie" alt="VERT.ZOEKEN-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="C1"><rect x="158" y="0" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="235" y="59" fill="#636e72" font-size="44.5">Student</text></g><g id="D1"><rect x="325" y="0" width="107" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="378" y="59" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="B2"><circle cx="95.5" cy="145.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="95" y="160" fill="#636e72" font-size="44.5">1</text></g><g id="C2"><rect x="158" y="101" width="155" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="235" y="160" fill="#636e72" font-size="44.5">DvW</text></g><g id="D2"><rect x="325" y="101" width="107" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="378" y="160" fill="#ffffff" font-size="44.5">7</text></g><g id="D2_comment"><line x1="444" y1="145.5" x2="488.5" y2="145.5" stroke-width="4" stroke="#2d3436"></line><text x="444" y="160" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="444.0" y="160.0" dx="55.625">VERT.ZOEKEN()</tspan><tspan x="444.0" y="213.4" dx="55.625">functie</tspan></text></g><g id="G3"><circle cx="679.0" cy="246.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="679" y="261" fill="#636e72" font-size="44.5">3</text></g><g id="H3"><circle cx="862.5" cy="246.5" r="35.6" fill="#a29bfe" stroke="#636e72" stroke-width="4"></circle><text x="862" y="261" fill="#636e72" font-size="44.5">4</text></g><g id="C4"><rect x="158" y="303" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="235" y="362" fill="#636e72" font-size="44.5">Student</text></g><g id="D4"><rect x="325" y="303" width="107" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="378" y="362" fill="#636e72" font-size="44.5">#Les</text></g><g id="E4"><rect x="444" y="303" width="114" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="501" y="362" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="G4"><rect x="615" y="303" width="128" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="679" y="362" fill="#636e72" font-size="44.5">Kolom</text></g><g id="H4"><rect x="755" y="303" width="215" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="862" y="362" fill="#636e72" font-size="44.5">Benaderen</text></g><g id="B5"><circle cx="95.5" cy="448.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="95" y="463" fill="#636e72" font-size="44.5">2</text></g><g id="C5"><rect x="158" y="404" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="463" fill="#636e72" font-size="44.5">LW</text></g><g id="D5"><rect x="325" y="404" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="463" fill="#636e72" font-size="44.5">7</text></g><g id="E5"><rect x="444" y="404" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="463" fill="#636e72" font-size="44.5">8</text></g><g id="G5"><rect x="615" y="404" width="128" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="679" y="463" fill="#636e72" font-size="44.5">3</text></g><g id="H5"><rect x="755" y="404" width="215" height="89" fill="#a29bfe" stroke="#636e72" stroke-width="4"></rect><text x="862" y="463" fill="#636e72" font-size="44.5">ONWAAR</text></g><g id="C6"><rect x="158" y="505" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="564" fill="#636e72" font-size="44.5">MvB</text></g><g id="D6"><rect x="325" y="505" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="564" fill="#636e72" font-size="44.5">4</text></g><g id="E6"><rect x="444" y="505" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="564" fill="#636e72" font-size="44.5">7</text></g><g id="H5_comment"><line x1="862.5" y1="505" x2="862.5" y2="549.5" stroke-width="4" stroke="#e17055"></line><text x="862.5" y="594.0" fill="#e17055" font-size="44.5"><tspan x="862.5" y="594.0" dx="">We willen exact,</tspan><tspan x="862.5" y="647.4" dx="">i.p.v. benadering</tspan></text></g><g id="C7"><rect x="158" y="606" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="665" fill="#636e72" font-size="44.5">EY</text></g><g id="D7"><rect x="325" y="606" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="665" fill="#636e72" font-size="44.5">5</text></g><g id="E7"><rect x="444" y="606" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="665" fill="#636e72" font-size="44.5">7</text></g><g id="C8_comment"><line x1="146" y1="751.5" x2="101.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="146" y="766" fill="#e17055" font-size="44.5" text-anchor="end" dx="-55.625"><tspan x="146.0" y="766.0" dx="-55.625">Match in</tspan><tspan x="146.0" y="819.4" dx="-55.625">1e kolom</tspan></text></g><g id="C8"><rect x="158" y="707" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="235" y="766" fill="#636e72" font-size="44.5">DvW</text></g><g id="D8"><rect x="325" y="707" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="766" fill="#636e72" font-size="44.5">5</text></g><g id="E8"><rect x="444" y="707" width="114" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="501" y="766" fill="#636e72" font-size="44.5">7</text></g><g id="E8_comment"><line x1="570" y1="751.5" x2="614.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="570" y="766" fill="#e17055" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="570.0" y="766.0" dx="55.625">Resultaat</tspan><tspan x="570.0" y="819.4" dx="55.625">uit 3e kolom</tspan></text></g><g id="C9"><rect x="158" y="808" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="867" fill="#636e72" font-size="44.5">AvdV</text></g><g id="D9"><rect x="325" y="808" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="867" fill="#636e72" font-size="44.5">6</text></g><g id="E9"><rect x="444" y="808" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="867" fill="#636e72" font-size="44.5">9</text></g><g id="C10"><rect x="158" y="909" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="968" fill="#636e72" font-size="44.5">FM</text></g><g id="D10"><rect x="325" y="909" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="968" fill="#636e72" font-size="44.5">6</text></g><g id="E10"><rect x="444" y="909" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="968" fill="#636e72" font-size="44.5">8</text></g></g></svg></div>
+            <div class="pt-2 md:pt-4 md:pb-1 font-semibold leading-normal">Verticaal zoeken met de VERT.ZOEKEN-functie</div>
+            <div class="text-lg text-warmGray-600 font-normal">Beschrijving met heel veel tekst, en nog meer tekst, mijn hemel</div>
+        </a>
+    </div>
+</div> -->
+
+<!-- VERWIJDEREN -->
+
+<!-- <div class="mx-auto py-32">
+<div class="max-w-5xl bg-green-100 prose prose-lg mx-auto text-center px-4">
+    <h2 class="">Excel wordt nu echt leuk</h2>
+    <p class="-mt-4 leading-normal bg-green-200 max-w-lg mx-auto text-xl">
+        A + B + C = 🚀
+    </p>
+</div>
+</div> -->
+
+<!-- lead magnet -->
+
+<!-- Logos -->
+
+<!-- About me -->
+
+<!-- Three more ways I can help you 
+    1. lead magnet
+    2. deep-dive video courses
+    3. live cursus
+    4. templates
+-->
+
+
+
+<!-- Recente tweets/social -->
+
+<!-- lead magnet 2 -->
+
+<!-- FAQ -->
+
+<!-- Is Excel leren moeilijk?
+
+Je kunt de basis van Excel in een aantal uur leren. Maar alleen als je focust op de meestgebruikte functies en shortcuts.
+
+Hoe lang duurt het om Excel te leren?
+
+In een dag kun je al een prima basisniveau krijgen. Maar alleen als je een geoptimaliseerde basiscursus Excel volgt. Deze kennis moet je dan wel onderhouden door ermee te blijven werken natuurlijk.
+
+Wat is de meeste effectieve manier om Excel te leren?
+
+Als je helemaal geen ervaring hebt, dan wil je een goede start hebben. Je wilt er zeker van zijn dat je je focust op de meestgebruikte functies en shortcuts.
+Daarvoor is een korte cursus het meest efficiënt; een docent heeft voor jou al dit werk al gedaan.
+
+Kun je Excel leren met zelfstudie?
+
+Absoluut, zeker de basis (van de basis). Maar het is niet de meest efficiënte manier van je tijd besteden. Op een bepaald moment zul je een plateau bereiken.
+
+Waar kan ik het beste mee beginnen als ik Excel wil leren?
+
+Wat kun je allemaal met Excel? -->
+
+<!-- GUIDES -->
+
+<!-- FUNCTIES -->
+
+<!-- HANDIGE FORMULES -->
+<!-- <div class="bg-warmGray-100">
+    <div class="prose prose-lg mx-auto px-6 max-w-5xl">
+
+        
+        <div class="px-4 pt-1 pb-2 rounded-xl text-center">
+            <h3>3 populaire functies:</h3>
+            <p class="text-sm text-warmGray-500 -mt-2">(Klik voor details en voorbeelden)</p>
+            <div class="flex flex-wrap justify-center leading-9">
+                
+                <a class="group no-underline" href="functies/als-functie/index.html">
+                    <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                        ALS
+                        
+                    </span>
+                    
+                </a>
+                
+                <a class="group no-underline" href="functies/vert-zoeken-functie/index.html">
+                    <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                        VERT.ZOEKEN
+                        
+                    </span>
+                    
+                </a>
+                
+                <a class="group no-underline" href="functies/x-zoeken-functie/index.html">
+                    <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                        X.ZOEKEN
+                        
+                        <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
+                        
+                    </span>
+                    
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="max-w-xl mx-auto toc pb-4">
+            <h3>Meer lijsten met Excel-functies:</h3>
+            <ul>
+                <li>
+                    <a href="functies/index.html">474 Excel functies per categorie, met beschrijving en vertaling</a>
+                </li>
+                <li>
+                    <a href="functies/vertalingen/nederlands-engels/index.html">Vertaling Excel-functies Nederlands-Engels, A-Z</a>
+                </li>
+                <li>
+                    <a href="functies/vertalingen/engels-nederlands/index.html">Vertaling Excel-functies Engels-Nederlands, A-Z</a>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+</div> -->
+
+<!-- Cursussen via banner bovenaan, en in menu en ways I can help-->
+
+    
+
+
+        <!-- </div> -->
+        
+    </div>
+
+    <!-- <footer class="footer relative bg-gray-700 mt-12 pt-6">
+    <div class="relative max-w-xl sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+    
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 md:gap-8 mt-6 px-6">
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 1</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 2</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 3</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. <a class="underline" href="#">Learn more</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-6">
+        <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-6">
+                <p class="text-sm text-gray-300 font-bold mb-2 font-sans">
+                    Excel in een dag © Tristan Bains
+                </p>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
+
+
+<footer class="border-t-2 bg-white border-white mt-12 px-2">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 py-6 text-warmGray-700 font-light gap-y-4">
+        <div class="mx-auto md:mr-auto ">
+            <p><span class="font-semibold">Excel in een dag ©</span> Tristan Bains</p>
+            <p>KvK: 92044867</p>
+        </div>
+        <!-- <div class=" text-center">
+            <p>KVK: 92044867</p>
+        </div> -->
+        <div class="md:ml-auto mx-auto my-auto flex gap-8">
+            <!-- <p>KVK: 92044867</p> -->
+            <!-- <a class="hover:text-blue-700 hover:text-underline" href="">Contact</a> -->
+            <div class="flex gap-2">
+                
+                <!-- LINKEDIN: -->
+                <a href="https://www.linkedin.com/in/tristanbains/">
+                    
+<svg class="h-8 w-8 hover:text-blue-600 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z"></path>
+    <!-- <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z" fill="#758CA3"></path> -->
+</svg>
+
+                </a>
+                
+                <!-- <a>
+                    
+<svg class="h-6 w-6 text-red-700 hover:text-red-500 fill-current" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <path d="M232,128a104.02405,104.02405,0,0,1-132.74316,99.957l9.8164-39.26513A50.31473,50.31473,0,0,0,136,196c35.29,0,64-30.50488,64-68A72,72,0,1,0,61.2373,155.00393,8.00011,8.00011,0,0,0,76.06836,149,56.00735,56.00735,0,1,1,184,128c0,28.67285-21.53271,52-48,52-10.49072,0-17.78076-3.66064-22.75049-8.01269l14.51172-58.04688a8.00012,8.00012,0,0,0-15.52246-3.88086L84.17822,222.30178A103.99416,103.99416,0,1,1,232,128Z"></path>
+</svg>
+
+                </a> -->
+                <!-- <a href="https://twitter.com/tristanbains">
+                    <div class="bg-warmGray-900 hover:bg-warmGray-700 flex rounded-lg px-1 h-6">
+                        <div class="my-auto pl-1">
+<svg class="h-3 w-3 text-white fill-current" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <path xmlns="http://www.w3.org/2000/svg" d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
+</svg>
+</div>
+                        <div class="text-white font-semibold my-auto pl-2 pr-1 text-sm">@TristanBains</div>
+                    </div>
+                </a> -->
+            </div>
+            
+            <!-- <p class="">
+                
+
+            </p> -->
+            
+        </div>
+    </div>
+
+</footer>
+
+	<div id="consentBox" class="p-10 mx-2 md:mx-0 md:w-screen fixed bg-warmGray-700 text-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
+    <div class="max-w-3xl mx-auto prose-lg leading-snug">
+        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
+        <div class="flex pt-4 pb-2 gap-x-4">
+            <button id="consentNo" class="px-6 py-2 font-semibold border-2 border-warmGray-300 rounded-xl">Liever niet</button>
+            <button id="consentYes" class="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
+            
+        </div>
+        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
+    </div>
+
+</div>
+
+<script>
+    const consentBox = document.getElementById("consentBox");
+    const consentYes = document.getElementById("consentYes");
+    const consentNo = document.getElementById("consentNo");
+    consentYes.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","yes");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+        consentGrantedAnalyticsStorage();
+    };
+    consentNo.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","no");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+    };
+    let checkConsent = window.localStorage.getItem("excelineendag_consent");
+    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
+</script>
+    
+    <script>
+		/* Progress bar */
+		//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+		var h = document.documentElement,
+			b = document.body,
+			st = 'scrollTop',
+			sh = 'scrollHeight',
+			progress = document.querySelector('#progress'),
+			scroll;
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+		var navcontent = document.getElementById("nav-content");
+
+		document.addEventListener('scroll', function() {
+
+			/*Refresh scroll % width*/
+			scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+			progress.style.setProperty('--scroll', scroll + '%');
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 10) {
+				// header.classList.add("bg-white");
+				header.classList.add("shadow");
+				// navcontent.classList.remove("bg-gray-100");
+				// navcontent.classList.add("bg-white");
+			} else {
+				// header.classList.remove("bg-white");
+				header.classList.remove("shadow");
+				// navcontent.classList.remove("bg-white");
+				// navcontent.classList.add("bg-gray-100");
+
+			}
+
+		});
+
+
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function() {
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+		// //Javascript to toggle specific menu item
+		// document.getElementById('item1-toggle').onclick = function() {
+		// 	document.getElementById("item1-content").classList.toggle("hidden");
+		// }
+		
+
+		//Javascript to close menu item
+		window.addEventListener('click', function(e){
+    		// if (!document.getElementById('item1-content').contains(e.target) && (!document.getElementById('item1-toggle').contains(e.target))){
+			// 	document.getElementById("item1-content").classList.add("hidden");
+			// 	// alert("Clicked outside l2 and logo-menu");
+			// 	// document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
+			// 	}
+			if (!document.getElementById('nav-content').contains(e.target) && (!document.getElementById('nav-toggle').contains(e.target))){
+			document.getElementById("nav-content").classList.add("hidden");
+			// alert("Clicked outside l2 and logo-menu");
+			// document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
+			}
+		})
+	</script>
+
+</body>
+</html>

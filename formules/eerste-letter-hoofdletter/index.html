@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="nl" style="scroll-behavior: smooth;">
+<head>
+	<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+</script>    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D148HDTZQK"></script>
+<script> 
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D148HDTZQK');
+</script>
+<script>
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+</script>
+  
+    <meta charset="utf-8" />
+	<meta name="robots" content="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="../../static/images/XL.svg" />
+	<link rel="mask-icon" href="../../static/images/XL.svg" color=”#15803D" />
+	<link rel="canonical" href="https://www.excelineendag.nl/formules/eerste-letter-hoofdletter/"/>
+	<title>
+		
+			
+				Eerste letter van tekst naar hoofdletter
+			
+		
+	</title>
+	
+		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Formules", "item": "https://www.excelineendag.nl/formules/"}, {"@type": "ListItem", "position": 2, "name": "Eerste letter hoofdletter", "item": "https://www.excelineendag.nl/formules/eerste-letter-hoofdletter/"}]}, {"@type": "TechArticle", "headline": "Eerste letter van tekst naar hoofdletter", "description": "Om zeker te zijn dat de eerste letter van een cel een hoofdletter is, kun je een formule met VERVANGEN, HOOFDLETTERS en LINKS gebruiken. Gebruik hiervoor niet de BEGINLETTERS-functie.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/formules/eerste-letter-hoofdletter", "name": "Eerste letter van tekst naar hoofdletter"}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Beginner"}]}</script>
+	
+	
+		
+		<meta name="description" content="Om zeker te zijn dat de eerste letter van een cel een hoofdletter is, kun je een formule met VERVANGEN, HOOFDLETTERS en LINKS gebruiken. Gebruik hiervoor niet de BEGINLETTERS-functie."/>
+		
+	
+    <link rel="stylesheet" href="../../static/css/main.css">
+</head>
+
+
+<!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
+<body>
+	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
+		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
+		
+	</div> -->
+
+	<!-- absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white -->
+    <div id="header" class="fixed w-full z-10 top-0 bg-white">
+        <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
+        
+<!-- TO DO: Als hamburger menu open, dan hamburger veranderen in kruis -->
+<!-- TO DO: als hover dan item open -->
+<!-- TO DO: meer menu items en grid, a la explainit.nl -->
+
+
+
+
+
+<div class="w-full lg:max-w-5xl xl:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+    
+    <!-- <div class="mx-2 px-4 py-1 items-center hover:bg-warmGray-100 rounded-xl">
+        <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="../../index.html">
+            Excel in een dag <br/><span class="text-sm font-normal text-gray-500 align-top">door Tristan Bains</span>
+        </a>
+    </div> -->
+
+    <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="../../index.html">
+        <div class="mx-2 px-4 py-1 items-center hover:bg-warmGray-100 rounded-xl">
+            Excel in een dag <br/><span class="text-sm font-normal text-gray-500 align-top">door Tristan Bains</span>
+        </div>
+    </a>
+
+    
+    <!-- MENU for mobile -->
+    <div class="flex md:hidden">
+        <!-- VISIBLE LEFT TO HAMBURGER: -->
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <!-- HAMBURGER MENU: -->
+        <div class="block md:hidden pr-4">
+            <button id="nav-toggle" class="flex items-center px-3 py-2  rounded text-gray-900  hover:text-green-700  appearance-none focus:outline-none">
+                <svg class="fill-current h-8 w-8 my-2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>                
+                    <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+                </svg>
+                
+            </button>
+        </div>
+    </div>
+    <!-- MENU for lg+ -->
+    <div id="nav-content" class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block mt-2 md:mt-0 bg-white z-20 pr-4">
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="../../functies/index.html">
+                        Excel functies
+                    </a>
+                </li>
+                
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="../index.html">
+                        Handige formules
+                    </a>
+                </li>
+                
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="../../contact/index.html">
+                        Contact
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    
+</div>
+	</div>
+
+	<!-- <div class="container w-full max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto mt-20 md:mt-32 lg:mt-40 px-6"> -->
+    <div class="mt-40">
+        <!-- <div class="w-full px-4 md:px-6 text-lg text-gray-800 leading-normal font-sans"> -->
+            
+
+
+    
+    <article class="lg:col-span-2 prose prose-slate prose-lg mx-auto px-6 prose-code:text-blue-600">
+
+        
+<div>
+        <nav class="" aria-label="Breadcrumb">
+            <ul class="inline-flex items-center space-x-1 md:space-x-2 list-reset list-none bg-warmGray-100 rounded-xl px-8">
+                <li class="inline-flex items-center">
+                    <a href="../../index.html" class="no-underline inline-flex items-center text-sm font-medium text-green-700 hover:text-green-500">
+                      <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                      </svg>
+                      <span class="hidden md:block">Excel in een dag</span>
+                    </a>
+                  </li>
+                
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">></li>
+                <li>
+                    <a class="no-underline inline-flex items-center text-sm font-medium text-green-700 hover:text-green-500" href="/formules">
+                        Formules
+                    </a>
+                </li>
+                
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">></li>
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">
+                    
+                    Eerste letter hoofdletter
+                    
+                    
+                </li>
+
+            </ul>
+        </nav>
+</div>
+
+        <h1 class="font-sans ">Eerste letter van tekst naar hoofdletter</h1>
+        
+        
+            
+            <p class="-mt-6 text-gray-500 text-2xl text-bold">aBc De → ABc De</p>
+            
+        
+
+        
+        
+        
+        
+
+        
+            
+<div class="bg-warmGray-100 p-4 rounded-xl">
+    <div class="flex">
+        <div class="whitespace-nowrap mr-2">
+            <span class="font-medium text-warmGray-500 text-sm mr-2">Gebruikte functies: </span>
+        </div>
+        <div class="flex flex-wrap">
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-300 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white pointer-events-none
+                ">
+                    LINKS
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        LINKS
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Geeft als resultaat de meest linkse tekens in een tekenreeks
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">LEFT</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-300 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white pointer-events-none
+                ">
+                    HOOFDLETTERS
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        HOOFDLETTERS
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Converteert tekst naar hoofdletters
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">UPPER</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-300 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white pointer-events-none
+                ">
+                    VERVANGEN
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        VERVANGEN
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Vervangt tekens binnen een tekst
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">REPLACE</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-300 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white pointer-events-none
+                ">
+                    DEEL
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        DEEL
+                        
+                            
+                            <span class="text-xl text-yellow-300">★</span>
+                            
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Geeft als resultaat een bepaald aantal tekens van een tekenreeks vanaf de positie die u opgeeft
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">MID</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-300 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white pointer-events-none
+                ">
+                    LENGTE
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        LENGTE
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Geeft als resultaat het aantal tekens in een teksttekenreeks
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">LEN</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-300 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white pointer-events-none
+                ">
+                    BEGINLETTERS
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        BEGINLETTERS
+                        
+                            
+                            <span class="text-xl text-yellow-300">★</span>
+                            
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Zet de eerste letter van elk woord in een tekst om in een hoofdletter
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">PROPER</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+            <p>Om zeker te zijn dat de eerste letter van een cel een hoofdletter is, kun je een formule met VERVANGEN, HOOFDLETTERS en LINKS gebruiken. Gebruik hiervoor niet de BEGINLETTERS-functie.</p>
+        
+
+        
+
+        <p>Er zijn ook nog alternatieve manieren om hetzelfde te bereiken, maar deze variant is de minst ingewikkelde.</p>
+<div class="toc"><p class="pl-2 font-semibold text-warmGray-400">Inhoud van dit artikel</p><ul>
+<li><a href="#voorbeeld-met-formules">Voorbeeld met formules</a><ul>
+<li><a href="#korte-uitleg-voor-gebruikte-functies-vervangen-hoofdletters-en-links">Korte uitleg voor gebruikte functies VERVANGEN, HOOFDLETTERS en LINKS</a></li>
+</ul>
+</li>
+<li><a href="#alternatieve-formule">Alternatieve formule</a><ul>
+<li><a href="#uitleg-voor-gebruikte-functies-deel-en-lengte">Uitleg voor gebruikte functies DEEL en LENGTE</a></li>
+</ul>
+</li>
+<li><a href="#veelgestelde-vragen">Veelgestelde vragen</a><ul>
+<li><a href="#hoe-verander-ik-de-eerste-letter-van-ieder-woord-dus-niet-alleen-van-zin-in-een-hoofdletter">Hoe verander ik de eerste letter van ieder woord (dus niet alleen van zin) in een hoofdletter?</a></li>
+</ul>
+</li>
+<li><a href="#meer-artikelen">Meer artikelen</a><ul><li><a href="#form_formulas">Meer formules</a></li></ul></li></ul>
+</div>
+<h2 style="scroll-margin-top: 100px;" id="voorbeeld-met-formules">Voorbeeld met formules</h2>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="Eerste-letter-van-tekst-naar-hoofdletter-VERVANGEN-HOOFDLETTERS-LINKS" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="Eerste-letter-van-tekst-naar-hoofdletter-VERVANGEN-HOOFDLETTERS-LINKS" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="C2"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="320" x="124" y="101"></rect><text fill="#636e72" font-size="44.5" x="284" y="160">Origineel</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="320" x="456" y="101"></rect><text fill="#636e72" font-size="44.5" x="616" y="160">Na formule</text></g><g style="scroll-margin-top: 100px;" id="C3"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="202"></rect><text fill="#636e72" font-size="44.5" x="284" y="261">Amsterdam</text></g><g style="scroll-margin-top: 100px;" id="D3"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="202"></rect><text fill="#ffffff" font-size="44.5" x="616" y="261">Amsterdam</text></g><g style="scroll-margin-top: 100px;" id="C4"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="303"></rect><text fill="#636e72" font-size="44.5" x="284" y="362">amsterdam</text></g><g style="scroll-margin-top: 100px;" id="D4"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="303"></rect><text fill="#ffffff" font-size="44.5" x="616" y="362">Amsterdam</text></g><g style="scroll-margin-top: 100px;" id="B5"><circle cx="62.0" cy="448.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="62" y="463">1</text></g><g style="scroll-margin-top: 100px;" id="C5"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="404"></rect><text fill="#636e72" font-size="44.5" x="284" y="463">kleine letters</text></g><g style="scroll-margin-top: 100px;" id="D5"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="320" x="456" y="404"></rect><text fill="#ffffff" font-size="44.5" x="616" y="463">Kleine letters</text></g><g style="scroll-margin-top: 100px;" id="D5_comment"><line stroke="#2d3436" stroke-width="4" x1="788" x2="832.5" y1="448.5" y2="448.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="788" y="463"><tspan dx="55.625" x="788.0" y="463.0">Formule met</tspan><tspan dx="55.625" x="788.0" y="516.4">VERVANGEN,</tspan><tspan dx="55.625" x="788.0" y="569.8">HOOFDLETTERS</tspan><tspan dx="55.625" x="788.0" y="623.2">en LINKS</tspan></text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="505"></rect><text fill="#636e72" font-size="44.5" x="284" y="564">123 en woord</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="505"></rect><text fill="#ffffff" font-size="44.5" x="616" y="564">123 en woord</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="606"></rect><text fill="#636e72" font-size="44.5" x="284" y="665">ABC</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="606"></rect><text fill="#ffffff" font-size="44.5" x="616" y="665">ABC</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span>C5<span class="code_sep"><span class="-mr-2">; </span></span>1<span class="code_sep"><span class="-mr-2">; </span></span>1<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span><span class="code_function">LINKS</span><span class="-mr-2">( </span>C5)))<span class="code_comment">// cel D5, output: Kleine letters</span></p>
+<p>De formule bestaat in feite uit de <code>VERVANGEN</code>-functie, waarbij het 4e input argument uit een geneste functie komt.</p>
+<p>In de <code>VERVANGEN</code>-functie geef je aan dat je vanaf de eerste positie (input 2) 1 teken (input 3) wilt vervangen. Je wilt dit teken vervangen door de uitkomst van de geneste formule.</p>
+<p>De geneste formule geeft de hoofdletter van het eerste teken.</p>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span> C5<span class="code_sep"><span class="-mr-2">; </span></span> 1<span class="code_sep"><span class="-mr-2">; </span></span> 1<span class="code_sep"><span class="-mr-2">; </span></span> <span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span> <span class="code_function">LINKS</span><span class="-mr-2">( </span> C5)))<br/><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span>"kleine letters"<span class="code_sep"><span class="-mr-2">; </span></span> 1<span class="code_sep"><span class="-mr-2">; </span></span> 1<span class="code_sep"><span class="-mr-2">; </span></span> <span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span>"k"))<br/><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span>"kleine letters"<span class="code_sep"><span class="-mr-2">; </span></span> 1<span class="code_sep"><span class="-mr-2">; </span></span> 1<span class="code_sep"><span class="-mr-2">; </span></span> "K")<br/><span class="code_symbol">=</span>"Kleine letters"</p>
+<h3 style="scroll-margin-top: 100px;" id="korte-uitleg-voor-gebruikte-functies-vervangen-hoofdletters-en-links">Korte uitleg voor gebruikte functies VERVANGEN, HOOFDLETTERS en LINKS</h3>
+<p>Alleen <code>VERVANGEN</code> heeft wat meer uitleg nodig:</p>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span>"AbCdE 123 @#$"<span class="code_sep"><span class="-mr-2">; </span></span>1<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>"XXX")<span class="code_comment">// Geeft "XXXdE 123 @#$"</span><br/><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span>"AbCdE 123 @#$"<span class="code_sep"><span class="-mr-2">; </span></span>7<span class="code_sep"><span class="-mr-2">; </span></span>1<span class="code_sep"><span class="-mr-2">; </span></span>"XXX")<span class="code_comment">// Geeft "AbCdE XXX23 @#$"</span><br/><span class="code_symbol">=</span><span class="code_function">VERVANGEN</span><span class="-mr-2">( </span>"AbCdE 123 @#$"<span class="code_sep"><span class="-mr-2">; </span></span>7<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>"X")<span class="code_comment">// Geeft "AbCdE X @#$"</span><br/><span class="code_symbol">=</span><span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span>"AbCdE 123 @#$")<span class="code_comment">// Geeft "ABCDE 123 @#$"</span><br/><span class="code_symbol">=</span><span class="code_function">LINKS</span><span class="-mr-2">( </span>"AbCdE 123 @#$")<span class="code_comment">// Geeft "A"</span><br/><span class="code_symbol">=</span><span class="code_function">LINKS</span><span class="-mr-2">( </span>"AbCdE 123 @#$"<span class="code_sep"><span class="-mr-2">; </span></span>1)<span class="code_comment">// Geeft "A"</span><br/><span class="code_symbol">=</span><span class="code_function">LINKS</span><span class="-mr-2">( </span>"AbCdE 123 @#$"<span class="code_sep"><span class="-mr-2">; </span></span>8)<span class="code_comment">// Geeft "AbCdE 12"</span><br/><span class="code_symbol">=</span><span class="code_function">LINKS</span><span class="-mr-2">( </span>"AbCdE 123 @#$"<span class="code_sep"><span class="-mr-2">; </span></span>100)<span class="code_comment">// Geeft "AbCdE 123 @#$"</span></p>
+<p>Bij <code>VERVANGEN</code> hebben we 4 input argumenten nodig:</p>
+<ul>
+<li>input 1: In welke cel of waarde wil je gaan vervangen?</li>
+<li>input 2: Vanaf welke positie willen we vervangen?</li>
+<li>input 3: Hoeveel tekens willen we vervangen?</li>
+<li>input 4: Waarmee wil je die tekens vervangen?</li>
+</ul>
+<p>In het tweede voorbeeld willen we vanaf de 7e positie 1 teken vervangen door "XXX". </p>
+<p>In het derde voorbeeld willen vanaf de 7e positie 3 tekens (in dit geval "123") vervangen door "X".</p>
+<p>In beide gevallen zie je dat de lengtes van wat je wilt vervangen en waardoor je wilt vervangen, niet gelijk hoeven te zijn.</p>
+<p><code>HOOFDLETTERS</code> vervangt alle kleine letters door hoofdletters. Alle hoofdletters, symbolen en spaties blijven ongemoeid.</p>
+<p><code>LINKS</code> geeft het gewenste aantal tekens, vanaf links. Als het aantal tekens (input argument 2) niet gedefinieerd is, dan gaat de functie uit van 1 teken. Als je "te veel" tekens vraagt, dan krijg je de gehele celwaarde.</p>
+<h2 style="scroll-margin-top: 100px;" id="alternatieve-formule">Alternatieve formule</h2>
+<p>Je kunt ook een formule maken met HOOFDLETTERS, LINKS, DEEL en LENGTE:</p>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="Eerste-letter-van-tekst-naar-hoofdletter-HOOFDLETTERS-LINKS-DEEL-LENGTE" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="Eerste-letter-van-tekst-naar-hoofdletter-HOOFDLETTERS-LINKS-DEEL-LENGTE" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="C2"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="320" x="124" y="101"></rect><text fill="#636e72" font-size="44.5" x="284" y="160">Origineel</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="320" x="456" y="101"></rect><text fill="#636e72" font-size="44.5" x="616" y="160">Na formule</text></g><g style="scroll-margin-top: 100px;" id="C3"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="202"></rect><text fill="#636e72" font-size="44.5" x="284" y="261">Amsterdam</text></g><g style="scroll-margin-top: 100px;" id="D3"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="202"></rect><text fill="#ffffff" font-size="44.5" x="616" y="261">Amsterdam</text></g><g style="scroll-margin-top: 100px;" id="C4"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="303"></rect><text fill="#636e72" font-size="44.5" x="284" y="362">amsterdam</text></g><g style="scroll-margin-top: 100px;" id="D4"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="303"></rect><text fill="#ffffff" font-size="44.5" x="616" y="362">Amsterdam</text></g><g style="scroll-margin-top: 100px;" id="B5"><circle cx="62.0" cy="448.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="62" y="463">1</text></g><g style="scroll-margin-top: 100px;" id="C5"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="404"></rect><text fill="#636e72" font-size="44.5" x="284" y="463">kleine letters</text></g><g style="scroll-margin-top: 100px;" id="D5"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="320" x="456" y="404"></rect><text fill="#ffffff" font-size="44.5" x="616" y="463">Kleine letters</text></g><g style="scroll-margin-top: 100px;" id="D5_comment"><line stroke="#2d3436" stroke-width="4" x1="788" x2="832.5" y1="448.5" y2="448.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="788" y="463"><tspan dx="55.625" x="788.0" y="463.0">Formule met</tspan><tspan dx="55.625" x="788.0" y="516.4">HOOFDLETTERS,</tspan><tspan dx="55.625" x="788.0" y="569.8">LINKS, DEEL</tspan><tspan dx="55.625" x="788.0" y="623.2">en LENGTE</tspan></text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="505"></rect><text fill="#636e72" font-size="44.5" x="284" y="564">123 en woord</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="505"></rect><text fill="#ffffff" font-size="44.5" x="616" y="564">123 en woord</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#b2bec3" height="89" stroke="#636e72" stroke-width="4" width="320" x="124" y="606"></rect><text fill="#636e72" font-size="44.5" x="284" y="665">ABC</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="320" x="456" y="606"></rect><text fill="#ffffff" font-size="44.5" x="616" y="665">ABC</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span><span class="code_function">LINKS</span><span class="-mr-2">( </span>C5<span class="code_sep"><span class="-mr-2">; </span></span>1))<span class="code_symbol -mr-2">&amp; </span><span class="code_function">DEEL</span><span class="-mr-2">( </span>C5<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">LENGTE</span><span class="-mr-2">( </span>C5))<span class="code_comment">// cel D5, output: Kleine letters</span></p>
+<p>De formule bestaat uit 2 delen, verbonden met <code>&amp;</code>. Het eerste deel maakt van de eerste letter een hoofdletter. Het tweede deel pakt de rest van de tekens, vanaf de 2e positie. Door de <code>&amp;</code> plak je ze dan weer aan elkaar.</p>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span> <span class="code_function">LINKS</span><span class="-mr-2">( </span> C5<span class="code_sep"><span class="-mr-2">; </span></span> 1))<span class="code_symbol -mr-2">&amp; </span> <span class="code_function">DEEL</span><span class="-mr-2">( </span> C5<span class="code_sep"><span class="-mr-2">; </span></span> 2<span class="code_sep"><span class="-mr-2">; </span></span> <span class="code_function">LENGTE</span><span class="-mr-2">( </span> C5))<br/><span class="code_symbol">=</span><span class="code_function">HOOFDLETTERS</span><span class="-mr-2">( </span>"k")<span class="code_symbol -mr-2">&amp; </span> <span class="code_function">DEEL</span><span class="-mr-2">( </span>"kleine letters"<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>14)<br/><span class="code_symbol">=</span>"K"<span class="code_symbol -mr-2">&amp; </span>"leine letters"<br/><span class="code_symbol">=</span>"Kleine letters"</p>
+<p>In de formule staat <code>LENGTE(C5)</code>, terwijl we ook <code>LENGTE(C5)-1</code> hadden kunnen gebruiken. We vragen eigenlijk om een teken te veel.
+De uitkomst van de <code>LENGTE</code>-functie is een input voor de <code>DEEL</code>-functie.</p>
+<p>Als je om "te veel" tekens vraagt in de <code>DEEL</code>-functie dan krijg je geen fout, maar dan stopt <code>DEEL</code> keurig aan het einde.</p>
+<h3 style="scroll-margin-top: 100px;" id="uitleg-voor-gebruikte-functies-deel-en-lengte">Uitleg voor gebruikte functies DEEL en LENGTE</h3>
+<p>Alle gebruikte functies zijn eenvoudig uit te leggen met minimale voorbeelden:</p>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">DEEL</span><span class="-mr-2">( </span>"AbCdE 123"<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>2)<span class="code_comment">// Geeft "Cd"</span><br/><span class="code_symbol">=</span><span class="code_function">DEEL</span><span class="-mr-2">( </span>"AbCdE 123"<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>10)<span class="code_comment">// Geeft "CdE 123"</span><br/><span class="code_symbol">=</span><span class="code_function">LENGTE</span><span class="-mr-2">( </span>"AbCdE 123")<span class="code_comment">// Geeft 9</span></p>
+<p><code>DEEL</code> pakt vanaf de 3e positie (input 2) het aantal tekens uit input 3. Als je om "te veel" tekens vraagt, zoals in het tweede voorbeeld, dan stopt <code>DEEL</code> keurig aan het eind.</p>
+<h2 style="scroll-margin-top: 100px;" id="veelgestelde-vragen">Veelgestelde vragen</h2>
+<h3 style="scroll-margin-top: 100px;" id="hoe-verander-ik-de-eerste-letter-van-ieder-woord-dus-niet-alleen-van-zin-in-een-hoofdletter">Hoe verander ik de eerste letter van ieder woord (dus niet alleen van zin) in een hoofdletter?</h3>
+<p>Om ieder woord in een cel in een hoofdletter te veranderen, gebruik je de BEGINLETTERS-functie:</p>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">BEGINLETTERS</span><span class="-mr-2">( </span>"Dit is een zin")<span class="code_comment">// geeft "Dit Is Een Zin"</span></p>
+    </article>
+
+    
+
+    <!-- TO DO: MEER FORMULES -->
+    <div class="prose prose-slate prose-lg mx-auto px-6">
+        <h2 class="mt-12" id="meer-artikelen">Meer artikelen</h2>
+
+        
+
+        
+
+        
+            <h3 id="form_formulas">Meer formules</h3>
+            
+    
+        <div class="py-2">
+            
+            <a class="no-underline" href="../alleen-eerste-letter-hoofdletter/index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose ">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">Alleen eerste letter naar hoofdletter, rest kleine letters</h2>
+                        </div>
+                        
+                        <!-- 
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    Als je alleen voor de eerste letter van een cel een hoofdletter wilt, dan kun je een formule met HOOFDLETTERS, KLEINE.LETTERS, LINKS, RECHTS en LENGTE gebruiken.
+                                </p>
+                            </div>
+                            
+                         -->
+                        
+
+                        
+                        
+                        
+                            
+                            <div class="-mt-2">
+                                
+                                <span class="group-hover:bg-warmGray-100 rounded-xl mr-1 text-warmGray-600 bg-warmGray-200 text-xs px-3 py-1 font-medium font-mono">
+                                    KLEINE.LETTERS</span>
+                                
+                                <span class="group-hover:bg-warmGray-100 rounded-xl mr-1 text-warmGray-600 bg-warmGray-200 text-xs px-3 py-1 font-medium font-mono">
+                                    HOOFDLETTERS</span>
+                                
+                                <span class="group-hover:bg-warmGray-100 rounded-xl mr-1 text-warmGray-600 bg-warmGray-200 text-xs px-3 py-1 font-medium font-mono">
+                                    RECHTS</span>
+                                
+                                <span class="group-hover:bg-warmGray-100 rounded-xl mr-1 text-warmGray-600 bg-warmGray-200 text-xs px-3 py-1 font-medium font-mono">
+                                    LENGTE</span>
+                                
+                                <span class="group-hover:bg-warmGray-100 rounded-xl mr-1 text-warmGray-600 bg-warmGray-200 text-xs px-3 py-1 font-medium font-mono">
+                                    LINKS</span>
+                                
+                            </div>
+                            
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+
+        
+
+        
+
+        <h3 id="overzichten">Overzichten</h3>
+        
+    
+        <div class="py-2">
+            
+            <a class="no-underline" href="../index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose ">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">Lijst met alle handige formules</h2>
+                        </div>
+                        
+                        <!--  -->
+                        
+
+                        
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    Overzicht van korte formules die paar functies combineren.
+                                </p>
+                            </div>
+                            
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+
+        
+    
+        <div class="py-2">
+            
+            <a class="no-underline" href="../../functies/index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose ">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">Lijst met alle Excel-functies</h2>
+                        </div>
+                        
+                        <!--  -->
+                        
+
+                        
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    Overzicht van bijna 500 functies, met wat ze doen, in welke versies ze werken, en vertaling.
+                                </p>
+                            </div>
+                            
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+
+        
+
+    </div>
+
+
+        <!-- </div> -->
+        
+    </div>
+
+    <!-- <footer class="footer relative bg-gray-700 mt-12 pt-6">
+    <div class="relative max-w-xl sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+    
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 md:gap-8 mt-6 px-6">
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 1</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 2</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 3</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. <a class="underline" href="#">Learn more</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-6">
+        <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-6">
+                <p class="text-sm text-gray-300 font-bold mb-2 font-sans">
+                    Excel in een dag © Tristan Bains
+                </p>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
+
+
+<footer class="border-t-2 bg-white border-white mt-12 px-2">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 py-6 text-warmGray-700 font-light gap-y-4">
+        <div class="mx-auto md:mr-auto ">
+            <p><span class="font-semibold">Excel in een dag ©</span> Tristan Bains</p>
+            <p>KvK: 92044867</p>
+        </div>
+        <!-- <div class=" text-center">
+            <p>KVK: 92044867</p>
+        </div> -->
+        <div class="md:ml-auto mx-auto my-auto flex gap-8">
+            <!-- <p>KVK: 92044867</p> -->
+            <!-- <a class="hover:text-blue-700 hover:text-underline" href="">Contact</a> -->
+            <div class="flex gap-2">
+                
+                <!-- LINKEDIN: -->
+                <a href="https://www.linkedin.com/in/tristanbains/">
+                    
+<svg class="h-8 w-8 hover:text-blue-600 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z"></path>
+    <!-- <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z" fill="#758CA3"></path> -->
+</svg>
+
+                </a>
+                
+                <!-- <a>
+                    
+<svg class="h-6 w-6 text-red-700 hover:text-red-500 fill-current" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <path d="M232,128a104.02405,104.02405,0,0,1-132.74316,99.957l9.8164-39.26513A50.31473,50.31473,0,0,0,136,196c35.29,0,64-30.50488,64-68A72,72,0,1,0,61.2373,155.00393,8.00011,8.00011,0,0,0,76.06836,149,56.00735,56.00735,0,1,1,184,128c0,28.67285-21.53271,52-48,52-10.49072,0-17.78076-3.66064-22.75049-8.01269l14.51172-58.04688a8.00012,8.00012,0,0,0-15.52246-3.88086L84.17822,222.30178A103.99416,103.99416,0,1,1,232,128Z"></path>
+</svg>
+
+                </a> -->
+                <!-- <a href="https://twitter.com/tristanbains">
+                    <div class="bg-warmGray-900 hover:bg-warmGray-700 flex rounded-lg px-1 h-6">
+                        <div class="my-auto pl-1">
+<svg class="h-3 w-3 text-white fill-current" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <path xmlns="http://www.w3.org/2000/svg" d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
+</svg>
+</div>
+                        <div class="text-white font-semibold my-auto pl-2 pr-1 text-sm">@TristanBains</div>
+                    </div>
+                </a> -->
+            </div>
+            
+            <!-- <p class="">
+                
+
+            </p> -->
+            
+        </div>
+    </div>
+
+</footer>
+
+	<div id="consentBox" class="p-10 mx-2 md:mx-0 md:w-screen fixed bg-warmGray-700 text-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
+    <div class="max-w-3xl mx-auto prose-lg leading-snug">
+        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
+        <div class="flex pt-4 pb-2 gap-x-4">
+            <button id="consentNo" class="px-6 py-2 font-semibold border-2 border-warmGray-300 rounded-xl">Liever niet</button>
+            <button id="consentYes" class="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
+            
+        </div>
+        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
+    </div>
+
+</div>
+
+<script>
+    const consentBox = document.getElementById("consentBox");
+    const consentYes = document.getElementById("consentYes");
+    const consentNo = document.getElementById("consentNo");
+    consentYes.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","yes");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+        consentGrantedAnalyticsStorage();
+    };
+    consentNo.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","no");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+    };
+    let checkConsent = window.localStorage.getItem("excelineendag_consent");
+    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
+</script>
+    
+    <script>
+		/* Progress bar */
+		//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+		var h = document.documentElement,
+			b = document.body,
+			st = 'scrollTop',
+			sh = 'scrollHeight',
+			progress = document.querySelector('#progress'),
+			scroll;
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+		var navcontent = document.getElementById("nav-content");
+
+		document.addEventListener('scroll', function() {
+
+			/*Refresh scroll % width*/
+			scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+			progress.style.setProperty('--scroll', scroll + '%');
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 10) {
+				// header.classList.add("bg-white");
+				header.classList.add("shadow");
+				// navcontent.classList.remove("bg-gray-100");
+				// navcontent.classList.add("bg-white");
+			} else {
+				// header.classList.remove("bg-white");
+				header.classList.remove("shadow");
+				// navcontent.classList.remove("bg-white");
+				// navcontent.classList.add("bg-gray-100");
+
+			}
+
+		});
+
+
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function() {
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+		// //Javascript to toggle specific menu item
+		// document.getElementById('item1-toggle').onclick = function() {
+		// 	document.getElementById("item1-content").classList.toggle("hidden");
+		// }
+		
+
+		//Javascript to close menu item
+		window.addEventListener('click', function(e){
+    		// if (!document.getElementById('item1-content').contains(e.target) && (!document.getElementById('item1-toggle').contains(e.target))){
+			// 	document.getElementById("item1-content").classList.add("hidden");
+			// 	// alert("Clicked outside l2 and logo-menu");
+			// 	// document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
+			// 	}
+			if (!document.getElementById('nav-content').contains(e.target) && (!document.getElementById('nav-toggle').contains(e.target))){
+			document.getElementById("nav-content").classList.add("hidden");
+			// alert("Clicked outside l2 and logo-menu");
+			// document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
+			}
+		})
+	</script>
+
+</body>
+</html>

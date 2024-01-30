@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="nl" style="scroll-behavior: smooth;">
+<head>
+	<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+</script>    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D148HDTZQK"></script>
+<script> 
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D148HDTZQK');
+</script>
+<script>
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+</script>
+  
+    <meta charset="utf-8" />
+	<meta name="robots" content="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="../../static/images/XL.svg" />
+	<link rel="mask-icon" href="../../static/images/XL.svg" color=”#15803D" />
+	<link rel="canonical" href="https://www.excelineendag.nl/functies/vert-zoeken-functie/"/>
+	<title>
+		
+			
+				VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel
+			
+		
+	</title>
+	
+		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Functies", "item": "https://www.excelineendag.nl/functies/"}, {"@type": "ListItem", "position": 2, "name": "VERT.ZOEKEN-functie", "item": "https://www.excelineendag.nl/functies/vert-zoeken-functie/"}]}, {"@type": "TechArticle", "headline": "VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel", "description": "Met de VERT.ZOEKEN-functie zoek je verticaal een waarde op in de eerste kolom, om een bijbehorende waarde uit een andere kolom te krijgen. Je kunt zoeken naar een exacte match, of een benadering.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/functies/vert-zoeken-functie", "name": "VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel"}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Beginner"}]}</script>
+	
+	
+		
+		<meta name="description" content="Met de VERT.ZOEKEN-functie zoek je verticaal een waarde op in de eerste kolom, om een bijbehorende waarde uit een andere kolom te krijgen. Je kunt zoeken naar een exacte match, of een benadering."/>
+		
+	
+    <link rel="stylesheet" href="../../static/css/main.css">
+</head>
+
+
+<!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
+<body>
+	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
+		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
+		
+	</div> -->
+
+	<!-- absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white -->
+    <div id="header" class="fixed w-full z-10 top-0 bg-white">
+        <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
+        
+<!-- TO DO: Als hamburger menu open, dan hamburger veranderen in kruis -->
+<!-- TO DO: als hover dan item open -->
+<!-- TO DO: meer menu items en grid, a la explainit.nl -->
+
+
+
+
+
+<div class="w-full lg:max-w-5xl xl:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+    
+    <!-- <div class="mx-2 px-4 py-1 items-center hover:bg-warmGray-100 rounded-xl">
+        <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="../../index.html">
+            Excel in een dag <br/><span class="text-sm font-normal text-gray-500 align-top">door Tristan Bains</span>
+        </a>
+    </div> -->
+
+    <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="../../index.html">
+        <div class="mx-2 px-4 py-1 items-center hover:bg-warmGray-100 rounded-xl">
+            Excel in een dag <br/><span class="text-sm font-normal text-gray-500 align-top">door Tristan Bains</span>
+        </div>
+    </a>
+
+    
+    <!-- MENU for mobile -->
+    <div class="flex md:hidden">
+        <!-- VISIBLE LEFT TO HAMBURGER: -->
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+        </ul>
+            
+        
+        <!-- HAMBURGER MENU: -->
+        <div class="block md:hidden pr-4">
+            <button id="nav-toggle" class="flex items-center px-3 py-2  rounded text-gray-900  hover:text-green-700  appearance-none focus:outline-none">
+                <svg class="fill-current h-8 w-8 my-2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>                
+                    <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+                </svg>
+                
+            </button>
+        </div>
+    </div>
+    <!-- MENU for lg+ -->
+    <div id="nav-content" class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block mt-2 md:mt-0 bg-white z-20 pr-4">
+        <ul class="list-reset md:flex justify-end flex-1 items-center list-none space-y-0 my-0 px-0">
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="../index.html">
+                        Excel functies
+                    </a>
+                </li>
+                
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="../../formules/index.html">
+                        Handige formules
+                    </a>
+                </li>
+                
+            
+                
+                <!-- NO SUBMENU -->
+                <li class="mr-1 px-3 md:px-0 mt-0 font-sans font-medium ">
+                    <a class="inline-block no-underline rounded-xl px-4 py-2 text-lg my-2 bg-white hover:bg-warmGray-100 text-warmGray-900" href="../../contact/index.html">
+                        Contact
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    
+</div>
+	</div>
+
+	<!-- <div class="container w-full max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto mt-20 md:mt-32 lg:mt-40 px-6"> -->
+    <div class="mt-40">
+        <!-- <div class="w-full px-4 md:px-6 text-lg text-gray-800 leading-normal font-sans"> -->
+            
+
+
+    
+    <article class="lg:col-span-2 prose prose-slate prose-lg mx-auto px-6 prose-code:text-blue-600">
+
+        
+<div>
+        <nav class="" aria-label="Breadcrumb">
+            <ul class="inline-flex items-center space-x-1 md:space-x-2 list-reset list-none bg-warmGray-100 rounded-xl px-8">
+                <li class="inline-flex items-center">
+                    <a href="../../index.html" class="no-underline inline-flex items-center text-sm font-medium text-green-700 hover:text-green-500">
+                      <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                      </svg>
+                      <span class="hidden md:block">Excel in een dag</span>
+                    </a>
+                  </li>
+                
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">></li>
+                <li>
+                    <a class="no-underline inline-flex items-center text-sm font-medium text-green-700 hover:text-green-500" href="/functies">
+                        Functies
+                    </a>
+                </li>
+                
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">></li>
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">
+                    
+                    
+                    VERT.ZOEKEN-functie
+                    
+                    
+                </li>
+
+            </ul>
+        </nav>
+</div>
+
+        <h1 class="font-sans ">VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel</h1>
+        
+        
+            
+            <p class="-mt-6 text-gray-500 text-2xl text-bold">Een van de meestgebruikte en nuttige functies, met een verbeterd alternatief...</p>
+            
+        
+
+        
+        <div class="-mt-6">
+            <p>
+                <span class="text-warmGray-400">Engels: </span>
+                <span class="text-green-700 font-mono">VLOOKUP</span>
+            </p>
+        </div>
+        
+        
+        
+        
+
+        
+            
+<div class="bg-warmGray-100 p-4 rounded-xl">
+    <div class="flex">
+        <div class="whitespace-nowrap mr-2">
+            <span class="font-medium text-warmGray-500 text-sm mr-2">Gebruikte functies: </span>
+        </div>
+        <div class="flex flex-wrap">
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-warmGray-700 text-white group-hover:bg-warmGray-500 pointer-events-none
+                ">
+                    VERT.ZOEKEN
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        VERT.ZOEKEN
+                        
+                            
+                            <span class="text-xl text-yellow-300">★</span>
+                            
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Zoekt in de meest linkse kolom van een matrix naar een bepaalde waarde en geeft als resultaat de waarde van een cel in de rij
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">VLOOKUP</span></p>
+                    
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+                <a class="no-underline" href="../als-functie/index.html">
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-green-700 text-white group-hover:bg-green-500
+                ">
+                    ALS
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        ALS
+                        
+                            
+                            <span class="text-xl text-yellow-300">★</span>
+                            
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Geeft een logische toets aan die moet worden uitgevoerd
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">IF</span></p>
+                    
+                    
+                    <p class="text-warmGray-400 text-sm">Klik om naar artikel over de ALS-functie te gaan</p>
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+                </a>
+                
+
+            </div>
+            
+            <div class="group relative">
+                
+                <!-- OPENING A: -->
+                
+                <a class="no-underline" href="../x-zoeken-functie/index.html">
+                
+
+                <span class="rounded-xl mr-2 mb-2 text-sm px-3 py-1 font-medium font-mono 
+                 
+                bg-green-700 text-white group-hover:bg-green-500
+                ">
+                    X.ZOEKEN
+                    
+                    <span class=" rounded-xl px-2 text-xs font-sans 
+                     
+                    bg-green-400 group-hover:bg-green-900 text-warmGray-800 group-hover:text-white
+                    ">
+                        2021
+                    </span>
+                    
+                    
+                    
+                </span>
+                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                    
+                    <p class="text-green-300 font-mono">
+                        X.ZOEKEN
+                        
+                            
+                            <span class="text-xl text-yellow-300">★</span>
+                            
+                        
+                    </p>
+                    <!-- <hr class="h-px my-8 bg-warmGray-200 border-0"> -->
+                    <p class="-mt-4">
+                        
+                            
+                            Zoek in het ene bereik, geef bijbehorende resultaat uit andere bereik. Verbeterd alternatief van VERT.ZOEKEN
+                            
+                    </p>
+                    
+                    
+                    <p class="-mb-4"><span class="text-warmGray-400">Beschikbaar vanaf: </span>Excel 2021</p>
+                    
+                    
+                    <p><span class="text-warmGray-400">Engels: </span><span class="text-green-300 font-mono">XLOOKUP</span></p>
+                    
+                    
+                    <p class="text-warmGray-400 text-sm">Klik om naar artikel over de X.ZOEKEN-functie te gaan</p>
+                    
+                </div>
+                
+                <!-- CLOSING A: -->
+                
+                </a>
+                
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+            <p>Met de VERT.ZOEKEN-functie zoek je verticaal een waarde op in de eerste kolom, om een bijbehorende waarde uit een andere kolom te krijgen. Je kunt zoeken naar een exacte match, of een benadering.</p>
+        
+
+        
+            
+                <h3>VERT.ZOEKEN-functie voorbeeld</h3>
+                <div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="VERT.ZOEKEN-functie" alt="VERT.ZOEKEN-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="C1"><rect x="158" y="0" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="235" y="59" fill="#636e72" font-size="44.5">Student</text></g><g id="D1"><rect x="325" y="0" width="107" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="378" y="59" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="B2"><circle cx="95.5" cy="145.5" r="35.6" fill="#55efc4" stroke="#636e72" stroke-width="4"></circle><text x="95" y="160" fill="#636e72" font-size="44.5">1</text></g><g id="C2"><rect x="158" y="101" width="155" height="89" fill="#55efc4" stroke="#636e72" stroke-width="4"></rect><text x="235" y="160" fill="#636e72" font-size="44.5">DvW</text></g><g id="D2"><rect x="325" y="101" width="107" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="378" y="160" fill="#ffffff" font-size="44.5">7</text></g><g id="D2_comment"><line x1="444" y1="145.5" x2="488.5" y2="145.5" stroke-width="4" stroke="#2d3436"></line><text x="444" y="160" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="444.0" y="160.0" dx="55.625">VERT.ZOEKEN()</tspan><tspan x="444.0" y="213.4" dx="55.625">functie</tspan></text></g><g id="G3"><circle cx="679.0" cy="246.5" r="35.6" fill="#74b9ff" stroke="#636e72" stroke-width="4"></circle><text x="679" y="261" fill="#636e72" font-size="44.5">3</text></g><g id="H3"><circle cx="862.5" cy="246.5" r="35.6" fill="#a29bfe" stroke="#636e72" stroke-width="4"></circle><text x="862" y="261" fill="#636e72" font-size="44.5">4</text></g><g id="C4"><rect x="158" y="303" width="155" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="235" y="362" fill="#636e72" font-size="44.5">Student</text></g><g id="D4"><rect x="325" y="303" width="107" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="378" y="362" fill="#636e72" font-size="44.5">#Les</text></g><g id="E4"><rect x="444" y="303" width="114" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="501" y="362" fill="#636e72" font-size="44.5">Cijfer</text></g><g id="G4"><rect x="615" y="303" width="128" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="679" y="362" fill="#636e72" font-size="44.5">Kolom</text></g><g id="H4"><rect x="755" y="303" width="215" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="862" y="362" fill="#636e72" font-size="44.5">Benaderen</text></g><g id="B5"><circle cx="95.5" cy="448.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="95" y="463" fill="#636e72" font-size="44.5">2</text></g><g id="C5"><rect x="158" y="404" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="463" fill="#636e72" font-size="44.5">LW</text></g><g id="D5"><rect x="325" y="404" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="463" fill="#636e72" font-size="44.5">7</text></g><g id="E5"><rect x="444" y="404" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="463" fill="#636e72" font-size="44.5">8</text></g><g id="G5"><rect x="615" y="404" width="128" height="89" fill="#74b9ff" stroke="#636e72" stroke-width="4"></rect><text x="679" y="463" fill="#636e72" font-size="44.5">3</text></g><g id="H5"><rect x="755" y="404" width="215" height="89" fill="#a29bfe" stroke="#636e72" stroke-width="4"></rect><text x="862" y="463" fill="#636e72" font-size="44.5">ONWAAR</text></g><g id="C6"><rect x="158" y="505" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="564" fill="#636e72" font-size="44.5">MvB</text></g><g id="D6"><rect x="325" y="505" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="564" fill="#636e72" font-size="44.5">4</text></g><g id="E6"><rect x="444" y="505" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="564" fill="#636e72" font-size="44.5">7</text></g><g id="H5_comment"><line x1="862.5" y1="505" x2="862.5" y2="549.5" stroke-width="4" stroke="#e17055"></line><text x="862.5" y="594.0" fill="#e17055" font-size="44.5"><tspan x="862.5" y="594.0" dx="">We willen exact,</tspan><tspan x="862.5" y="647.4" dx="">i.p.v. benadering</tspan></text></g><g id="C7"><rect x="158" y="606" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="665" fill="#636e72" font-size="44.5">EY</text></g><g id="D7"><rect x="325" y="606" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="665" fill="#636e72" font-size="44.5">5</text></g><g id="E7"><rect x="444" y="606" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="665" fill="#636e72" font-size="44.5">7</text></g><g id="C8_comment"><line x1="146" y1="751.5" x2="101.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="146" y="766" fill="#e17055" font-size="44.5" text-anchor="end" dx="-55.625"><tspan x="146.0" y="766.0" dx="-55.625">Match in</tspan><tspan x="146.0" y="819.4" dx="-55.625">1e kolom</tspan></text></g><g id="C8"><rect x="158" y="707" width="155" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="235" y="766" fill="#636e72" font-size="44.5">DvW</text></g><g id="D8"><rect x="325" y="707" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="766" fill="#636e72" font-size="44.5">5</text></g><g id="E8"><rect x="444" y="707" width="114" height="89" fill="#fdcb6e" stroke="#636e72" stroke-width="4"></rect><text x="501" y="766" fill="#636e72" font-size="44.5">7</text></g><g id="E8_comment"><line x1="570" y1="751.5" x2="614.5" y2="751.5" stroke-width="4" stroke="#e17055"></line><text x="570" y="766" fill="#e17055" font-size="44.5" text-anchor="start" dx="55.625"><tspan x="570.0" y="766.0" dx="55.625">Resultaat</tspan><tspan x="570.0" y="819.4" dx="55.625">uit 3e kolom</tspan></text></g><g id="C9"><rect x="158" y="808" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="867" fill="#636e72" font-size="44.5">AvdV</text></g><g id="D9"><rect x="325" y="808" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="867" fill="#636e72" font-size="44.5">6</text></g><g id="E9"><rect x="444" y="808" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="867" fill="#636e72" font-size="44.5">9</text></g><g id="C10"><rect x="158" y="909" width="155" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="235" y="968" fill="#636e72" font-size="44.5">FM</text></g><g id="D10"><rect x="325" y="909" width="107" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="378" y="968" fill="#636e72" font-size="44.5">6</text></g><g id="E10"><rect x="444" y="909" width="114" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="501" y="968" fill="#636e72" font-size="44.5">8</text></g></g></svg></div><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>C5:E10<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: 7</span></p>
+            
+        
+
+        <p>In het voorbeeld hierboven zoeken we de waarde (student) <code>DvW</code> op uit cel <code>C2</code>.</p>
+<p>We zoeken deze waarde in het gele bereik, <code>C5:E10</code>. Let erop dat de VERT.ZOEKEN-functie deze waarde ALTIJD in de eerste kolom zoekt.</p>
+<p>We zijn geïnteresseerd in de waarde uit de derde kolom van het gele bereik (het cijfer van de student). Je kunt als input argument een "3" invoeren, of deze waarde uit een cel halen. (In dit geval staat de waarde ook in cel <code>G5</code>, maar de formule gebruikt "3").</p>
+<p>In dit voorbeeld willen we een exacte match. We zoeken student <code>DvW</code>, en niets anders. Daarom <strong>moet</strong> het 4e input argument <code>ONWAAR</code> zijn.</p>
+<div class="toc"><p class="pl-2 font-semibold text-warmGray-400">Inhoud van dit artikel</p><ul>
+<li><a href="#gebruik">Gebruik</a><ul>
+<li><a href="#exacte-match-vs-niet-exacte-benadering">Exacte match vs (niet-exacte) benadering</a></li>
+<li><a href="#verticaal-zoeken-met-benaderen-vs-meerdere-keer-als">Verticaal zoeken (met benaderen) vs meerdere keer ALS</a></li>
+<li><a href="#verticaal-zoeken-met-meerdere-criteria">Verticaal zoeken met meerdere criteria</a></li>
+<li><a href="#verticaal-zoeken-met-xzoeken">Verticaal zoeken met X.ZOEKEN</a></li>
+</ul>
+</li>
+<li><a href="#veelgestelde-vragen">Veelgestelde vragen</a><ul>
+<li><a href="#wat-is-de-zoekwaarde-bij-verticaal-zoeken">Wat is de zoekwaarde bij verticaal zoeken?</a></li>
+<li><a href="#wat-als-verticaal-zoeken-niet-lukt">Wat als verticaal zoeken niet lukt?</a></li>
+<li><a href="#wat-is-het-verschil-tussen-vlookup-en-xlookup">Wat is het verschil tussen VLOOKUP en XLOOKUP?</a></li>
+<li><a href="#waarom-moet-ik-de-vertzoeken-functie-kennen-als-ik-ook-de-xzoeken-functie-kan-gebruiken">Waarom moet ik de VERT.ZOEKEN-functie kennen als ik ook de X.ZOEKEN-functie kan gebruiken?</a></li>
+</ul>
+</li>
+<li><a href="#meer-artikelen">Meer artikelen</a><ul><li><a href="#fncs_functions">Lees meer over ALS en  X.ZOEKEN</a></li></ul></li></ul>
+</div>
+<h2 style="scroll-margin-top: 100px;" id="gebruik">Gebruik</h2>
+<p>De <code>VERT.ZOEKEN</code>-functie is populair en bijzonder nuttig, maar niet per se intuïtief in het gebruik.</p>
+<p>Nog een voorbeeld, maar dit keer met <strong>gesorteerde data</strong>:</p>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="VERT.ZOEKEN-gebruik" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="VERT.ZOEKEN-gebruik" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="B2"><circle cx="148.0" cy="145.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="148" y="160">1</text></g><g style="scroll-margin-top: 100px;" id="C2"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="101"></rect><text fill="#636e72" font-size="44.5" x="336" y="160">180</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="215" x="436" y="101"></rect><text fill="#ffffff" font-size="44.5" x="543" y="160">Gold</text></g><g style="scroll-margin-top: 100px;" id="D2_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="145.5" y2="145.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="160"><tspan dx="55.625" x="663.0" y="160.0">VERT.ZOEKEN()</tspan><tspan dx="55.625" x="663.0" y="213.4">functie</tspan></text></g><g style="scroll-margin-top: 100px;" id="C5"><circle cx="336.0" cy="448.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="336" y="463">2</text></g><g style="scroll-margin-top: 100px;" id="B6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="564">Kleur</text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="248" y="505"></rect><text fill="#636e72" font-size="44.5" x="336" y="564">Aantal</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="215" x="436" y="505"></rect><text fill="#636e72" font-size="44.5" x="543" y="564">Level</text></g><g style="scroll-margin-top: 100px;" id="E6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="564">Korting</text></g><g style="scroll-margin-top: 100px;" id="B7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="665">Blauw</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="606"></rect><text fill="#636e72" font-size="44.5" x="336" y="665">0</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="606"></rect><text fill="#636e72" font-size="44.5" x="543" y="665">Explorer</text></g><g style="scroll-margin-top: 100px;" id="E7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="665">-5</text></g><g style="scroll-margin-top: 100px;" id="B8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="766">Zilver</text></g><g style="scroll-margin-top: 100px;" id="C8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="707"></rect><text fill="#636e72" font-size="44.5" x="336" y="766">100</text></g><g style="scroll-margin-top: 100px;" id="D8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="707"></rect><text fill="#636e72" font-size="44.5" x="543" y="766">Silver</text></g><g style="scroll-margin-top: 100px;" id="E8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="766">-10</text></g><g style="scroll-margin-top: 100px;" id="B9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="867">Goud</text></g><g style="scroll-margin-top: 100px;" id="C9"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="808"></rect><text fill="#636e72" font-size="44.5" x="336" y="867">180</text></g><g style="scroll-margin-top: 100px;" id="D9"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="808"></rect><text fill="#636e72" font-size="44.5" x="543" y="867">Gold</text></g><g style="scroll-margin-top: 100px;" id="E9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="867">-20</text></g><g style="scroll-margin-top: 100px;" id="B10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="968">Platina</text></g><g style="scroll-margin-top: 100px;" id="C10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="909"></rect><text fill="#636e72" font-size="44.5" x="336" y="968">300</text></g><g style="scroll-margin-top: 100px;" id="D10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="909"></rect><text fill="#636e72" font-size="44.5" x="543" y="968">Platinum</text></g><g style="scroll-margin-top: 100px;" id="E10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="968">-25</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: Gold</span></p>
+<p>Een paar opmerkingen bij de <code>VERT.ZOEKEN</code>-functie:</p>
+<ul>
+<li>Het eerste input argument, de <code>zoekwaarde</code>, moet te vinden zijn in de meest linkerkolom van het tweede input argument, de <code>tabelmatrix</code>. In dit geval zoeken we dus de waarde van cel <code>C2</code> in de meest linkerkolom van <code>C6:D10</code>. Als we bv. <code>B6:D10</code> hadden gebruikt, dan wordt de waarde van <code>C2</code> gezocht in kolom <code>B</code>, en dat willen we niet...</li>
+<li>Het derde input argument, <code>kolomindex_getal</code>, geeft aan uit de hoeveelste kolom van het tweede input argument de uiteindelijke output moet komen. In dit geval willen we het Level, dat in de tweede kolom van <code>C6:D10</code> staat.</li>
+<li>Het vierde input argument geeft aan of je een benadering wilt (waarde <code>WAAR</code>, later meer), of een exacte match wilt (waarde <code>ONWAAR</code>). In dit voorbeeld willen we een exacte match.</li>
+</ul>
+<p>Je ziet dat met name het tweede input argument, de <code>tabelmatrix</code>, extra gecontroleerd moet worden.</p>
+<p class="tip">Laat je niet afleiden door de $-tekens in het tweede input argument, er had ook <code>C6:D10</code> kunnen staan. De $-tekens maken van deze cellen een absolute verwijzing, wat handig is als de formule in andere cellen hergebruikt moet worden.</p>
+<h3 style="scroll-margin-top: 100px;" id="exacte-match-vs-niet-exacte-benadering">Exacte match vs (niet-exacte) benadering</h3>
+<p>Het laatste (optionele) input argument, <code>benaderen</code>, verdient extra aandacht, omdat het vaak fout gaat.</p>
+<p>In de meeste gevallen wil je een exacte match, en geen benadering. Als je het laatste input argument niet definieert, gaat Excel er echter van uit dat je wilt benaderen... Let hier dus op.</p>
+<p>Kijk naar het volgende voorbeeld:</p>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="VERT.ZOEKEN-exact-vs-benadering" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="VERT.ZOEKEN-exact-vs-benadering" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="B2"><circle cx="148.0" cy="145.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="148" y="160">1</text></g><g style="scroll-margin-top: 100px;" id="C2"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="101"></rect><text fill="#636e72" font-size="44.5" x="336" y="160">150</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="215" x="436" y="101"></rect><text fill="#ffffff" font-size="44.5" x="543" y="160">#N/A</text></g><g style="scroll-margin-top: 100px;" id="D2_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="145.5" y2="145.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="160">Exacte match (ONWAAR)</text></g><g style="scroll-margin-top: 100px;" id="B3"><circle cx="148.0" cy="246.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="148" y="261">1</text></g><g style="scroll-margin-top: 100px;" id="C3"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="202"></rect><text fill="#636e72" font-size="44.5" x="336" y="261">150</text></g><g style="scroll-margin-top: 100px;" id="D3"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="215" x="436" y="202"></rect><text fill="#ffffff" font-size="44.5" x="543" y="261">Silver</text></g><g style="scroll-margin-top: 100px;" id="D3_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="246.5" y2="246.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="261">Benaderen (WAAR)</text></g><g style="scroll-margin-top: 100px;" id="C5"><circle cx="336.0" cy="448.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="336" y="463">2</text></g><g style="scroll-margin-top: 100px;" id="B6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="564">Kleur</text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="248" y="505"></rect><text fill="#636e72" font-size="44.5" x="336" y="564">Aantal</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="215" x="436" y="505"></rect><text fill="#636e72" font-size="44.5" x="543" y="564">Level</text></g><g style="scroll-margin-top: 100px;" id="E6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="564">Korting</text></g><g style="scroll-margin-top: 100px;" id="B7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="665">Blauw</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="606"></rect><text fill="#636e72" font-size="44.5" x="336" y="665">0</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="606"></rect><text fill="#636e72" font-size="44.5" x="543" y="665">Explorer</text></g><g style="scroll-margin-top: 100px;" id="E7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="665">-5</text></g><g style="scroll-margin-top: 100px;" id="B8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="766">Zilver</text></g><g style="scroll-margin-top: 100px;" id="C8"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="707"></rect><text fill="#636e72" font-size="44.5" x="336" y="766">100</text></g><g style="scroll-margin-top: 100px;" id="D8"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="707"></rect><text fill="#636e72" font-size="44.5" x="543" y="766">Silver</text></g><g style="scroll-margin-top: 100px;" id="E8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="766">-10</text></g><g style="scroll-margin-top: 100px;" id="B9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="867">Goud</text></g><g style="scroll-margin-top: 100px;" id="C9"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="808"></rect><text fill="#636e72" font-size="44.5" x="336" y="867">180</text></g><g style="scroll-margin-top: 100px;" id="D9"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="808"></rect><text fill="#636e72" font-size="44.5" x="543" y="867">Gold</text></g><g style="scroll-margin-top: 100px;" id="E9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="867">-20</text></g><g style="scroll-margin-top: 100px;" id="B10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="968">Platina</text></g><g style="scroll-margin-top: 100px;" id="C10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="909"></rect><text fill="#636e72" font-size="44.5" x="336" y="968">300</text></g><g style="scroll-margin-top: 100px;" id="D10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="909"></rect><text fill="#636e72" font-size="44.5" x="543" y="968">Platinum</text></g><g style="scroll-margin-top: 100px;" id="E10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="968">-25</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: #N/A</span><br/><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C3<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>WAAR)<span class="code_comment">// cel D3, output: Silver</span></p>
+<p>We hebben een variant met benaderen, en een zonder benaderen (oftewel een exacte match).</p>
+<p>We zoeken de waarde <code>150</code> in de meest linkerkolom van de gele cellen. Deze waarde zit er niet tussen. Een exacte match bestaat dus niet.</p>
+<p>Als we het laatste input argument, <code>benaderen</code>, op <code>ONWAAR</code> zetten, dan is de output <code>#N/B</code> (of <code>#N/A</code> in het Engels).</p>
+<p>Als we echter <code>benaderen</code> op <code>WAAR</code> zetten, zoals in de tweede formule, dan krijgen we wel een waarde. In dit geval zoekt de functie net zo lang in de eerste kolom tot het een waarde tegenkomt die groter is dan <code>150</code>. De functie neemt dan de rij met de hoogst mogeljke waarde die niet "te hoog" is. In dit geval dus de rij van <code>100</code> (Level "Silver"), want de rij erna is <code>180</code> en dit is hoger dan de waarde die we zoeken, <code>150</code>.</p>
+<p class="warning"><code>VERT.ZOEKEN</code> met benaderen werkt alleen goed als de data (oplopend) gesorteerd is. Als dit niet zo is, dan kunnen er onverwachte dingen uitkomen.</p>
+<h3 style="scroll-margin-top: 100px;" id="verticaal-zoeken-met-benaderen-vs-meerdere-keer-als">Verticaal zoeken (met benaderen) vs meerdere keer ALS</h3>
+<p>Kijk eens naar deze twee formules, die hetzelfde eindresultaat hebben:</p>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="VERT.ZOEKEN-functie-vs-meerdere-ALS" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="VERT.ZOEKEN-functie-vs-meerdere-ALS" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="B2"><circle cx="148.0" cy="145.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="148" y="160">1</text></g><g style="scroll-margin-top: 100px;" id="C2"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="101"></rect><text fill="#636e72" font-size="44.5" x="336" y="160">150</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="215" x="436" y="101"></rect><text fill="#ffffff" font-size="44.5" x="543" y="160">Silver</text></g><g style="scroll-margin-top: 100px;" id="D2_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="145.5" y2="145.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="160">Meerdere ALS-functies</text></g><g style="scroll-margin-top: 100px;" id="B3"><circle cx="148.0" cy="246.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="148" y="261">1</text></g><g style="scroll-margin-top: 100px;" id="C3"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="202"></rect><text fill="#636e72" font-size="44.5" x="336" y="261">150</text></g><g style="scroll-margin-top: 100px;" id="D3"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="215" x="436" y="202"></rect><text fill="#ffffff" font-size="44.5" x="543" y="261">Silver</text></g><g style="scroll-margin-top: 100px;" id="D3_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="246.5" y2="246.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="261">VERT.ZOEKEN met benaderen</text></g><g style="scroll-margin-top: 100px;" id="C5"><circle cx="336.0" cy="448.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="336" y="463">2</text></g><g style="scroll-margin-top: 100px;" id="B6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="564">Kleur</text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="248" y="505"></rect><text fill="#636e72" font-size="44.5" x="336" y="564">Aantal</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="215" x="436" y="505"></rect><text fill="#636e72" font-size="44.5" x="543" y="564">Level</text></g><g style="scroll-margin-top: 100px;" id="E6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="564">Korting</text></g><g style="scroll-margin-top: 100px;" id="B7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="665">Blauw</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="606"></rect><text fill="#636e72" font-size="44.5" x="336" y="665">0</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="606"></rect><text fill="#636e72" font-size="44.5" x="543" y="665">Explorer</text></g><g style="scroll-margin-top: 100px;" id="E7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="665">-5</text></g><g style="scroll-margin-top: 100px;" id="B8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="766">Zilver</text></g><g style="scroll-margin-top: 100px;" id="C8"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="707"></rect><text fill="#636e72" font-size="44.5" x="336" y="766">100</text></g><g style="scroll-margin-top: 100px;" id="D8"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="707"></rect><text fill="#636e72" font-size="44.5" x="543" y="766">Silver</text></g><g style="scroll-margin-top: 100px;" id="E8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="766">-10</text></g><g style="scroll-margin-top: 100px;" id="B9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="867">Goud</text></g><g style="scroll-margin-top: 100px;" id="C9"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="808"></rect><text fill="#636e72" font-size="44.5" x="336" y="867">180</text></g><g style="scroll-margin-top: 100px;" id="D9"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="808"></rect><text fill="#636e72" font-size="44.5" x="543" y="867">Gold</text></g><g style="scroll-margin-top: 100px;" id="E9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="867">-20</text></g><g style="scroll-margin-top: 100px;" id="B10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="968">Platina</text></g><g style="scroll-margin-top: 100px;" id="C10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="909"></rect><text fill="#636e72" font-size="44.5" x="336" y="968">300</text></g><g style="scroll-margin-top: 100px;" id="D10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="909"></rect><text fill="#636e72" font-size="44.5" x="543" y="968">Platinum</text></g><g style="scroll-margin-top: 100px;" id="E10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="968">-25</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C10<span class="code_sep"><span class="-mr-2">; </span></span>D10<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C9<span class="code_sep"><span class="-mr-2">; </span></span>D9<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C8<span class="code_sep"><span class="-mr-2">; </span></span>D8<span class="code_sep"><span class="-mr-2">; </span></span>D7)))<span class="code_comment">// cel D2, output: Silver</span><br/><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C3<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>WAAR)<span class="code_comment">// cel D3, output: Silver</span></p>
+<p>Beide varianten werken, maar de versie met verticaal zoeken is een stuk leesbaarder. En veel makkelijker te onderhouden, mocht je een keer een categorie wijzigen.</p>
+<p>Meerdere keren <code>ALS</code> in elkaar nesten is eigenlijk nooit een goed idee; het is extreem foutgevoelig.</p>
+<p class="tip">Zodra je merkt dat je de neiging krijgt 3 of meer <code>ALS</code>-functies in elkaar te nesten, kijk dan of de <code>VERT.ZOEKEN</code>-functie je kan redden. Dit zal niet in elke situatie zo zijn, maar vaak wel als je met gesorteerde tabellen te maken hebt.</p>
+<h3 style="scroll-margin-top: 100px;" id="verticaal-zoeken-met-meerdere-criteria">Verticaal zoeken met meerdere criteria</h3>
+<p>Als je wilt zoeken met meerdere criteria, bijvoorbeeld uit meerdere kolommen, dan kan dit ook met <code>VERT.ZOEKEN</code>.</p>
+<p>De truc is om dan een hulpkolom aan de linkerkant toe te voegen, en hierin te zoeken:</p>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="VERT.ZOEKEN-functie-meerdere-criteria" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="VERT.ZOEKEN-functie-meerdere-criteria" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="D1"><circle cx="622.0" cy="44.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="622" y="59">1</text></g><g style="scroll-margin-top: 100px;" id="D1_comment"><line stroke="#e17055" stroke-width="4" x1="714" x2="758.5" y1="44.5" y2="44.5"></line><text dx="55.625" fill="#e17055" font-size="44.5" text-anchor="start" x="714" y="59"><tspan dx="55.625" x="714.0" y="59.0">Plak Dennis en HR</tspan><tspan dx="55.625" x="714.0" y="112.4">aan elkaar in</tspan><tspan dx="55.625" x="714.0" y="165.8">eerste input argument</tspan></text></g><g style="scroll-margin-top: 100px;" id="C2"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="160" x="370" y="101"></rect><text fill="#636e72" font-size="44.5" x="450" y="160">Naam</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="160" x="542" y="101"></rect><text fill="#636e72" font-size="44.5" x="622" y="160">Dennis</text></g><g style="scroll-margin-top: 100px;" id="C3"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="160" x="370" y="202"></rect><text fill="#636e72" font-size="44.5" x="450" y="261">Team</text></g><g style="scroll-margin-top: 100px;" id="D3"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="160" x="542" y="202"></rect><text fill="#636e72" font-size="44.5" x="622" y="261">HR</text></g><g style="scroll-margin-top: 100px;" id="C4"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="160" x="370" y="303"></rect><text fill="#636e72" font-size="44.5" x="450" y="362">Jaren</text></g><g style="scroll-margin-top: 100px;" id="D4"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="160" x="542" y="303"></rect><text fill="#ffffff" font-size="44.5" x="622" y="362">17</text></g><g style="scroll-margin-top: 100px;" id="D4_comment"><line stroke="#2d3436" stroke-width="4" x1="714" x2="758.5" y1="347.5" y2="347.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="714" y="362"><tspan dx="55.625" x="714.0" y="362.0">VERT.ZOEKEN()</tspan><tspan dx="55.625" x="714.0" y="415.4">functie</tspan></text></g><g style="scroll-margin-top: 100px;" id="B6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="275" x="83" y="505"></rect><text fill="#636e72" font-size="44.5" x="220" y="564">Hulpkolom</text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="160" x="370" y="505"></rect><text fill="#636e72" font-size="44.5" x="450" y="564">Naam</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="160" x="542" y="505"></rect><text fill="#636e72" font-size="44.5" x="622" y="564">Team</text></g><g style="scroll-margin-top: 100px;" id="E6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="133" x="714" y="505"></rect><text fill="#636e72" font-size="44.5" x="780" y="564">Jaren</text></g><g style="scroll-margin-top: 100px;" id="A7"><circle cx="35.5" cy="650.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="35" y="665">2</text></g><g style="scroll-margin-top: 100px;" id="B7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="275" x="83" y="606"></rect><text fill="#636e72" font-size="44.5" x="220" y="665">DennisLegal</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="370" y="606"></rect><text fill="#636e72" font-size="44.5" x="450" y="665">Dennis</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="542" y="606"></rect><text fill="#636e72" font-size="44.5" x="622" y="665">Legal</text></g><g style="scroll-margin-top: 100px;" id="E7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="133" x="714" y="606"></rect><text fill="#636e72" font-size="44.5" x="780" y="665">2</text></g><g style="scroll-margin-top: 100px;" id="B8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="275" x="83" y="707"></rect><text fill="#636e72" font-size="44.5" x="220" y="766">AnnaLegal</text></g><g style="scroll-margin-top: 100px;" id="C8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="370" y="707"></rect><text fill="#636e72" font-size="44.5" x="450" y="766">Anna</text></g><g style="scroll-margin-top: 100px;" id="D8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="542" y="707"></rect><text fill="#636e72" font-size="44.5" x="622" y="766">Legal</text></g><g style="scroll-margin-top: 100px;" id="E8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="133" x="714" y="707"></rect><text fill="#636e72" font-size="44.5" x="780" y="766">5</text></g><g style="scroll-margin-top: 100px;" id="B9"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="275" x="83" y="808"></rect><text fill="#636e72" font-size="44.5" x="220" y="867">DennisHR</text></g><g style="scroll-margin-top: 100px;" id="C9"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="370" y="808"></rect><text fill="#636e72" font-size="44.5" x="450" y="867">Dennis</text></g><g style="scroll-margin-top: 100px;" id="D9"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="542" y="808"></rect><text fill="#636e72" font-size="44.5" x="622" y="867">HR</text></g><g style="scroll-margin-top: 100px;" id="E9"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="133" x="714" y="808"></rect><text fill="#636e72" font-size="44.5" x="780" y="867">17</text></g><g style="scroll-margin-top: 100px;" id="B10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="275" x="83" y="909"></rect><text fill="#636e72" font-size="44.5" x="220" y="968">LisaHR</text></g><g style="scroll-margin-top: 100px;" id="C10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="370" y="909"></rect><text fill="#636e72" font-size="44.5" x="450" y="968">Lisa</text></g><g style="scroll-margin-top: 100px;" id="D10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="160" x="542" y="909"></rect><text fill="#636e72" font-size="44.5" x="622" y="968">HR</text></g><g style="scroll-margin-top: 100px;" id="E10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="133" x="714" y="909"></rect><text fill="#636e72" font-size="44.5" x="780" y="968">3</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>D2<span class="code_symbol -mr-2">&amp; </span>D3<span class="code_sep"><span class="-mr-2">; </span></span>B6:E10<span class="code_sep"><span class="-mr-2">; </span></span>4<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D4, output: 17</span></p>
+<p>We hebben nu een hulpkolom toegevoegd die de twee kolommen ernaast "aan elkaar plakt". Het eerste input argument, <code>zoekwaarde</code>, passen we ook iets aan, door de twee zoekwaarden aan elkaar te plakken. We zoeken deze vervolgens op in de toegevoegde hulpkolom.</p>
+<p class="tip">De oplossing met de hulpkolom is een beetje gekunsteld. Het kan veel eenvoudiger, door <code>X.ZOEKEN</code> te gebruiken.</p>
+<h3 style="scroll-margin-top: 100px;" id="verticaal-zoeken-met-xzoeken">Verticaal zoeken met X.ZOEKEN</h3>
+<p>Als je een nieuwere versie van Excel hebt, dan kun je als alternatief voor <code>VERT.ZOEKEN</code> in de meeste gevallen beter de <code>X.ZOEKEN</code>-functie gebruiken. De <code>X.ZOEKEN</code>-functie is intuïtiever, en minder foutgevoelig als je bv. kolommen toevoegt.</p>
+<div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg alt="VERT.ZOEKEN-functie-vs-X.ZOEKEN" dy="0.25em" font-family="Sans,Arial" style="background-color:#dfe6e9" text-anchor="middle" title="VERT.ZOEKEN-functie-vs-X.ZOEKEN" viewbox="0 0 2133 1200" xmlns="http://www.w3.org/2000/svg"><g style="scroll-margin-top: 100px;" id="box" transform="translate(566.6666666666665 100.0)"><g style="scroll-margin-top: 100px;" id="B2"><circle cx="148.0" cy="145.5" fill="#55efc4" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="148" y="160">1</text></g><g style="scroll-margin-top: 100px;" id="C2"><rect fill="#55efc4" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="101"></rect><text fill="#636e72" font-size="44.5" x="336" y="160">180</text></g><g style="scroll-margin-top: 100px;" id="D2"><rect fill="#2d3436" height="89" stroke="#2d3436" stroke-width="4" width="215" x="436" y="101"></rect><text fill="#ffffff" font-size="44.5" x="543" y="160">Gold</text></g><g style="scroll-margin-top: 100px;" id="D2_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="145.5" y2="145.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="160">X.ZOEKEN</text></g><g style="scroll-margin-top: 100px;" id="C3"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="248" y="202"></rect><text fill="#b2bec3" font-size="44.5" x="336" y="261">180</text></g><g style="scroll-margin-top: 100px;" id="D3"><rect fill="#636e72" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="202"></rect><text fill="#ffffff" font-size="44.5" x="543" y="261">Gold</text></g><g style="scroll-margin-top: 100px;" id="D3_comment"><line stroke="#2d3436" stroke-width="4" x1="663" x2="707.5" y1="246.5" y2="246.5"></line><text dx="55.625" fill="#2d3436" font-size="44.5" text-anchor="start" x="663" y="261"><tspan dx="55.625" x="663.0" y="261.0">VERT.ZOEKEN met</tspan><tspan dx="55.625" x="663.0" y="314.4">exacte match</tspan></text></g><g style="scroll-margin-top: 100px;" id="C5"><circle cx="336.0" cy="448.5" fill="#ffeaa7" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="336" y="463">2</text></g><g style="scroll-margin-top: 100px;" id="D5"><circle cx="543.5" cy="448.5" fill="#74b9ff" r="35.6" stroke="#636e72" stroke-width="4"></circle><text fill="#636e72" font-size="44.5" x="543" y="463">3</text></g><g style="scroll-margin-top: 100px;" id="B6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="564">Kleur</text></g><g style="scroll-margin-top: 100px;" id="C6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="248" y="505"></rect><text fill="#636e72" font-size="44.5" x="336" y="564">Aantal</text></g><g style="scroll-margin-top: 100px;" id="D6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="215" x="436" y="505"></rect><text fill="#636e72" font-size="44.5" x="543" y="564">Level</text></g><g style="scroll-margin-top: 100px;" id="E6"><rect fill="transparent" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="505"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="564">Korting</text></g><g style="scroll-margin-top: 100px;" id="B7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="665">Blauw</text></g><g style="scroll-margin-top: 100px;" id="C7"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="606"></rect><text fill="#636e72" font-size="44.5" x="336" y="665">0</text></g><g style="scroll-margin-top: 100px;" id="D7"><rect fill="#74b9ff" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="606"></rect><text fill="#636e72" font-size="44.5" x="543" y="665">Explorer</text></g><g style="scroll-margin-top: 100px;" id="E7"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="606"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="665">-5</text></g><g style="scroll-margin-top: 100px;" id="B8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="766">Zilver</text></g><g style="scroll-margin-top: 100px;" id="C8"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="707"></rect><text fill="#636e72" font-size="44.5" x="336" y="766">100</text></g><g style="scroll-margin-top: 100px;" id="D8"><rect fill="#74b9ff" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="707"></rect><text fill="#636e72" font-size="44.5" x="543" y="766">Silver</text></g><g style="scroll-margin-top: 100px;" id="E8"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="707"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="766">-10</text></g><g style="scroll-margin-top: 100px;" id="B9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="867">Goud</text></g><g style="scroll-margin-top: 100px;" id="C9"><rect fill="#fdcb6e" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="808"></rect><text fill="#636e72" font-size="44.5" x="336" y="867">180</text></g><g style="scroll-margin-top: 100px;" id="D9"><rect fill="#0984e3" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="808"></rect><text fill="#ffffff" font-size="44.5" x="543" y="867">Gold</text></g><g style="scroll-margin-top: 100px;" id="E9"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="808"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="867">-20</text></g><g style="scroll-margin-top: 100px;" id="B10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="60" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="148" y="968">Platina</text></g><g style="scroll-margin-top: 100px;" id="C10"><rect fill="#ffeaa7" height="89" stroke="#636e72" stroke-width="4" width="176" x="248" y="909"></rect><text fill="#636e72" font-size="44.5" x="336" y="968">300</text></g><g style="scroll-margin-top: 100px;" id="D10"><rect fill="#74b9ff" height="89" stroke="#636e72" stroke-width="4" width="215" x="436" y="909"></rect><text fill="#636e72" font-size="44.5" x="543" y="968">Platinum</text></g><g style="scroll-margin-top: 100px;" id="E10"><rect fill="#C9D2D6" height="89" stroke="transparent" stroke-width="4" width="176" x="663" y="909"></rect><text fill="#b2bec3" font-size="44.5" x="751" y="968">-25</text></g></g></svg></div>
+<p class="code_block"><span class="code_symbol">=</span><span class="code_function">X.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$7:$C$10<span class="code_sep"><span class="-mr-2">; </span></span>$D$7:$D$10)<span class="code_comment">// cel D2, output: Gold</span></p>
+<p>Deze formule is veel intuïtiever; Zoek <code>C2</code> in <code>C7:C10</code> en geef de bijbehorende match uit <code>D7:D10</code>.</p>
+<p>Grootste voordeel van <code>X.ZOEKEN</code> is dat we geen <code>kolomindex_getal</code> hoeven te geven. Hierdoor kan de formule makkelijker horizontaal gekopieerd worden. Ook heeft <code>X.ZOEKEN</code> nog allerlei extra zoekopties via optionele input argumenten.</p>
+<h2 style="scroll-margin-top: 100px;" id="veelgestelde-vragen">Veelgestelde vragen</h2>
+<h3 style="scroll-margin-top: 100px;" id="wat-is-de-zoekwaarde-bij-verticaal-zoeken">Wat is de zoekwaarde bij verticaal zoeken?</h3>
+<p>De <code>zoekwaarde</code> is datgene dat je wilt zoeken. De <code>zoekwaarde</code> is het eerste input argument voor de <code>VERT.ZOEKEN</code>-functie. Het tweede input argument, de <code>tabelmatrix</code>, is waar je deze <code>zoekwaarde</code> wilt zoeken (zoekt altijd in de eerste kolom!)</p>
+<h3 style="scroll-margin-top: 100px;" id="wat-als-verticaal-zoeken-niet-lukt">Wat als verticaal zoeken niet lukt?</h3>
+<p>Er zijn een aantal veelvoorkomende redenen waar verticaal zoeken niet lukt, of onverwachte output geeft. In 98% van de gevallen is het een van deze:</p>
+<ul>
+<li>De <code>zoekwaarde</code> bestaat niet in de eerste kolom</li>
+<li>Verwijzing naar <code>tabelmatrix</code> (2e argument) is incorrect</li>
+<li>De input <code>kolomindex_getal</code> (input argument 3) is groter dan het aantal kolommen van de <code>tabelmatrix</code></li>
+<li>De input <code>kolomindex_getal</code> klopt niet (meer)</li>
+<li>Je wilt een exacte match, maar hebt dit niet expliciet gezegd in het 4e input argument <code>benaderen</code></li>
+</ul>
+<p>Deze fouten ontstaan ook vaak na kopiëren van cellen met de functie erin, of wanneer er later een kolom wordt ingevoegd. </p>
+<h3 style="scroll-margin-top: 100px;" id="wat-is-het-verschil-tussen-vlookup-en-xlookup">Wat is het verschil tussen VLOOKUP en XLOOKUP?</h3>
+<p><code>XLOOKUP</code> (<code>X.ZOEKEN</code> in Nederlands) is een vernieuwd alternatief voor <code>VLOOKUP</code> (<code>VERT.ZOEKEN</code> in Nederlands). <code>X.ZOEKEN</code> heeft voorspelbaarder gedrag dan <code>VERT.ZOEKEN</code>, is makkelijker te kopiëren naar andere cellen, en heeft extra opties (bv van beneden naar boven zoeken, wat te doen als niets gevonden, etc.).</p>
+<h3 style="scroll-margin-top: 100px;" id="waarom-moet-ik-de-vertzoeken-functie-kennen-als-ik-ook-de-xzoeken-functie-kan-gebruiken">Waarom moet ik de VERT.ZOEKEN-functie kennen als ik ook de X.ZOEKEN-functie kan gebruiken?</h3>
+<p><code>X.ZOEKEN</code> is een vrij nieuwe functie, die niet iedereen kent. Ook is deze versie pas beschikbaar in nieuwere versies van Excel.</p>
+<p>Alle oudere Excelbestanden zullen daarom geen <code>X.ZOEKEN</code> bevatten, maar vaak wel <code>VERT.ZOEKEN</code>. Begrijpen hoe <code>VERT.ZOEKEN</code> werkt is dan wel essentieel.</p>
+<p>Ook kan het zijn dat de mensen/collega's waar je bestanden mee deelt een oudere versie van Excel hebben die <code>X.ZOEKEN</code> niet ondersteunt.</p>
+    </article>
+
+    
+
+    <!-- TO DO: MEER FORMULES -->
+    <div class="prose prose-slate prose-lg mx-auto px-6">
+        <h2 class="mt-12" id="meer-artikelen">Meer artikelen</h2>
+
+        
+
+        
+            <h3 id="fncs_functions">Lees meer over ALS en  X.ZOEKEN</h3>
+            
+    
+        <div class="py-2">
+            
+            <a class="no-underline" href="../als-functie/index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <div class="hidden md:block md:col-span-4 code_block ml-4 my-4">
+                        <div class="text-base">
+                            <span class="code_symbol">=</span><span class="code_function">ALS</span>()
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose md:col-span-8">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">ALS-functie - complete tutorial met simpele voorbeelden</h2>
+                        </div>
+                        
+                        <!-- 
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    Bij de ALS-functie voer je een logische test uit. Afhankelijk van de uitkomst kun je zelf de output definiëren.
+                                </p>
+                            </div>
+                            
+                         -->
+                        
+
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+        <div class="py-2">
+            
+            <a class="no-underline" href="../x-zoeken-functie/index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <div class="hidden md:block md:col-span-4 code_block ml-4 my-4">
+                        <div class="text-base">
+                            <span class="code_symbol">=</span><span class="code_function">X.ZOEKEN</span>()
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose md:col-span-8">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">X.ZOEKEN-functie (XLOOKUP) - Beter dan VERT.ZOEKEN</h2>
+                        </div>
+                        
+                        <!-- 
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    De X.ZOEKEN-functie (Engelse XLOOKUP) is een ondergewaardeerde functie die meerdere (oudere) functies als VERT.ZOEKEN en ZOEKEN vervangt.
+                                </p>
+                            </div>
+                            
+                         -->
+                        
+
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+
+        
+
+        
+
+        
+
+        <h3 id="overzichten">Overzichten</h3>
+        
+    
+        <div class="py-2">
+            
+            <a class="no-underline" href="../../formules/index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose ">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">Lijst met alle handige formules</h2>
+                        </div>
+                        
+                        <!--  -->
+                        
+
+                        
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    Overzicht van korte formules die paar functies combineren.
+                                </p>
+                            </div>
+                            
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+
+        
+    
+        <div class="py-2">
+            
+            <a class="no-underline" href="../index.html">
+            
+                <div class="grid grid-cols-12 bg-warmGray-100 rounded-2xl  
+                 
+                group hover:bg-warmGray-200
+                ">
+                    
+
+                    
+                    <!-- TITLE, META and FUNCTIONS -->
+                    
+                    <div class="py-4 px-6 col-span-12 prose ">
+                        
+                        
+
+                        <div class="">
+                            <h2 class="text-xl font-sans font-bold text-warmGray-800 mt-4">Lijst met alle Excel-functies</h2>
+                        </div>
+                        
+                        <!--  -->
+                        
+
+                        
+                            
+                            <div class="">
+                                <p class=" leading-6 -mt-4 text-warmGray-500 font-normal group-hover:text-warmGray-600">
+                                    Overzicht van bijna 500 functies, met wat ze doen, in welke versies ze werken, en vertaling.
+                                </p>
+                            </div>
+                            
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            
+            
+            </a>
+            
+        </div>
+        
+
+        
+
+    </div>
+
+
+        <!-- </div> -->
+        
+    </div>
+
+    <!-- <footer class="footer relative bg-gray-700 mt-12 pt-6">
+    <div class="relative max-w-xl sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+    
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 md:gap-8 mt-6 px-6">
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 1</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 2</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-100 font-bold text-xl mb-2">Footer item 3</h3>
+                <p class="text-gray-300 text-sm font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. <a class="underline" href="#">Learn more</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-6">
+        <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-6">
+                <p class="text-sm text-gray-300 font-bold mb-2 font-sans">
+                    Excel in een dag © Tristan Bains
+                </p>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
+
+
+<footer class="border-t-2 bg-white border-white mt-12 px-2">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 py-6 text-warmGray-700 font-light gap-y-4">
+        <div class="mx-auto md:mr-auto ">
+            <p><span class="font-semibold">Excel in een dag ©</span> Tristan Bains</p>
+            <p>KvK: 92044867</p>
+        </div>
+        <!-- <div class=" text-center">
+            <p>KVK: 92044867</p>
+        </div> -->
+        <div class="md:ml-auto mx-auto my-auto flex gap-8">
+            <!-- <p>KVK: 92044867</p> -->
+            <!-- <a class="hover:text-blue-700 hover:text-underline" href="">Contact</a> -->
+            <div class="flex gap-2">
+                
+                <!-- LINKEDIN: -->
+                <a href="https://www.linkedin.com/in/tristanbains/">
+                    
+<svg class="h-8 w-8 hover:text-blue-600 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z"></path>
+    <!-- <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z" fill="#758CA3"></path> -->
+</svg>
+
+                </a>
+                
+                <!-- <a>
+                    
+<svg class="h-6 w-6 text-red-700 hover:text-red-500 fill-current" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <path d="M232,128a104.02405,104.02405,0,0,1-132.74316,99.957l9.8164-39.26513A50.31473,50.31473,0,0,0,136,196c35.29,0,64-30.50488,64-68A72,72,0,1,0,61.2373,155.00393,8.00011,8.00011,0,0,0,76.06836,149,56.00735,56.00735,0,1,1,184,128c0,28.67285-21.53271,52-48,52-10.49072,0-17.78076-3.66064-22.75049-8.01269l14.51172-58.04688a8.00012,8.00012,0,0,0-15.52246-3.88086L84.17822,222.30178A103.99416,103.99416,0,1,1,232,128Z"></path>
+</svg>
+
+                </a> -->
+                <!-- <a href="https://twitter.com/tristanbains">
+                    <div class="bg-warmGray-900 hover:bg-warmGray-700 flex rounded-lg px-1 h-6">
+                        <div class="my-auto pl-1">
+<svg class="h-3 w-3 text-white fill-current" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <path xmlns="http://www.w3.org/2000/svg" d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
+</svg>
+</div>
+                        <div class="text-white font-semibold my-auto pl-2 pr-1 text-sm">@TristanBains</div>
+                    </div>
+                </a> -->
+            </div>
+            
+            <!-- <p class="">
+                
+
+            </p> -->
+            
+        </div>
+    </div>
+
+</footer>
+
+	<div id="consentBox" class="p-10 mx-2 md:mx-0 md:w-screen fixed bg-warmGray-700 text-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
+    <div class="max-w-3xl mx-auto prose-lg leading-snug">
+        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
+        <div class="flex pt-4 pb-2 gap-x-4">
+            <button id="consentNo" class="px-6 py-2 font-semibold border-2 border-warmGray-300 rounded-xl">Liever niet</button>
+            <button id="consentYes" class="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
+            
+        </div>
+        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
+    </div>
+
+</div>
+
+<script>
+    const consentBox = document.getElementById("consentBox");
+    const consentYes = document.getElementById("consentYes");
+    const consentNo = document.getElementById("consentNo");
+    consentYes.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","yes");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+        consentGrantedAnalyticsStorage();
+    };
+    consentNo.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","no");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+    };
+    let checkConsent = window.localStorage.getItem("excelineendag_consent");
+    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
+</script>
+    
+    <script>
+		/* Progress bar */
+		//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+		var h = document.documentElement,
+			b = document.body,
+			st = 'scrollTop',
+			sh = 'scrollHeight',
+			progress = document.querySelector('#progress'),
+			scroll;
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+		var navcontent = document.getElementById("nav-content");
+
+		document.addEventListener('scroll', function() {
+
+			/*Refresh scroll % width*/
+			scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+			progress.style.setProperty('--scroll', scroll + '%');
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 10) {
+				// header.classList.add("bg-white");
+				header.classList.add("shadow");
+				// navcontent.classList.remove("bg-gray-100");
+				// navcontent.classList.add("bg-white");
+			} else {
+				// header.classList.remove("bg-white");
+				header.classList.remove("shadow");
+				// navcontent.classList.remove("bg-white");
+				// navcontent.classList.add("bg-gray-100");
+
+			}
+
+		});
+
+
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function() {
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+		// //Javascript to toggle specific menu item
+		// document.getElementById('item1-toggle').onclick = function() {
+		// 	document.getElementById("item1-content").classList.toggle("hidden");
+		// }
+		
+
+		//Javascript to close menu item
+		window.addEventListener('click', function(e){
+    		// if (!document.getElementById('item1-content').contains(e.target) && (!document.getElementById('item1-toggle').contains(e.target))){
+			// 	document.getElementById("item1-content").classList.add("hidden");
+			// 	// alert("Clicked outside l2 and logo-menu");
+			// 	// document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
+			// 	}
+			if (!document.getElementById('nav-content').contains(e.target) && (!document.getElementById('nav-toggle').contains(e.target))){
+			document.getElementById("nav-content").classList.add("hidden");
+			// alert("Clicked outside l2 and logo-menu");
+			// document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
+			}
+		})
+	</script>
+
+</body>
+</html>
