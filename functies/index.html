@@ -1,34 +1,6 @@
 <!doctype html>
 <html lang="nl" style="scroll-behavior: smooth;">
 <head>
-	<script>
-    // Define dataLayer and the gtag function.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    // Set default consent to 'denied' as a placeholder
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
-    });
-</script>    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D148HDTZQK"></script>
-<script> 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D148HDTZQK');
-</script>
-<script>
-    function consentGrantedAnalyticsStorage() {
-        gtag('consent', 'update', {
-            'analytics_storage': 'granted'
-        });
-    }
-</script>
-  
     <meta charset="utf-8" />
 	<meta name="robots" content="all">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,11 +17,45 @@
 		<meta name="description" content="VERT.ZOEKEN, X.ZOEKEN, ALS, SOMMEN.ALS, ZOEKEN, VIND.SPEC, VERGELIJKEN, TEKST.SPLITSEN, TEKST.VOOR, ALS.FOUT, ALS.NB, SPATIES.WISSEN, DEEL"/>
 	
     <link rel="stylesheet" href="../static/css/main.css">
+	<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+</script>    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MWVMMTKM');</script>
+    <!-- End Google Tag Manager -->
+
+<script>
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+</script>
+  
 </head>
 
 
 <!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
 <body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWVMMTKM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+	
 	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
 		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
 		
@@ -159,17 +165,17 @@
 
 
 <!--  -->
-<div class="prose prose-lg mx-auto px-6 max-w-5xl">
+<div class="prose md:prose-lg mx-auto px-6 md:px-12 max-w-5xl">
     <h1 id="h1" style="scroll-margin-top: 100px;">474 Excel-functies per categorie, met beschrijving en vertaling</h1>
     <!-- {&#39;AANTAL&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;AANTALARG&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;AANTALLEN.ALS&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;AFRONDEN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Wiskunde&#39;}, &#39;ALS&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Logisch&#39;}, &#39;ALS.FOUT&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Logisch&#39;}, &#39;ALS.NB&#39;: {&#39;Support&#39;: &#39;Excel 2013&#39;, &#39;Categorie&#39;: &#39;Logisch&#39;}, &#39;BEGINLETTERS&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;DEEL&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;EN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Logisch&#39;}, &#39;FILTER&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;GEMIDDELDE&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;GEMIDDELDEA&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;GEMIDDELDEN.ALS&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;HERHALING&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;HOR.STAPELEN&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;INDEX&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;MAX&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;MAX.ALS.VOORWAARDEN&#39;: {&#39;Support&#39;: &#39;Excel 2019&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;MEDIAAN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;MIN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;MIN.ALS.VOORWAARDEN&#39;: {&#39;Support&#39;: &#39;Excel 2019&#39;, &#39;Categorie&#39;: &#39;Statistisch&#39;}, &#39;NIET&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Logisch&#39;}, &#39;OF&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Logisch&#39;}, &#39;REEKS&#39;: {&#39;Support&#39;: &#39;Excel 365&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;SOM&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Wiskunde&#39;}, &#39;SOMMEN.ALS&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Wiskunde&#39;}, &#39;SORTEREN&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;SORTEREN.OP&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;SPATIES.WISSEN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;SUBSTITUEREN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;TEKST.NA&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;TEKST.SPLITSEN&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;TEKST.VOOR&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;TRANSPONEREN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;UNIEK&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;VANDAAG&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Datum en tijd&#39;}, &#39;VERGELIJKEN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;VERSCHUIVING&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;VERT.STAPELEN&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Array&#39;}, &#39;VERT.ZOEKEN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;VIND.SPEC&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Tekst&#39;}, &#39;X.VERGELIJKEN&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;X.ZOEKEN&#39;: {&#39;Support&#39;: &#39;Excel 2021&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}, &#39;ZELFDE.DAG&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Datum en tijd&#39;}, &#39;ZOEKEN&#39;: {&#39;Support&#39;: &#39;&#39;, &#39;Categorie&#39;: &#39;Zoeken en verwijzen&#39;}} -->
-    <div class="px-4 pt-1 pb-4 rounded-xl mb-4">
+    <div class=" md:pt-1 pb-4 rounded-xl mb-4">
         <p>Scroll meteen naar een van de 46 populaire functies: 
             <!-- <span class="text-yellow-300 text-xl">★</span> -->
         </p>
-        <div class="flex flex-wrap leading-9">
+        <div class="flex flex-wrap leading-8 md:leading-9">
             
             <a class="group no-underline" href="#nl-aantal">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     AANTAL
                     
                 </span>
@@ -177,7 +183,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-aantalarg">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     AANTALARG
                     
                 </span>
@@ -185,7 +191,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-aantallen-als">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     AANTALLEN.ALS
                     
                 </span>
@@ -193,7 +199,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-afronden">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     AFRONDEN
                     
                 </span>
@@ -201,7 +207,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-als">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     ALS
                     
                 </span>
@@ -209,7 +215,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-als-fout">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     ALS.FOUT
                     
                 </span>
@@ -217,7 +223,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-als-nb">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     ALS.NB
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2013</span>
@@ -227,7 +233,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-beginletters">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     BEGINLETTERS
                     
                 </span>
@@ -235,7 +241,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-deel">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     DEEL
                     
                 </span>
@@ -243,7 +249,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-en">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     EN
                     
                 </span>
@@ -251,7 +257,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-filter">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     FILTER
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -261,7 +267,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-gemiddelde">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     GEMIDDELDE
                     
                 </span>
@@ -269,7 +275,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-gemiddeldea">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     GEMIDDELDEA
                     
                 </span>
@@ -277,7 +283,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-gemiddelden-als">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     GEMIDDELDEN.ALS
                     
                 </span>
@@ -285,7 +291,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-herhaling">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     HERHALING
                     
                 </span>
@@ -293,7 +299,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-hor-stapelen">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     HOR.STAPELEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -303,7 +309,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-index">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     INDEX
                     
                 </span>
@@ -311,7 +317,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-max">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     MAX
                     
                 </span>
@@ -319,7 +325,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-max-als-voorwaarden">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     MAX.ALS.VOORWAARDEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2019</span>
@@ -329,7 +335,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-mediaan">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     MEDIAAN
                     
                 </span>
@@ -337,7 +343,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-min">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     MIN
                     
                 </span>
@@ -345,7 +351,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-min-als-voorwaarden">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     MIN.ALS.VOORWAARDEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2019</span>
@@ -355,7 +361,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-niet">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     NIET
                     
                 </span>
@@ -363,7 +369,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-of">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     OF
                     
                 </span>
@@ -371,7 +377,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-reeks">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     REEKS
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">365</span>
@@ -381,7 +387,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-som">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     SOM
                     
                 </span>
@@ -389,7 +395,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-sommen-als">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     SOMMEN.ALS
                     
                 </span>
@@ -397,7 +403,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-sorteren">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     SORTEREN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -407,7 +413,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-sorteren-op">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     SORTEREN.OP
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -417,7 +423,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-spaties-wissen">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     SPATIES.WISSEN
                     
                 </span>
@@ -425,7 +431,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-substitueren">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     SUBSTITUEREN
                     
                 </span>
@@ -433,7 +439,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-tekst-na">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     TEKST.NA
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -443,7 +449,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-tekst-splitsen">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     TEKST.SPLITSEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -453,7 +459,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-tekst-voor">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     TEKST.VOOR
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -463,7 +469,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-transponeren">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     TRANSPONEREN
                     
                 </span>
@@ -471,7 +477,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-uniek">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     UNIEK
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -481,7 +487,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-vandaag">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     VANDAAG
                     
                 </span>
@@ -489,7 +495,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-vergelijken">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     VERGELIJKEN
                     
                 </span>
@@ -497,7 +503,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-verschuiving">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     VERSCHUIVING
                     
                 </span>
@@ -505,7 +511,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-vert-stapelen">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     VERT.STAPELEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -515,7 +521,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-vert-zoeken">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     VERT.ZOEKEN
                     
                 </span>
@@ -523,7 +529,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-vind-spec">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     VIND.SPEC
                     
                 </span>
@@ -531,7 +537,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-x-vergelijken">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     X.VERGELIJKEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -541,7 +547,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-x-zoeken">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     X.ZOEKEN
                     
                     <span class="group-hover:bg-green-900 rounded-xl px-2 bg-green-700 text-white text-xs font-sans">2021</span>
@@ -551,7 +557,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-zelfde-dag">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     ZELFDE.DAG
                     
                 </span>
@@ -559,7 +565,7 @@
             </a>
             
             <a class="group no-underline" href="#nl-zoeken">
-                <span class="rounded-xl mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
+                <span class="rounded-xl mr-1 md:mr-2 text-sm px-3 py-1 bg-warmGray-200 text-warmGray-600 group-hover:bg-warmGray-400 group-hover:text-white font-medium font-mono whitespace-nowrap">
                     ZOEKEN
                     
                 </span>
@@ -13441,7 +13447,48 @@
         <!-- </div> -->
         
     </div>
+	<div id="consentBox" class="border-4 md:border-none md:bg-warmGray-50 px-4 py-8 border-warmGray-300 mx-2 md:mx-0 md:w-screen fixed bg-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
+    <div class="max-w-3xl mx-auto leading-snug">
+        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
+        <div class="flex pt-4 pb-2 gap-x-4">
+            <button id="consentYes" class="bg-green-700 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
+            <button id="consentNo" class="px-6 py-2 bg-red-700 text-white font-semibold rounded-xl">Liever niet</button>
+            
+            
+        </div>
+        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
+    </div>
 
+</div>
+
+<script>
+    const consentBox = document.getElementById("consentBox");
+    const consentYes = document.getElementById("consentYes");
+    const consentNo = document.getElementById("consentNo");
+    consentYes.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","yes");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+        consentGrantedAnalyticsStorage();
+    };
+    consentNo.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","no");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+    };
+    let checkConsent = window.localStorage.getItem("excelineendag_consent");
+    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
+</script>
     <!-- <footer class="footer relative bg-gray-700 mt-12 pt-6">
     <div class="relative max-w-xl sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
     
@@ -13526,47 +13573,7 @@
 
 </footer>
 
-	<div id="consentBox" class="p-10 mx-2 md:mx-0 md:w-screen fixed bg-warmGray-700 text-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
-    <div class="max-w-3xl mx-auto prose-lg leading-snug">
-        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
-        <div class="flex pt-4 pb-2 gap-x-4">
-            <button id="consentNo" class="px-6 py-2 font-semibold border-2 border-warmGray-300 rounded-xl">Liever niet</button>
-            <button id="consentYes" class="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
-            
-        </div>
-        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
-    </div>
-
-</div>
-
-<script>
-    const consentBox = document.getElementById("consentBox");
-    const consentYes = document.getElementById("consentYes");
-    const consentNo = document.getElementById("consentNo");
-    consentYes.onclick = () => {
-        window.localStorage.setItem("excelineendag_consent","yes");
-        if (window.localStorage.getItem("excelineendag_consent")!=null){
-            consentBox.classList.add("hidden");
-        } else {
-            alert("Cookie can't be set! Please"+ 
-            " unblock this site from the cookie"+
-            " setting of your browser.");
-        };
-        consentGrantedAnalyticsStorage();
-    };
-    consentNo.onclick = () => {
-        window.localStorage.setItem("excelineendag_consent","no");
-        if (window.localStorage.getItem("excelineendag_consent")!=null){
-            consentBox.classList.add("hidden");
-        } else {
-            alert("Cookie can't be set! Please"+ 
-            " unblock this site from the cookie"+
-            " setting of your browser.");
-        };
-    };
-    let checkConsent = window.localStorage.getItem("excelineendag_consent");
-    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
-</script>
+	
     
     <script>
 		/* Progress bar */

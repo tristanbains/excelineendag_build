@@ -118,10 +118,6 @@ code {
 Add the correct font size in all browsers.
 */
 
-small {
-  font-size: 80%;
-}
-
 /**
 Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
 */
@@ -240,6 +236,7 @@ Add the correct display in Chrome and Safari.
  */
 
 
+dl,
 h1,
 h2,
 h3,
@@ -429,6 +426,7 @@ code {
 img,
 svg,
 video,
+iframe,
 object {
   display: block;
   vertical-align: middle;
@@ -1683,12 +1681,6 @@ li::marker {
   margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
-.space-x-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1710,6 +1702,11 @@ li::marker {
   background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+}
+
 .bg-green-50 {
   --tw-bg-opacity: 1;
   background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
@@ -1728,11 +1725,6 @@ li::marker {
 .bg-green-400 {
   --tw-bg-opacity: 1;
   background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
 }
 
 .bg-green-700 {
@@ -1866,6 +1858,10 @@ li::marker {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-t-2 {
@@ -2038,18 +2034,12 @@ li::marker {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .leading-9 {
@@ -2122,6 +2112,10 @@ li::marker {
 
 .mr-1 {
   margin-right: 0.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .mt-2 {
@@ -2204,12 +2198,12 @@ li::marker {
   margin-top: -1.5rem;
 }
 
-.-mt-16 {
-  margin-top: -4rem;
+.-ml-8 {
+  margin-left: -2rem;
 }
 
-.-ml-32 {
-  margin-left: -8rem;
+.-mt-16 {
+  margin-top: -4rem;
 }
 
 .max-w-lg {
@@ -2251,10 +2245,6 @@ li::marker {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
 }
 
 .px-0 {
@@ -2312,19 +2302,14 @@ li::marker {
   padding-right: 1.5rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .py-32 {
@@ -2384,20 +2369,12 @@ li::marker {
   padding-top: 1.5rem;
 }
 
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
 .pt-8 {
   padding-top: 2rem;
 }
 
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .pointer-events-none {
@@ -2667,12 +2644,12 @@ li::marker {
   width: 3rem;
 }
 
-.w-48 {
-  width: 12rem;
+.w-40 {
+  width: 10rem;
 }
 
-.w-72 {
-  width: 18rem;
+.w-48 {
+  width: 12rem;
 }
 
 .w-96 {
@@ -2729,12 +2706,12 @@ li::marker {
        column-gap: 2.5rem;
 }
 
-.gap-y-4 {
-  row-gap: 1rem;
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
-.gap-y-6 {
-  row-gap: 1.5rem;
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .grid-cols-1 {
@@ -2743,10 +2720,6 @@ li::marker {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-12 {
@@ -2813,8 +2786,18 @@ li::marker {
 
 @media (min-width: 640px) {
 
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .sm\:max-w-2xl {
     max-width: 42rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sm\:w-2\/3 {
@@ -2828,14 +2811,23 @@ li::marker {
 
 @media (min-width: 768px) {
 
-  .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  .md\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
-    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:bg-warmGray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(250, 250, 249, var(--tw-bg-opacity));
   }
 
   .md\:rounded-none {
     border-radius: 0px;
+  }
+
+  .md\:border-none {
+    border-style: none;
   }
 
   .md\:block {
@@ -2864,6 +2856,11 @@ li::marker {
     line-height: 1.5rem;
   }
 
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2879,6 +2876,15 @@ li::marker {
     line-height: 2.5rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:leading-9 {
+    line-height: 2.25rem;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2886,6 +2892,10 @@ li::marker {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mr-2 {
+    margin-right: 0.5rem;
   }
 
   .md\:mt-32 {
@@ -2914,19 +2924,37 @@ li::marker {
     padding-bottom: 1rem;
   }
 
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
+  }
+
+  .md\:pt-1 {
+    padding-top: 0.25rem;
+  }
+
+  .md\:pr-1 {
+    padding-right: 0.25rem;
   }
 
   .md\:pb-1 {
@@ -2941,16 +2969,20 @@ li::marker {
     padding-top: 1rem;
   }
 
-  .md\:pl-4 {
-    padding-left: 1rem;
+  .md\:pr-4 {
+    padding-right: 1rem;
   }
 
-  .md\:pl-8 {
-    padding-left: 2rem;
+  .md\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .md\:bottom-0 {
     bottom: 0px;
+  }
+
+  .md\:w-72 {
+    width: 18rem;
   }
 
   .md\:w-auto {
@@ -2982,8 +3014,8 @@ li::marker {
          column-gap: 1rem;
   }
 
-  .md\:gap-y-12 {
-    row-gap: 3rem;
+  .md\:gap-y-4 {
+    row-gap: 1rem;
   }
 
   .md\:grid-cols-2 {

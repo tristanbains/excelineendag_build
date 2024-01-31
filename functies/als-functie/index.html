@@ -1,34 +1,6 @@
 <!doctype html>
 <html lang="nl" style="scroll-behavior: smooth;">
 <head>
-	<script>
-    // Define dataLayer and the gtag function.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    // Set default consent to 'denied' as a placeholder
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
-    });
-</script>    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D148HDTZQK"></script>
-<script> 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D148HDTZQK');
-</script>
-<script>
-    function consentGrantedAnalyticsStorage() {
-        gtag('consent', 'update', {
-            'analytics_storage': 'granted'
-        });
-    }
-</script>
-  
     <meta charset="utf-8" />
 	<meta name="robots" content="all">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,11 +23,45 @@
 		
 	
     <link rel="stylesheet" href="../../static/css/main.css">
+	<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+</script>    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MWVMMTKM');</script>
+    <!-- End Google Tag Manager -->
+
+<script>
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+</script>
+  
 </head>
 
 
 <!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
 <body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWVMMTKM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+	
 	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
 		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
 		
@@ -164,12 +170,12 @@
 
 
     
-    <article class="lg:col-span-2 prose prose-slate prose-lg mx-auto px-6 prose-code:text-blue-600">
+    <article class="lg:col-span-2 prose prose-slate md:prose-lg mx-auto px-6 prose-code:text-blue-600">
 
         
 <div>
         <nav class="" aria-label="Breadcrumb">
-            <ul class="inline-flex items-center space-x-1 md:space-x-2 list-reset list-none bg-warmGray-100 rounded-xl px-8">
+            <ul class="inline-flex md:space-x-1 list-reset list-none bg-warmGray-100 rounded-xl px-4 md:px-8">
                 <li class="inline-flex items-center">
                     <a href="../../index.html" class="no-underline inline-flex items-center text-sm font-medium text-green-700 hover:text-green-500">
                       <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -187,7 +193,7 @@
                 </li>
                 
                 <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">></li>
-                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500 ml-1">
                     
                     
                     ALS-functie
@@ -222,7 +228,7 @@
         
             
 <div class="bg-warmGray-100 p-4 rounded-xl">
-    <div class="flex">
+    <div class="md:flex">
         <div class="whitespace-nowrap mr-2">
             <span class="font-medium text-warmGray-500 text-sm mr-2">Gebruikte functies: </span>
         </div>
@@ -242,7 +248,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         ALS
@@ -286,7 +292,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         EN
@@ -330,7 +336,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         NIET
@@ -374,7 +380,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         GELIJK
@@ -414,7 +420,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         OF
@@ -457,7 +463,7 @@
 
         
             
-                <h3>ALS-functie voorbeeld</h3>
+                <h2>ALS-functie voorbeeld</h2>
                 <div class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300"><svg viewBox="0 0 2133 1200" style="background-color:#dfe6e9" title="ALS-functie" alt="ALS-functie" font-family="Sans,Arial" dy="0.25em" text-anchor="middle" xmlns="http://www.w3.org/2000/svg"><g id="box" transform="translate(566.6666666666665 100.0)"><g id="D3"><circle cx="301.5" cy="246.5" r="35.6" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></circle><text x="301" y="261" fill="#636e72" font-size="44.5">1</text></g><g id="C4"><rect x="101" y="303" width="116" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="159" y="362" fill="#b2bec3" font-size="44.5">Dag</text></g><g id="D4"><rect x="229" y="303" width="145" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="301" y="362" fill="#636e72" font-size="44.5">Temp</text></g><g id="E4"><rect x="386" y="303" width="145" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="458" y="362" fill="#b2bec3" font-size="44.5">Regen</text></g><g id="G4"><rect x="632" y="303" width="328" height="89" fill="transparent" stroke="transparent" stroke-width="4"></rect><text x="796" y="362" fill="#636e72" font-size="44.5">Mening</text></g><g id="C5"><rect x="101" y="404" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="463" fill="#b2bec3" font-size="44.5">1</text></g><g id="D5"><rect x="229" y="404" width="145" height="89" fill="#ffeaa7" stroke="#636e72" stroke-width="4"></rect><text x="301" y="463" fill="#636e72" font-size="44.5">15</text></g><g id="E5"><rect x="386" y="404" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="463" fill="#b2bec3" font-size="44.5">11</text></g><g id="G5"><rect x="632" y="404" width="328" height="89" fill="#2d3436" stroke="#2d3436" stroke-width="4"></rect><text x="796" y="463" fill="#ffffff" font-size="44.5">Niet warm</text></g><g id="G5_comment"><line x1="972" y1="448.5" x2="1016.5" y2="448.5" stroke-width="4" stroke="#2d3436"></line><text x="972" y="463" fill="#2d3436" font-size="44.5" text-anchor="start" dx="55.625">ALS()-functie</text></g><g id="C6"><rect x="101" y="505" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="564" fill="#b2bec3" font-size="44.5">2</text></g><g id="D6"><rect x="229" y="505" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="564" fill="#636e72" font-size="44.5">18</text></g><g id="E6"><rect x="386" y="505" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="564" fill="#b2bec3" font-size="44.5">0</text></g><g id="G6"><rect x="632" y="505" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="564" fill="#ffffff" font-size="44.5">Niet warm</text></g><g id="C7"><rect x="101" y="606" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="665" fill="#b2bec3" font-size="44.5">3</text></g><g id="D7"><rect x="229" y="606" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="665" fill="#636e72" font-size="44.5">21</text></g><g id="E7"><rect x="386" y="606" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="665" fill="#b2bec3" font-size="44.5">1</text></g><g id="G7"><rect x="632" y="606" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="665" fill="#ffffff" font-size="44.5">Warm</text></g><g id="C8"><rect x="101" y="707" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="766" fill="#b2bec3" font-size="44.5">4</text></g><g id="D8"><rect x="229" y="707" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="766" fill="#636e72" font-size="44.5">22</text></g><g id="E8"><rect x="386" y="707" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="766" fill="#b2bec3" font-size="44.5">12</text></g><g id="G8"><rect x="632" y="707" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="766" fill="#ffffff" font-size="44.5">Warm</text></g><g id="C9"><rect x="101" y="808" width="116" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="159" y="867" fill="#b2bec3" font-size="44.5">5</text></g><g id="D9"><rect x="229" y="808" width="145" height="89" fill="#b2bec3" stroke="#636e72" stroke-width="4"></rect><text x="301" y="867" fill="#636e72" font-size="44.5">17</text></g><g id="E9"><rect x="386" y="808" width="145" height="89" fill="#C9D2D6" stroke="transparent" stroke-width="4"></rect><text x="458" y="867" fill="#b2bec3" font-size="44.5">0</text></g><g id="G9"><rect x="632" y="808" width="328" height="89" fill="#636e72" stroke="#636e72" stroke-width="4"></rect><text x="796" y="867" fill="#ffffff" font-size="44.5">Niet warm</text></g></g></svg></div><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span>D5<span class="code_symbol">>=</span>20<span class="code_sep"><span class="-mr-2">; </span></span>"Warm"<span class="code_sep"><span class="-mr-2">; </span></span>"Niet warm")<span class="code_comment">// cel G5, output: Niet warm</span></p>
             
         
@@ -818,7 +824,48 @@
         <!-- </div> -->
         
     </div>
+	<div id="consentBox" class="border-4 md:border-none md:bg-warmGray-50 px-4 py-8 border-warmGray-300 mx-2 md:mx-0 md:w-screen fixed bg-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
+    <div class="max-w-3xl mx-auto leading-snug">
+        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
+        <div class="flex pt-4 pb-2 gap-x-4">
+            <button id="consentYes" class="bg-green-700 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
+            <button id="consentNo" class="px-6 py-2 bg-red-700 text-white font-semibold rounded-xl">Liever niet</button>
+            
+            
+        </div>
+        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
+    </div>
 
+</div>
+
+<script>
+    const consentBox = document.getElementById("consentBox");
+    const consentYes = document.getElementById("consentYes");
+    const consentNo = document.getElementById("consentNo");
+    consentYes.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","yes");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+        consentGrantedAnalyticsStorage();
+    };
+    consentNo.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","no");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+    };
+    let checkConsent = window.localStorage.getItem("excelineendag_consent");
+    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
+</script>
     <!-- <footer class="footer relative bg-gray-700 mt-12 pt-6">
     <div class="relative max-w-xl sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
     
@@ -903,47 +950,7 @@
 
 </footer>
 
-	<div id="consentBox" class="p-10 mx-2 md:mx-0 md:w-screen fixed bg-warmGray-700 text-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
-    <div class="max-w-3xl mx-auto prose-lg leading-snug">
-        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
-        <div class="flex pt-4 pb-2 gap-x-4">
-            <button id="consentNo" class="px-6 py-2 font-semibold border-2 border-warmGray-300 rounded-xl">Liever niet</button>
-            <button id="consentYes" class="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
-            
-        </div>
-        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
-    </div>
-
-</div>
-
-<script>
-    const consentBox = document.getElementById("consentBox");
-    const consentYes = document.getElementById("consentYes");
-    const consentNo = document.getElementById("consentNo");
-    consentYes.onclick = () => {
-        window.localStorage.setItem("excelineendag_consent","yes");
-        if (window.localStorage.getItem("excelineendag_consent")!=null){
-            consentBox.classList.add("hidden");
-        } else {
-            alert("Cookie can't be set! Please"+ 
-            " unblock this site from the cookie"+
-            " setting of your browser.");
-        };
-        consentGrantedAnalyticsStorage();
-    };
-    consentNo.onclick = () => {
-        window.localStorage.setItem("excelineendag_consent","no");
-        if (window.localStorage.getItem("excelineendag_consent")!=null){
-            consentBox.classList.add("hidden");
-        } else {
-            alert("Cookie can't be set! Please"+ 
-            " unblock this site from the cookie"+
-            " setting of your browser.");
-        };
-    };
-    let checkConsent = window.localStorage.getItem("excelineendag_consent");
-    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
-</script>
+	
     
     <script>
 		/* Progress bar */

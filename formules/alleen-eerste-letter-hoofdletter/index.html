@@ -1,34 +1,6 @@
 <!doctype html>
 <html lang="nl" style="scroll-behavior: smooth;">
 <head>
-	<script>
-    // Define dataLayer and the gtag function.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    // Set default consent to 'denied' as a placeholder
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
-    });
-</script>    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D148HDTZQK"></script>
-<script> 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D148HDTZQK');
-</script>
-<script>
-    function consentGrantedAnalyticsStorage() {
-        gtag('consent', 'update', {
-            'analytics_storage': 'granted'
-        });
-    }
-</script>
-  
     <meta charset="utf-8" />
 	<meta name="robots" content="all">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,11 +23,45 @@
 		
 	
     <link rel="stylesheet" href="../../static/css/main.css">
+	<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+</script>    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MWVMMTKM');</script>
+    <!-- End Google Tag Manager -->
+
+<script>
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+</script>
+  
 </head>
 
 
 <!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
 <body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWVMMTKM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+	
 	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
 		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
 		
@@ -164,12 +170,12 @@
 
 
     
-    <article class="lg:col-span-2 prose prose-slate prose-lg mx-auto px-6 prose-code:text-blue-600">
+    <article class="lg:col-span-2 prose prose-slate md:prose-lg mx-auto px-6 prose-code:text-blue-600">
 
         
 <div>
         <nav class="" aria-label="Breadcrumb">
-            <ul class="inline-flex items-center space-x-1 md:space-x-2 list-reset list-none bg-warmGray-100 rounded-xl px-8">
+            <ul class="inline-flex md:space-x-1 list-reset list-none bg-warmGray-100 rounded-xl px-4 md:px-8">
                 <li class="inline-flex items-center">
                     <a href="../../index.html" class="no-underline inline-flex items-center text-sm font-medium text-green-700 hover:text-green-500">
                       <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -187,7 +193,7 @@
                 </li>
                 
                 <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">></li>
-                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500">
+                <li class="no-underline inline-flex items-center text-sm font-medium text-warmGray-500 ml-1">
                     
                     Alleen eerste letter hoofdletter
                     
@@ -214,7 +220,7 @@
         
             
 <div class="bg-warmGray-100 p-4 rounded-xl">
-    <div class="flex">
+    <div class="md:flex">
         <div class="whitespace-nowrap mr-2">
             <span class="font-medium text-warmGray-500 text-sm mr-2">Gebruikte functies: </span>
         </div>
@@ -234,7 +240,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         KLEINE.LETTERS
@@ -274,7 +280,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         HOOFDLETTERS
@@ -314,7 +320,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         RECHTS
@@ -354,7 +360,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         LENGTE
@@ -394,7 +400,7 @@
                     
                     
                 </span>
-                <div class="shadow-2xl px-4 text-sm group-hover:block hidden absolute w-72 -ml-32 md:-ml-20 z-10 bg-gray-700 text-warmGray-100 rounded-md">
+                <div class="shadow-2xl bg-gray-700 text-warmGray-100 text-sm rounded-md px-4 group-hover:block hidden absolute mx-auto md:mx-0 w-40 md:w-72 -ml-8 md:-ml-20 z-10">
                     
                     <p class="text-green-300 font-mono">
                         LINKS
@@ -649,7 +655,48 @@
         <!-- </div> -->
         
     </div>
+	<div id="consentBox" class="border-4 md:border-none md:bg-warmGray-50 px-4 py-8 border-warmGray-300 mx-2 md:mx-0 md:w-screen fixed bg-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
+    <div class="max-w-3xl mx-auto leading-snug">
+        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
+        <div class="flex pt-4 pb-2 gap-x-4">
+            <button id="consentYes" class="bg-green-700 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
+            <button id="consentNo" class="px-6 py-2 bg-red-700 text-white font-semibold rounded-xl">Liever niet</button>
+            
+            
+        </div>
+        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
+    </div>
 
+</div>
+
+<script>
+    const consentBox = document.getElementById("consentBox");
+    const consentYes = document.getElementById("consentYes");
+    const consentNo = document.getElementById("consentNo");
+    consentYes.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","yes");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+        consentGrantedAnalyticsStorage();
+    };
+    consentNo.onclick = () => {
+        window.localStorage.setItem("excelineendag_consent","no");
+        if (window.localStorage.getItem("excelineendag_consent")!=null){
+            consentBox.classList.add("hidden");
+        } else {
+            alert("Cookie can't be set! Please"+ 
+            " unblock this site from the cookie"+
+            " setting of your browser.");
+        };
+    };
+    let checkConsent = window.localStorage.getItem("excelineendag_consent");
+    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
+</script>
     <!-- <footer class="footer relative bg-gray-700 mt-12 pt-6">
     <div class="relative max-w-xl sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
     
@@ -734,47 +781,7 @@
 
 </footer>
 
-	<div id="consentBox" class="p-10 mx-2 md:mx-0 md:w-screen fixed bg-warmGray-700 text-white bottom-16 md:bottom-0 rounded-xl md:rounded-none">
-    <div class="max-w-3xl mx-auto prose-lg leading-snug">
-        <div class="px-1">Voor deze site wil ik gebruik maken van cookies om te analyseren hoe bezoekers de pagina gebruiken. Vind je dat OK?</div>
-        <div class="flex pt-4 pb-2 gap-x-4">
-            <button id="consentNo" class="px-6 py-2 font-semibold border-2 border-warmGray-300 rounded-xl">Liever niet</button>
-            <button id="consentYes" class="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-semibold">Tuurlijk, geen probleem</button>
-            
-        </div>
-        <div class="px-1 pt-2 text-base">(Ik toon sowieso geen advertenties en speel geen advertentiedata door)</div>
-    </div>
-
-</div>
-
-<script>
-    const consentBox = document.getElementById("consentBox");
-    const consentYes = document.getElementById("consentYes");
-    const consentNo = document.getElementById("consentNo");
-    consentYes.onclick = () => {
-        window.localStorage.setItem("excelineendag_consent","yes");
-        if (window.localStorage.getItem("excelineendag_consent")!=null){
-            consentBox.classList.add("hidden");
-        } else {
-            alert("Cookie can't be set! Please"+ 
-            " unblock this site from the cookie"+
-            " setting of your browser.");
-        };
-        consentGrantedAnalyticsStorage();
-    };
-    consentNo.onclick = () => {
-        window.localStorage.setItem("excelineendag_consent","no");
-        if (window.localStorage.getItem("excelineendag_consent")!=null){
-            consentBox.classList.add("hidden");
-        } else {
-            alert("Cookie can't be set! Please"+ 
-            " unblock this site from the cookie"+
-            " setting of your browser.");
-        };
-    };
-    let checkConsent = window.localStorage.getItem("excelineendag_consent");
-    checkConsent !== null ? consentBox.classList.add("hidden") : consentBox.classList.remove("hidden");
-</script>
+	
     
     <script>
 		/* Progress bar */
