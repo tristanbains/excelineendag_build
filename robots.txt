@@ -3,4 +3,4 @@ Disallow: /missing/
 Disallow: /link/
 Disallow: /test/
 
-Sitemap: https://www.excelineendag.nl//sitemap.xml
+Sitemap: https://www.excelineendag.nl/sitemap.xml
