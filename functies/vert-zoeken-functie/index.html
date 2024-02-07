@@ -1,8 +1,15 @@
 <!doctype html>
 <html lang="nl" style="scroll-behavior: smooth;">
 <head>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel" />
+	<meta property="og:url" content="https://www.excelineendag.nl/functies/vert-zoeken-functie/" />
+	<meta property="og:description" content="Met de VERT.ZOEKEN-functie zoek je verticaal een waarde op in de eerste kolom, om een bijbehorende waarde uit een andere kolom te krijgen. Je kunt zoeken naar een exacte match, of een benadering." />
+	<meta property="og:image" content="https://www.excelineendag.nl/static/images/webp/VERT-ZOEKEN-functie.webp" />
+	<meta property="og:locale" content="nl" />
+	<meta property="og:site_name" content="Excel in een dag" />
+	<meta property="article:author" content="Tristan Bains" />
     <meta charset="utf-8" />
-	<!-- <meta name="robots" content="all"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" href="../../static/images/XL.svg" />
 	<link rel="mask-icon" href="../../static/images/XL.svg" color=”#15803D" />
@@ -15,7 +22,7 @@
 		
 	</title>
 	
-		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Functies", "item": "https://www.excelineendag.nl/functies/"}, {"@type": "ListItem", "position": 2, "name": "VERT.ZOEKEN-functie", "item": "https://www.excelineendag.nl/functies/vert-zoeken-functie/"}]}, {"@type": "TechArticle", "headline": "VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel", "description": "Met de VERT.ZOEKEN-functie zoek je verticaal een waarde op in de eerste kolom, om een bijbehorende waarde uit een andere kolom te krijgen. Je kunt zoeken naar een exacte match, of een benadering.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/functies/vert-zoeken-functie", "name": "VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel"}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Beginner"}]}</script>
+		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-functie.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-gebruik.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-exact-vs-benadering.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-functie-vs-meerdere-ALS.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-functie-meerdere-criteria.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-functie-vs-X-ZOEKEN.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Functies", "item": "https://www.excelineendag.nl/functies/"}, {"@type": "ListItem", "position": 2, "name": "VERT.ZOEKEN-functie", "item": "https://www.excelineendag.nl/functies/vert-zoeken-functie/"}]}, {"@type": "TechArticle", "image": ["https://www.excelineendag.nl/static/images/svg/VERT-ZOEKEN-functie.svg"], "headline": "VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel", "description": "Met de VERT.ZOEKEN-functie zoek je verticaal een waarde op in de eerste kolom, om een bijbehorende waarde uit een andere kolom te krijgen. Je kunt zoeken naar een exacte match, of een benadering.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/functies/vert-zoeken-functie", "name": "VERT.ZOEKEN-functie (VLOOKUP) - Verticaal zoeken in Excel"}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Beginner"}]}</script>
 	
 	
 		
@@ -54,20 +61,11 @@
   
 </head>
 
-
-<!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
 <body>
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWVMMTKM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-	
-	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
-		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
-		
-	</div> -->
-
-	<!-- absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white -->
     <div id="header" class="fixed w-full z-10 top-0 bg-white">
         <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
         
@@ -162,8 +160,6 @@
     
 </div>
 	</div>
-
-	<!-- <div class="container w-full max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto mt-20 md:mt-32 lg:mt-40 px-6"> -->
     <div class="mt-40">
         <!-- <div class="w-full px-4 md:px-6 text-lg text-gray-800 leading-normal font-sans"> -->
             
@@ -369,7 +365,7 @@
         
             
                 <h2>VERT.ZOEKEN-functie voorbeeld</h2>
-                <img title="VERT.ZOEKEN-functie" alt="VERT.ZOEKEN-functie" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-functie.svg" /><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>C5:E10<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: 7</span></p>
+                <img loading="lazy" title="VERT.ZOEKEN-functie" alt="VERT.ZOEKEN-functie" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-functie.svg" /><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>C5:E10<span class="code_sep"><span class="-mr-2">; </span></span>3<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: 7</span></p>
             
         
 
@@ -397,7 +393,7 @@
 <h2 style="scroll-margin-top: 100px;" id="gebruik">Gebruik</h2>
 <p>De <code>VERT.ZOEKEN</code>-functie is populair en bijzonder nuttig, maar niet per se intuïtief in het gebruik.</p>
 <p>Nog een voorbeeld, maar dit keer met <strong>gesorteerde data</strong>:</p>
-<p><img alt="VERT.ZOEKEN gebruik" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-gebruik.svg" title="VERT.ZOEKEN gebruik"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: Gold</span></p></p>
+<p><img alt="VERT.ZOEKEN gebruik" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/VERT-ZOEKEN-gebruik.svg" title="VERT.ZOEKEN gebruik"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: Gold</span></p></p>
 <p>Een paar opmerkingen bij de <code>VERT.ZOEKEN</code>-functie:</p>
 <ul>
 <li>Het eerste input argument, de <code>zoekwaarde</code>, moet te vinden zijn in de meest linkerkolom van het tweede input argument, de <code>tabelmatrix</code>. In dit geval zoeken we dus de waarde van cel <code>C2</code> in de meest linkerkolom van <code>C6:D10</code>. Als we bv. <code>B6:D10</code> hadden gebruikt, dan wordt de waarde van <code>C2</code> gezocht in kolom <code>B</code>, en dat willen we niet...</li>
@@ -410,7 +406,7 @@
 <p>Het laatste (optionele) input argument, <code>benaderen</code>, verdient extra aandacht, omdat het vaak fout gaat.</p>
 <p>In de meeste gevallen wil je een exacte match, en geen benadering. Als je het laatste input argument niet definieert, gaat Excel er echter van uit dat je wilt benaderen... Let hier dus op.</p>
 <p>Kijk naar het volgende voorbeeld:</p>
-<p><img alt="VERT.ZOEKEN exact vs benadering" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-exact-vs-benadering.svg" title="VERT.ZOEKEN exact vs benadering"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: #N/A</span><br/><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C3<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>WAAR)<span class="code_comment">// cel D3, output: Silver</span></p></p>
+<p><img alt="VERT.ZOEKEN exact vs benadering" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/VERT-ZOEKEN-exact-vs-benadering.svg" title="VERT.ZOEKEN exact vs benadering"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D2, output: #N/A</span><br/><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C3<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>WAAR)<span class="code_comment">// cel D3, output: Silver</span></p></p>
 <p>We hebben een variant met benaderen, en een zonder benaderen (oftewel een exacte match).</p>
 <p>We zoeken de waarde <code>150</code> in de meest linkerkolom van de gele cellen. Deze waarde zit er niet tussen. Een exacte match bestaat dus niet.</p>
 <p>Als we het laatste input argument, <code>benaderen</code>, op <code>ONWAAR</code> zetten, dan is de output <code>#N/B</code> (of <code>#N/A</code> in het Engels).</p>
@@ -418,19 +414,19 @@
 <p class="warning"><code>VERT.ZOEKEN</code> met benaderen werkt alleen goed als de data (oplopend) gesorteerd is. Als dit niet zo is, dan kunnen er onverwachte dingen uitkomen.</p>
 <h3 style="scroll-margin-top: 100px;" id="verticaal-zoeken-met-benaderen-vs-meerdere-keer-als">Verticaal zoeken (met benaderen) vs meerdere keer ALS</h3>
 <p>Kijk eens naar deze twee formules, die hetzelfde eindresultaat hebben:</p>
-<p><img alt="VERT.ZOEKEN-functie vs meerdere ALS" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-functie-vs-meerdere-ALS.svg" title="VERT.ZOEKEN-functie vs meerdere ALS"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C10<span class="code_sep"><span class="-mr-2">; </span></span>D10<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C9<span class="code_sep"><span class="-mr-2">; </span></span>D9<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C8<span class="code_sep"><span class="-mr-2">; </span></span>D8<span class="code_sep"><span class="-mr-2">; </span></span>D7)))<span class="code_comment">// cel D2, output: Silver</span><br/><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C3<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>WAAR)<span class="code_comment">// cel D3, output: Silver</span></p></p>
+<p><img alt="VERT.ZOEKEN-functie vs meerdere ALS" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/VERT-ZOEKEN-functie-vs-meerdere-ALS.svg" title="VERT.ZOEKEN-functie vs meerdere ALS"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C10<span class="code_sep"><span class="-mr-2">; </span></span>D10<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C9<span class="code_sep"><span class="-mr-2">; </span></span>D9<span class="code_sep"><span class="-mr-2">; </span></span><span class="code_function">ALS</span><span class="-mr-2">( </span>C2<span class="code_symbol">&gt;=</span>C8<span class="code_sep"><span class="-mr-2">; </span></span>D8<span class="code_sep"><span class="-mr-2">; </span></span>D7)))<span class="code_comment">// cel D2, output: Silver</span><br/><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>C3<span class="code_sep"><span class="-mr-2">; </span></span>$C$6:$D$10<span class="code_sep"><span class="-mr-2">; </span></span>2<span class="code_sep"><span class="-mr-2">; </span></span>WAAR)<span class="code_comment">// cel D3, output: Silver</span></p></p>
 <p>Beide varianten werken, maar de versie met verticaal zoeken is een stuk leesbaarder. En veel makkelijker te onderhouden, mocht je een keer een categorie wijzigen.</p>
 <p>Meerdere keren <code>ALS</code> in elkaar nesten is eigenlijk nooit een goed idee; het is extreem foutgevoelig.</p>
 <p class="tip">Zodra je merkt dat je de neiging krijgt 3 of meer <code>ALS</code>-functies in elkaar te nesten, kijk dan of de <code>VERT.ZOEKEN</code>-functie je kan redden. Dit zal niet in elke situatie zo zijn, maar vaak wel als je met gesorteerde tabellen te maken hebt.</p>
 <h3 style="scroll-margin-top: 100px;" id="verticaal-zoeken-met-meerdere-criteria">Verticaal zoeken met meerdere criteria</h3>
 <p>Als je wilt zoeken met meerdere criteria, bijvoorbeeld uit meerdere kolommen, dan kan dit ook met <code>VERT.ZOEKEN</code>.</p>
 <p>De truc is om dan een hulpkolom aan de linkerkant toe te voegen, en hierin te zoeken:</p>
-<p><img alt="VERT.ZOEKEN-functie meerdere criteria" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-functie-meerdere-criteria.svg" title="VERT.ZOEKEN-functie meerdere criteria"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>D2<span class="code_symbol -mr-2">&amp; </span>D3<span class="code_sep"><span class="-mr-2">; </span></span>B6:E10<span class="code_sep"><span class="-mr-2">; </span></span>4<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D4, output: 17</span></p></p>
+<p><img alt="VERT.ZOEKEN-functie meerdere criteria" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/VERT-ZOEKEN-functie-meerdere-criteria.svg" title="VERT.ZOEKEN-functie meerdere criteria"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">VERT.ZOEKEN</span><span class="-mr-2">( </span>D2<span class="code_symbol -mr-2">&amp; </span>D3<span class="code_sep"><span class="-mr-2">; </span></span>B6:E10<span class="code_sep"><span class="-mr-2">; </span></span>4<span class="code_sep"><span class="-mr-2">; </span></span>ONWAAR)<span class="code_comment">// cel D4, output: 17</span></p></p>
 <p>We hebben nu een hulpkolom toegevoegd die de twee kolommen ernaast "aan elkaar plakt". Het eerste input argument, <code>zoekwaarde</code>, passen we ook iets aan, door de twee zoekwaarden aan elkaar te plakken. We zoeken deze vervolgens op in de toegevoegde hulpkolom.</p>
 <p class="tip">De oplossing met de hulpkolom is een beetje gekunsteld. Het kan veel eenvoudiger, door <code>X.ZOEKEN</code> te gebruiken.</p>
 <h3 style="scroll-margin-top: 100px;" id="verticaal-zoeken-met-xzoeken">Verticaal zoeken met X.ZOEKEN</h3>
 <p>Als je een nieuwere versie van Excel hebt, dan kun je als alternatief voor <code>VERT.ZOEKEN</code> in de meeste gevallen beter de <code>X.ZOEKEN</code>-functie gebruiken. De <code>X.ZOEKEN</code>-functie is intuïtiever, en minder foutgevoelig als je bv. kolommen toevoegt.</p>
-<p><img alt="VERT.ZOEKEN-functie vs X.ZOEKEN" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/VERT-ZOEKEN-functie-vs-X-ZOEKEN.svg" title="VERT.ZOEKEN-functie vs X.ZOEKEN"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">X.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$7:$C$10<span class="code_sep"><span class="-mr-2">; </span></span>$D$7:$D$10)<span class="code_comment">// cel D2, output: Gold</span></p></p>
+<p><img alt="VERT.ZOEKEN-functie vs X.ZOEKEN" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/VERT-ZOEKEN-functie-vs-X-ZOEKEN.svg" title="VERT.ZOEKEN-functie vs X.ZOEKEN"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">X.ZOEKEN</span><span class="-mr-2">( </span>C2<span class="code_sep"><span class="-mr-2">; </span></span>$C$7:$C$10<span class="code_sep"><span class="-mr-2">; </span></span>$D$7:$D$10)<span class="code_comment">// cel D2, output: Gold</span></p></p>
 <p>Deze formule is veel intuïtiever; Zoek <code>C2</code> in <code>C7:C10</code> en geef de bijbehorende match uit <code>D7:D10</code>.</p>
 <p>Grootste voordeel van <code>X.ZOEKEN</code> is dat we geen <code>kolomindex_getal</code> hoeven te geven. Hierdoor kan de formule makkelijker horizontaal gekopieerd worden. Ook heeft <code>X.ZOEKEN</code> nog allerlei extra zoekopties via optionele input argumenten.</p>
 <h2 style="scroll-margin-top: 100px;" id="veelgestelde-vragen">Veelgestelde vragen</h2>

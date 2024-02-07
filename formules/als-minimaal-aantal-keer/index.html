@@ -1,8 +1,15 @@
 <!doctype html>
 <html lang="nl" style="scroll-behavior: smooth;">
 <head>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Als minimaal aantal keer, dan..." />
+	<meta property="og:url" content="https://www.excelineendag.nl/formules/als-minimaal-aantal-keer/" />
+	<meta property="og:description" content="Je wilt testen of een specifieke waarde een minimaal aantal keren voorkomt in een rij, of kolom. Of een hele tabel." />
+	<meta property="og:image" content="https://www.excelineendag.nl/static/images/webp/Als-minimaal-aantal-keer.webp" />
+	<meta property="og:locale" content="nl" />
+	<meta property="og:site_name" content="Excel in een dag" />
+	<meta property="article:author" content="Tristan Bains" />
     <meta charset="utf-8" />
-	<!-- <meta name="robots" content="all"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" href="../../static/images/XL.svg" />
 	<link rel="mask-icon" href="../../static/images/XL.svg" color=”#15803D" />
@@ -15,7 +22,7 @@
 		
 	</title>
 	
-		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Formules", "item": "https://www.excelineendag.nl/formules/"}, {"@type": "ListItem", "position": 2, "name": "Als minimaal aantal keer", "item": "https://www.excelineendag.nl/formules/als-minimaal-aantal-keer/"}]}, {"@type": "TechArticle", "headline": "Als minimaal aantal keer, dan...", "description": "Je wilt testen of een specifieke waarde een minimaal aantal keren voorkomt in een rij, of kolom. Of een hele tabel.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/formules/als-minimaal-aantal-keer", "name": "Als minimaal aantal keer, dan..."}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Beginner"}]}</script>
+		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/Als-minimaal-aantal-keer.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Formules", "item": "https://www.excelineendag.nl/formules/"}, {"@type": "ListItem", "position": 2, "name": "Als minimaal aantal keer", "item": "https://www.excelineendag.nl/formules/als-minimaal-aantal-keer/"}]}, {"@type": "TechArticle", "image": ["https://www.excelineendag.nl/static/images/svg/Als-minimaal-aantal-keer.svg"], "headline": "Als minimaal aantal keer, dan...", "description": "Je wilt testen of een specifieke waarde een minimaal aantal keren voorkomt in een rij, of kolom. Of een hele tabel.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/formules/als-minimaal-aantal-keer", "name": "Als minimaal aantal keer, dan..."}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Beginner"}]}</script>
 	
 	
 		
@@ -54,20 +61,11 @@
   
 </head>
 
-
-<!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
 <body>
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWVMMTKM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-	
-	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
-		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
-		
-	</div> -->
-
-	<!-- absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white -->
     <div id="header" class="fixed w-full z-10 top-0 bg-white">
         <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
         
@@ -162,8 +160,6 @@
     
 </div>
 	</div>
-
-	<!-- <div class="container w-full max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto mt-20 md:mt-32 lg:mt-40 px-6"> -->
     <div class="mt-40">
         <!-- <div class="w-full px-4 md:px-6 text-lg text-gray-800 leading-normal font-sans"> -->
             
@@ -310,7 +306,7 @@
 
         <h2 style="scroll-margin-top: 100px;" id="voorbeeld-met-formules">Voorbeeld met formules</h2>
 <p><strong>Situatie</strong>: Je bent docent en houdt aanwezigheid bij van studenten. Als een student bij minimaal 3 lessen aanwezig is, dan is de status "OK". Als de student minder dan 3 lessen aanwezig is geweest dan krijgt deze de status "Strafwerk". Je houdt aanwezigheid per les bij door een "x" in te vullen.</p>
-<p><img alt="Als minimaal aantal keer" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/Als-minimaal-aantal-keer.svg" title="Als minimaal aantal keer"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span><span class="code_function">AANTALLEN.ALS</span><span class="-mr-2">( </span>C7:F7<span class="code_sep"><span class="-mr-2">; </span></span>"x")<span class="code_symbol">&lt;</span>$C$2<span class="code_sep"><span class="-mr-2">; </span></span>"Strafwerk"<span class="code_sep"><span class="-mr-2">; </span></span>"OK")<span class="code_comment">// cel G7, output: Strafwerk</span></p></p>
+<p><img alt="Als minimaal aantal keer" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/Als-minimaal-aantal-keer.svg" title="Als minimaal aantal keer"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span><span class="code_function">AANTALLEN.ALS</span><span class="-mr-2">( </span>C7:F7<span class="code_sep"><span class="-mr-2">; </span></span>"x")<span class="code_symbol">&lt;</span>$C$2<span class="code_sep"><span class="-mr-2">; </span></span>"Strafwerk"<span class="code_sep"><span class="-mr-2">; </span></span>"OK")<span class="code_comment">// cel G7, output: Strafwerk</span></p></p>
 <p>De <code>AANTALLEN.ALS</code>-functie telt het aantal keer dat in <code>C7:F7</code> een <code>"x"</code> staat (2 keer).</p>
 <p>De uitkomst hiervan wordt vervolgens in de <code>ALS</code>-functie getest:</p>
 <p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span> <span class="code_function">AANTALLEN.ALS</span><span class="-mr-2">( </span> C7:F7<span class="code_sep"><span class="-mr-2">; </span></span> "x")<span class="code_symbol">&lt;</span>$C$2<span class="code_sep"><span class="-mr-2">; </span></span> "Strafwerk"<span class="code_sep"><span class="-mr-2">; </span></span> "OK")<br/><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span> 2<span class="code_symbol">&lt;</span>3<span class="code_sep"><span class="-mr-2">; </span></span> "Strafwerk"<span class="code_sep"><span class="-mr-2">; </span></span> "OK")<br/><span class="code_symbol">=</span>"Strafwerk"</p>

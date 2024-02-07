@@ -1,8 +1,15 @@
 <!doctype html>
 <html lang="nl" style="scroll-behavior: smooth;">
 <head>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Kijken of een cel bepaald woord bevat" />
+	<meta property="og:url" content="https://www.excelineendag.nl/formules/cel-bevat-bepaalde-tekst/" />
+	<meta property="og:description" content="Als je wilt kijken of een cel een bepaald woord bevat, doe je dat met geneste ALS-functie met ISGETAL en VIND.SPEC." />
+	<meta property="og:image" content="https://www.excelineendag.nl/static/images/webp/Kijken_of_cel_woord_bevat.webp" />
+	<meta property="og:locale" content="nl" />
+	<meta property="og:site_name" content="Excel in een dag" />
+	<meta property="article:author" content="Tristan Bains" />
     <meta charset="utf-8" />
-	<!-- <meta name="robots" content="all"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" href="../../static/images/XL.svg" />
 	<link rel="mask-icon" href="../../static/images/XL.svg" color=”#15803D" />
@@ -15,7 +22,7 @@
 		
 	</title>
 	
-		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Formules", "item": "https://www.excelineendag.nl/formules/"}, {"@type": "ListItem", "position": 2, "name": "Cel bevat bepaalde tekst", "item": "https://www.excelineendag.nl/formules/cel-bevat-bepaalde-tekst/"}]}, {"@type": "TechArticle", "headline": "Kijken of een cel bepaald woord bevat", "description": "Als je wilt kijken of een cel een bepaald woord bevat, doe je dat met geneste ALS-functie met ISGETAL en VIND.SPEC.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/formules/cel-bevat-bepaalde-tekst", "name": "Kijken of een cel bepaald woord bevat"}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Gemiddeld"}]}</script>
+		<script type="application/ld+json">{"@context": "http://schema.org","@graph": [{"@type": "ImageObject", "contentUrl": "https://www.excelineendag.nl/static/images/svg/Kijken_of_cel_woord_bevat.svg", "creator": {"@type": "Person", "name": "Tristan Bains"}, "creditText": "Excel in een dag"}, {"@type": "WebPage", "name": "Excel in een dag"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Formules", "item": "https://www.excelineendag.nl/formules/"}, {"@type": "ListItem", "position": 2, "name": "Cel bevat bepaalde tekst", "item": "https://www.excelineendag.nl/formules/cel-bevat-bepaalde-tekst/"}]}, {"@type": "TechArticle", "image": ["https://www.excelineendag.nl/static/images/svg/Kijken_of_cel_woord_bevat.svg"], "headline": "Kijken of een cel bepaald woord bevat", "description": "Als je wilt kijken of een cel een bepaald woord bevat, doe je dat met geneste ALS-functie met ISGETAL en VIND.SPEC.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.excelineendag.nl/formules/cel-bevat-bepaalde-tekst", "name": "Kijken of een cel bepaald woord bevat"}, "author": {"@type": "Person", "name": "Tristan Bains", "url": "https://www.excelineendag.nl/contact/"}, "genre": "Microsoft Excel", "proficiencyLevel": "Gemiddeld"}]}</script>
 	
 	
 		
@@ -54,20 +61,11 @@
   
 </head>
 
-
-<!-- <body class="font-sans leading-normal tracking-normal antialiased"> -->
 <body>
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWVMMTKM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-	
-	<!-- <div class="absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white">
-		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
-		
-	</div> -->
-
-	<!-- absolute top-0 left-0 z-40 flex w-full items-center sticky bg-white -->
     <div id="header" class="fixed w-full z-10 top-0 bg-white">
         <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #15803d var(--scroll), transparent 0);"></div>
         
@@ -162,8 +160,6 @@
     
 </div>
 	</div>
-
-	<!-- <div class="container w-full max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto mt-20 md:mt-32 lg:mt-40 px-6"> -->
     <div class="mt-40">
         <!-- <div class="w-full px-4 md:px-6 text-lg text-gray-800 leading-normal font-sans"> -->
             
@@ -343,7 +339,7 @@
         
 
         <h2 style="scroll-margin-top: 100px;" id="voorbeeld-met-formules">Voorbeeld met formules</h2>
-<p><img alt="Kijken_of_cel_woord_bevat" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" src="/static/images/svg/Kijken_of_cel_woord_bevat.svg" title="Kijken_of_cel_woord_bevat"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span><span class="code_function">ISGETAL</span><span class="-mr-2">( </span><span class="code_function">VIND.SPEC</span><span class="-mr-2">( </span>$C$1<span class="code_sep"><span class="-mr-2">; </span></span>D6))<span class="code_sep"><span class="-mr-2">; </span></span>"Ja"<span class="code_sep"><span class="-mr-2">; </span></span>"Nee")<span class="code_comment">// cel E6, output: Ja</span></p></p>
+<p><img alt="Kijken_of_cel_woord_bevat" class="my-4 relative mx-auto rounded-xl overflow-hidden border-2 border-gray-300" loading="lazy" src="/static/images/svg/Kijken_of_cel_woord_bevat.svg" title="Kijken_of_cel_woord_bevat"/><p class="code_block"><span class="code_symbol">=</span><span class="code_function">ALS</span><span class="-mr-2">( </span><span class="code_function">ISGETAL</span><span class="-mr-2">( </span><span class="code_function">VIND.SPEC</span><span class="-mr-2">( </span>$C$1<span class="code_sep"><span class="-mr-2">; </span></span>D6))<span class="code_sep"><span class="-mr-2">; </span></span>"Ja"<span class="code_sep"><span class="-mr-2">; </span></span>"Nee")<span class="code_comment">// cel E6, output: Ja</span></p></p>
 <p>De buitenste functie is de <code>ALS</code>-functie, die een logische test uitvoert. De logische test is weer een geneste formule met <code>ISGETAL</code> en <code>VIND.SPEC</code>. </p>
 <p>De <code>VIND.SPEC</code>-functie kijkt of de waarde uit het tweede argument, in het eerste argument zit. Als dat zo is, dan krijg je de positie (als getal) waarop dit het eerst voorkomt. Als deze functie echter niets vindt, dan krijg je <code>#WAARDE!</code>.</p>
 <p>Om die reden moeten we de <code>VIND.SPEC</code>-functie nog nesten in een <code>ALS</code> en <code>ISGETAL</code>. Als de <code>VIND.SPEC</code>-functie iets vindt, en dus een getal geeft, dan wordt <code>ISGETAL</code> een <code>WAAR</code>. Als de <code>VIND.SPEC</code>-functie niets vindt en dus <code>#WAARDE!</code> geeft, dan wordt de <code>ISGETAL</code>-functie <code>ONWAAR</code>.</p>
